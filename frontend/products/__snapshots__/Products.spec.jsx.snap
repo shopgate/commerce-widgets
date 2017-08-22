@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductsWidget /> should render the grid only when products are received 1`] = `null`;
+
+exports[`<ProductsWidget /> should render the products in the list view 1`] = `
+<div
+  className="b-fff overflow-auto _5pgfgv _42f0g9"
+>
+  <Headline
+    text=""
+  />
+  <ProductListWidget
+    flags={
+      Object {
+        "manufacturer": false,
+        "name": true,
+        "price": undefined,
+        "reviews": undefined,
+      }
+    }
+    products={
+      Array [
+        Object {},
+      ]
+    }
+  />
+</div>
+`;

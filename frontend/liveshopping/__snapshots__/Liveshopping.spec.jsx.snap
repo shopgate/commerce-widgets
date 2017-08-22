@@ -1,0 +1,916 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LiveshoppingWidget /> should not render the widget without any data 1`] = `null`;
+
+exports[`<LiveshoppingWidget /> should render the widget with a slider for multiple products 1`] = `
+<LiveshoppingWidget
+  getLiveshoppingProducts={[Function]}
+  products={
+    Array [
+      Object {
+        "featuredImageUrl": "http://placekitten.com/300/300",
+        "id": "1234",
+        "liveshoppings": Array [
+          Object {
+            "from": 0,
+            "to": 123456789,
+          },
+        ],
+        "name": "First product",
+        "price": Object {
+          "currency": "EUR",
+          "unitPrice": 100,
+          "unitPriceMin": 0,
+          "unitPriceStriked": 20,
+        },
+      },
+      Object {
+        "featuredImageUrl": "http://placekitten.com/300/300",
+        "id": "1235",
+        "liveshoppings": Array [
+          Object {
+            "from": 0,
+            "to": 123456789,
+          },
+        ],
+        "name": "Second product",
+        "price": Object {
+          "currency": "EUR",
+          "unitPrice": 100,
+          "unitPriceMin": 0,
+          "unitPriceStriked": 20,
+        },
+      },
+    ]
+  }
+  settings={Object {}}
+>
+  <div
+    className="p-16px_0px_0px"
+  >
+    <ImageSlider
+      autoPlay={false}
+      className=""
+      classNames={
+        Object {
+          "indicator": Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "relative",
+            "textAlign": "center",
+            "transform": "translateX(0)",
+          },
+        }
+      }
+      controls={false}
+      disabled={false}
+      indicators={true}
+      initialSlide={0}
+      interval={3000}
+      loop={true}
+      onSlideChange={null}
+      slidesPerView={1}
+      snapItems={true}
+    >
+      <Slider
+        autoPlay={false}
+        className=""
+        classNames={
+          Object {
+            "activeIndicator": "d-inline-block m-5 border-radius-50P w-8 h-8 bc-656565",
+            "container": "",
+            "inactiveIndicator": "d-inline-block m-5 border-radius-50P w-8 h-8 bc-ccc",
+            "indicator": "position-relative bottom-0 left-0 transform-translateX0 z-index-10 text-align-center",
+            "slide": "",
+            "slider": "max-height-100P position-relative w-auto",
+          }
+        }
+        controls={false}
+        disabled={false}
+        indicators={true}
+        initialSlide={0}
+        interval={3000}
+        loop={true}
+        onSlideChange={null}
+        slidesPerView={1}
+        snapItems={true}
+      >
+        <div
+          className="position-relative max-height-100P "
+        >
+          <ReactIdSwiper
+            autoplay={null}
+            bulletActiveClass="d-inline-block m-5 border-radius-50P w-8 h-8 bc-656565"
+            bulletClass="d-inline-block m-5 border-radius-50P w-8 h-8 bc-ccc"
+            containerClass="sg-swiper-container overflow-hidden "
+            freeMode={false}
+            initialSlide={0}
+            loop={true}
+            nextButton={null}
+            onInit={[Function]}
+            onSlideChangeEnd={[Function]}
+            onTouchStart={[Function]}
+            onTransitionEnd={[Function]}
+            onTransitionStart={[Function]}
+            pagination=".position-relative bottom-0 left-0 transform-translateX0 z-index-10 text-align-center"
+            paginationModifierClass="sg-swiper-pagination-"
+            prevButton={null}
+            slideClass="sg-swiper-slide"
+            slidesPerView={1}
+            wrapperClass="swiper-wrapper"
+          >
+            <div
+              className="sg-swiper-container overflow-hidden "
+            >
+              <div
+                className="swiper-wrapper"
+              >
+                <div
+                  className="sg-swiper-slide flex-shrink-0 "
+                >
+                  <SliderItem>
+                    <div
+                      className="position-relative h-100P"
+                    >
+                      <div
+                        className="p-0px_10px"
+                      >
+                        <Card
+                          className=""
+                        >
+                          <div
+                            className="_1xx7oe7 m-5px_5px_10px border-radius-2 b-fff overflow-hidden "
+                          >
+                            <Link
+                              className=""
+                              href="/item/31323334"
+                            >
+                              <div
+                                className="p-0 m-0 border-none text-align-left align-items-stretch w-100P "
+                                onClick={[Function]}
+                                role="link"
+                              >
+                                <Grid
+                                  className=""
+                                  component="ul"
+                                  wrap={false}
+                                >
+                                  <ul
+                                    className=" d-flex min-width-100P"
+                                  >
+                                    <GridItem
+                                      className="w-50P position-relative b-fff"
+                                      component="li"
+                                      grow={0}
+                                      shrink={1}
+                                    >
+                                      <li
+                                        className="w-50P position-relative b-fff"
+                                      >
+                                        <ProductImage
+                                          alt="First product"
+                                          animating={true}
+                                          forcePlaceholder={false}
+                                          highestResolutionLoaded={[Function]}
+                                          ratio={null}
+                                          resolutions={
+                                            Array [
+                                              Object {
+                                                "blur": 2,
+                                                "height": 50,
+                                                "width": 50,
+                                              },
+                                              Object {
+                                                "height": 440,
+                                                "width": 440,
+                                              },
+                                            ]
+                                          }
+                                          src="http://placekitten.com/300/300"
+                                        >
+                                          <Image
+                                            alt="First product"
+                                            animating={true}
+                                            className=""
+                                            forcePlaceholder={false}
+                                            highestResolutionLoaded={[Function]}
+                                            onError={[Function]}
+                                            onLoad={null}
+                                            ratio={null}
+                                            resolutions={
+                                              Array [
+                                                Object {
+                                                  "blur": 2,
+                                                  "height": 50,
+                                                  "width": 50,
+                                                },
+                                                Object {
+                                                  "height": 440,
+                                                  "width": 440,
+                                                },
+                                              ]
+                                            }
+                                            src="http://placekitten.com/300/300"
+                                          >
+                                            <Transition
+                                              childrenStyles={
+                                                Object {
+                                                  "appear": Object {
+                                                    "opacity": 1,
+                                                    "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                                  },
+                                                  "base": Object {
+                                                    "opacity": 0,
+                                                    "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                                  },
+                                                  "enter": Object {
+                                                    "opacity": 1,
+                                                    "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                                  },
+                                                  "leave": Object {
+                                                    "opacity": 0,
+                                                    "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                                  },
+                                                }
+                                              }
+                                              className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                                              component="div"
+                                            >
+                                              <TransitionHooks
+                                                className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                                                component="div"
+                                              >
+                                                <div
+                                                  className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                                                />
+                                              </TransitionHooks>
+                                            </Transition>
+                                          </Image>
+                                        </ProductImage>
+                                      </li>
+                                    </GridItem>
+                                    <GridItem
+                                      className="w-50P position-relative b-fff p-16"
+                                      component="li"
+                                      grow={0}
+                                      shrink={1}
+                                    >
+                                      <li
+                                        className="w-50P position-relative b-fff p-16"
+                                      >
+                                        <Ellipsis
+                                          className="fw-500 lh-1p25 mb-4"
+                                          ellipsis="..."
+                                          rows={2}
+                                        >
+                                          <Dotdotdot
+                                            clamp={2}
+                                            className="fw-500 lh-1p25 mb-4"
+                                            ellipsis="..."
+                                            truncationChar="…"
+                                            useNativeClamp={true}
+                                          >
+                                            <div
+                                              className="fw-500 lh-1p25 mb-4"
+                                            >
+                                              First product
+                                            </div>
+                                          </Dotdotdot>
+                                        </Ellipsis>
+                                        <div
+                                          className="position-absolute left-15 bottom-15 right-15"
+                                        >
+                                          <Grid
+                                            className="align-items-flex-end"
+                                            component="ul"
+                                            wrap={false}
+                                          >
+                                            <ul
+                                              className="align-items-flex-end d-flex min-width-100P"
+                                            >
+                                              <GridItem
+                                                className="flex-grow-1"
+                                                component="li"
+                                                grow={0}
+                                                shrink={1}
+                                              >
+                                                <li
+                                                  className="flex-grow-1"
+                                                >
+                                                  <PriceStriked
+                                                    className="0-p 1-- 2-0 3-_ 4-1 5-5 6-p 7-x fs-0p875rem"
+                                                    currency="EUR"
+                                                    value={20}
+                                                  >
+                                                    <div
+                                                      className="c-9a9a9a white-space-nowrap _span-position-relative _n1515k _span_before-content-__ _7dasym _span_before-left-0 _span_before-right-0 _span_before-top-50P 0-p 1-- 2-0 3-_ 4-1 5-5 6-p 7-x fs-0p875rem "
+                                                    >
+                                                      <span>
+                                                        <FormatPrice
+                                                          currency="EUR"
+                                                          fractions={true}
+                                                          price={20}
+                                                        >
+                                                          <span>
+                                                            20
+                                                          </span>
+                                                        </FormatPrice>
+                                                      </span>
+                                                    </div>
+                                                  </PriceStriked>
+                                                </li>
+                                              </GridItem>
+                                              <GridItem
+                                                className="flex-grow-1 text-align-right"
+                                                component="li"
+                                                grow={0}
+                                                shrink={1}
+                                              >
+                                                <li
+                                                  className="flex-grow-1 text-align-right"
+                                                >
+                                                  <Price
+                                                    className="0-p 1-- 2-0 3-_ 4-1 5-5 6-p 7-x c-fa5400 fs-1p25rem"
+                                                    currency="EUR"
+                                                    discounted={false}
+                                                    fractions={true}
+                                                    unitPrice={100}
+                                                    unitPriceMin={0}
+                                                  >
+                                                    <div
+                                                      className="white-space-nowrap 0-p 1-- 2-0 3-_ 4-1 5-5 6-p 7-x c-fa5400 fs-1p25rem"
+                                                    >
+                                                      <FormatPrice
+                                                        currency="EUR"
+                                                        fractions={true}
+                                                        price={100}
+                                                      >
+                                                        <span>
+                                                          100
+                                                        </span>
+                                                      </FormatPrice>
+                                                    </div>
+                                                  </Price>
+                                                </li>
+                                              </GridItem>
+                                            </ul>
+                                          </Grid>
+                                        </div>
+                                      </li>
+                                    </GridItem>
+                                  </ul>
+                                </Grid>
+                              </div>
+                            </Link>
+                          </div>
+                        </Card>
+                      </div>
+                    </div>
+                  </SliderItem>
+                </div>
+                <div
+                  className="sg-swiper-slide flex-shrink-0 "
+                >
+                  <SliderItem>
+                    <div
+                      className="position-relative h-100P"
+                    >
+                      <div
+                        className="p-0px_10px"
+                      >
+                        <Card
+                          className=""
+                        >
+                          <div
+                            className="_1xx7oe7 m-5px_5px_10px border-radius-2 b-fff overflow-hidden "
+                          >
+                            <Link
+                              className=""
+                              href="/item/31323335"
+                            >
+                              <div
+                                className="p-0 m-0 border-none text-align-left align-items-stretch w-100P "
+                                onClick={[Function]}
+                                role="link"
+                              >
+                                <Grid
+                                  className=""
+                                  component="ul"
+                                  wrap={false}
+                                >
+                                  <ul
+                                    className=" d-flex min-width-100P"
+                                  >
+                                    <GridItem
+                                      className="w-50P position-relative b-fff"
+                                      component="li"
+                                      grow={0}
+                                      shrink={1}
+                                    >
+                                      <li
+                                        className="w-50P position-relative b-fff"
+                                      >
+                                        <ProductImage
+                                          alt="Second product"
+                                          animating={true}
+                                          forcePlaceholder={false}
+                                          highestResolutionLoaded={[Function]}
+                                          ratio={null}
+                                          resolutions={
+                                            Array [
+                                              Object {
+                                                "blur": 2,
+                                                "height": 50,
+                                                "width": 50,
+                                              },
+                                              Object {
+                                                "height": 440,
+                                                "width": 440,
+                                              },
+                                            ]
+                                          }
+                                          src="http://placekitten.com/300/300"
+                                        >
+                                          <Image
+                                            alt="Second product"
+                                            animating={true}
+                                            className=""
+                                            forcePlaceholder={false}
+                                            highestResolutionLoaded={[Function]}
+                                            onError={[Function]}
+                                            onLoad={null}
+                                            ratio={null}
+                                            resolutions={
+                                              Array [
+                                                Object {
+                                                  "blur": 2,
+                                                  "height": 50,
+                                                  "width": 50,
+                                                },
+                                                Object {
+                                                  "height": 440,
+                                                  "width": 440,
+                                                },
+                                              ]
+                                            }
+                                            src="http://placekitten.com/300/300"
+                                          >
+                                            <Transition
+                                              childrenStyles={
+                                                Object {
+                                                  "appear": Object {
+                                                    "opacity": 1,
+                                                    "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                                  },
+                                                  "base": Object {
+                                                    "opacity": 0,
+                                                    "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                                  },
+                                                  "enter": Object {
+                                                    "opacity": 1,
+                                                    "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                                  },
+                                                  "leave": Object {
+                                                    "opacity": 0,
+                                                    "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                                  },
+                                                }
+                                              }
+                                              className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                                              component="div"
+                                            >
+                                              <TransitionHooks
+                                                className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                                                component="div"
+                                              >
+                                                <div
+                                                  className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                                                />
+                                              </TransitionHooks>
+                                            </Transition>
+                                          </Image>
+                                        </ProductImage>
+                                      </li>
+                                    </GridItem>
+                                    <GridItem
+                                      className="w-50P position-relative b-fff p-16"
+                                      component="li"
+                                      grow={0}
+                                      shrink={1}
+                                    >
+                                      <li
+                                        className="w-50P position-relative b-fff p-16"
+                                      >
+                                        <Ellipsis
+                                          className="fw-500 lh-1p25 mb-4"
+                                          ellipsis="..."
+                                          rows={2}
+                                        >
+                                          <Dotdotdot
+                                            clamp={2}
+                                            className="fw-500 lh-1p25 mb-4"
+                                            ellipsis="..."
+                                            truncationChar="…"
+                                            useNativeClamp={true}
+                                          >
+                                            <div
+                                              className="fw-500 lh-1p25 mb-4"
+                                            >
+                                              Second product
+                                            </div>
+                                          </Dotdotdot>
+                                        </Ellipsis>
+                                        <div
+                                          className="position-absolute left-15 bottom-15 right-15"
+                                        >
+                                          <Grid
+                                            className="align-items-flex-end"
+                                            component="ul"
+                                            wrap={false}
+                                          >
+                                            <ul
+                                              className="align-items-flex-end d-flex min-width-100P"
+                                            >
+                                              <GridItem
+                                                className="flex-grow-1"
+                                                component="li"
+                                                grow={0}
+                                                shrink={1}
+                                              >
+                                                <li
+                                                  className="flex-grow-1"
+                                                >
+                                                  <PriceStriked
+                                                    className="0-p 1-- 2-0 3-_ 4-1 5-5 6-p 7-x fs-0p875rem"
+                                                    currency="EUR"
+                                                    value={20}
+                                                  >
+                                                    <div
+                                                      className="c-9a9a9a white-space-nowrap _span-position-relative _n1515k _span_before-content-__ _7dasym _span_before-left-0 _span_before-right-0 _span_before-top-50P 0-p 1-- 2-0 3-_ 4-1 5-5 6-p 7-x fs-0p875rem "
+                                                    >
+                                                      <span>
+                                                        <FormatPrice
+                                                          currency="EUR"
+                                                          fractions={true}
+                                                          price={20}
+                                                        >
+                                                          <span>
+                                                            20
+                                                          </span>
+                                                        </FormatPrice>
+                                                      </span>
+                                                    </div>
+                                                  </PriceStriked>
+                                                </li>
+                                              </GridItem>
+                                              <GridItem
+                                                className="flex-grow-1 text-align-right"
+                                                component="li"
+                                                grow={0}
+                                                shrink={1}
+                                              >
+                                                <li
+                                                  className="flex-grow-1 text-align-right"
+                                                >
+                                                  <Price
+                                                    className="0-p 1-- 2-0 3-_ 4-1 5-5 6-p 7-x c-fa5400 fs-1p25rem"
+                                                    currency="EUR"
+                                                    discounted={false}
+                                                    fractions={true}
+                                                    unitPrice={100}
+                                                    unitPriceMin={0}
+                                                  >
+                                                    <div
+                                                      className="white-space-nowrap 0-p 1-- 2-0 3-_ 4-1 5-5 6-p 7-x c-fa5400 fs-1p25rem"
+                                                    >
+                                                      <FormatPrice
+                                                        currency="EUR"
+                                                        fractions={true}
+                                                        price={100}
+                                                      >
+                                                        <span>
+                                                          100
+                                                        </span>
+                                                      </FormatPrice>
+                                                    </div>
+                                                  </Price>
+                                                </li>
+                                              </GridItem>
+                                            </ul>
+                                          </Grid>
+                                        </div>
+                                      </li>
+                                    </GridItem>
+                                  </ul>
+                                </Grid>
+                              </div>
+                            </Link>
+                          </div>
+                        </Card>
+                      </div>
+                    </div>
+                  </SliderItem>
+                </div>
+              </div>
+              <div
+                className="position-relative bottom-0 left-0 transform-translateX0 z-index-10 text-align-center "
+              />
+            </div>
+          </ReactIdSwiper>
+        </div>
+      </Slider>
+    </ImageSlider>
+  </div>
+</LiveshoppingWidget>
+`;
+
+exports[`<LiveshoppingWidget /> should render the widget with no slider for one product 1`] = `
+<LiveshoppingWidget
+  getLiveshoppingProducts={[Function]}
+  products={
+    Array [
+      Object {
+        "featuredImageUrl": "http://placekitten.com/300/300",
+        "id": "1234",
+        "liveshoppings": Array [
+          Object {
+            "from": 0,
+            "to": 123456789,
+          },
+        ],
+        "name": "First product",
+        "price": Object {
+          "currency": "EUR",
+          "unitPrice": 100,
+          "unitPriceMin": 0,
+          "unitPriceStriked": 20,
+        },
+      },
+    ]
+  }
+  settings={Object {}}
+>
+  <div
+    className="p-16px_0px_0px"
+  >
+    <ImageSlider
+      autoPlay={false}
+      className=""
+      classNames={
+        Object {
+          "indicator": Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "relative",
+            "textAlign": "center",
+            "transform": "translateX(0)",
+          },
+        }
+      }
+      controls={false}
+      disabled={false}
+      indicators={true}
+      initialSlide={0}
+      interval={3000}
+      loop={true}
+      onSlideChange={null}
+      slidesPerView={1}
+      snapItems={true}
+    >
+      <div
+        className="p-0px_10px"
+      >
+        <Card
+          className=""
+        >
+          <div
+            className="_1xx7oe7 m-5px_5px_10px border-radius-2 b-fff overflow-hidden "
+          >
+            <Link
+              className=""
+              href="/item/31323334"
+            >
+              <div
+                className="p-0 m-0 border-none text-align-left align-items-stretch w-100P "
+                onClick={[Function]}
+                role="link"
+              >
+                <Grid
+                  className=""
+                  component="ul"
+                  wrap={false}
+                >
+                  <ul
+                    className=" d-flex min-width-100P"
+                  >
+                    <GridItem
+                      className="w-50P position-relative b-fff"
+                      component="li"
+                      grow={0}
+                      shrink={1}
+                    >
+                      <li
+                        className="w-50P position-relative b-fff"
+                      >
+                        <ProductImage
+                          alt="First product"
+                          animating={true}
+                          forcePlaceholder={false}
+                          highestResolutionLoaded={[Function]}
+                          ratio={null}
+                          resolutions={
+                            Array [
+                              Object {
+                                "blur": 2,
+                                "height": 50,
+                                "width": 50,
+                              },
+                              Object {
+                                "height": 440,
+                                "width": 440,
+                              },
+                            ]
+                          }
+                          src="http://placekitten.com/300/300"
+                        >
+                          <Image
+                            alt="First product"
+                            animating={true}
+                            className=""
+                            forcePlaceholder={false}
+                            highestResolutionLoaded={[Function]}
+                            onError={[Function]}
+                            onLoad={null}
+                            ratio={null}
+                            resolutions={
+                              Array [
+                                Object {
+                                  "blur": 2,
+                                  "height": 50,
+                                  "width": 50,
+                                },
+                                Object {
+                                  "height": 440,
+                                  "width": 440,
+                                },
+                              ]
+                            }
+                            src="http://placekitten.com/300/300"
+                          >
+                            <Transition
+                              childrenStyles={
+                                Object {
+                                  "appear": Object {
+                                    "opacity": 1,
+                                    "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                  },
+                                  "base": Object {
+                                    "opacity": 0,
+                                    "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                  },
+                                  "enter": Object {
+                                    "opacity": 1,
+                                    "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                  },
+                                  "leave": Object {
+                                    "opacity": 0,
+                                    "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                  },
+                                }
+                              }
+                              className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                              component="div"
+                            >
+                              <TransitionHooks
+                                className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                                component="div"
+                              >
+                                <div
+                                  className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                                />
+                              </TransitionHooks>
+                            </Transition>
+                          </Image>
+                        </ProductImage>
+                      </li>
+                    </GridItem>
+                    <GridItem
+                      className="w-50P position-relative b-fff p-16"
+                      component="li"
+                      grow={0}
+                      shrink={1}
+                    >
+                      <li
+                        className="w-50P position-relative b-fff p-16"
+                      >
+                        <Ellipsis
+                          className="fw-500 lh-1p25 mb-4"
+                          ellipsis="..."
+                          rows={2}
+                        >
+                          <Dotdotdot
+                            clamp={2}
+                            className="fw-500 lh-1p25 mb-4"
+                            ellipsis="..."
+                            truncationChar="…"
+                            useNativeClamp={true}
+                          >
+                            <div
+                              className="fw-500 lh-1p25 mb-4"
+                            >
+                              First product
+                            </div>
+                          </Dotdotdot>
+                        </Ellipsis>
+                        <div
+                          className="position-absolute left-15 bottom-15 right-15"
+                        >
+                          <Grid
+                            className="align-items-flex-end"
+                            component="ul"
+                            wrap={false}
+                          >
+                            <ul
+                              className="align-items-flex-end d-flex min-width-100P"
+                            >
+                              <GridItem
+                                className="flex-grow-1"
+                                component="li"
+                                grow={0}
+                                shrink={1}
+                              >
+                                <li
+                                  className="flex-grow-1"
+                                >
+                                  <PriceStriked
+                                    className="0-p 1-- 2-0 3-_ 4-1 5-5 6-p 7-x fs-0p875rem"
+                                    currency="EUR"
+                                    value={20}
+                                  >
+                                    <div
+                                      className="c-9a9a9a white-space-nowrap _span-position-relative _n1515k _span_before-content-__ _7dasym _span_before-left-0 _span_before-right-0 _span_before-top-50P 0-p 1-- 2-0 3-_ 4-1 5-5 6-p 7-x fs-0p875rem "
+                                    >
+                                      <span>
+                                        <FormatPrice
+                                          currency="EUR"
+                                          fractions={true}
+                                          price={20}
+                                        >
+                                          <span>
+                                            20
+                                          </span>
+                                        </FormatPrice>
+                                      </span>
+                                    </div>
+                                  </PriceStriked>
+                                </li>
+                              </GridItem>
+                              <GridItem
+                                className="flex-grow-1 text-align-right"
+                                component="li"
+                                grow={0}
+                                shrink={1}
+                              >
+                                <li
+                                  className="flex-grow-1 text-align-right"
+                                >
+                                  <Price
+                                    className="0-p 1-- 2-0 3-_ 4-1 5-5 6-p 7-x c-fa5400 fs-1p25rem"
+                                    currency="EUR"
+                                    discounted={false}
+                                    fractions={true}
+                                    unitPrice={100}
+                                    unitPriceMin={0}
+                                  >
+                                    <div
+                                      className="white-space-nowrap 0-p 1-- 2-0 3-_ 4-1 5-5 6-p 7-x c-fa5400 fs-1p25rem"
+                                    >
+                                      <FormatPrice
+                                        currency="EUR"
+                                        fractions={true}
+                                        price={100}
+                                      >
+                                        <span>
+                                          100
+                                        </span>
+                                      </FormatPrice>
+                                    </div>
+                                  </Price>
+                                </li>
+                              </GridItem>
+                            </ul>
+                          </Grid>
+                        </div>
+                      </li>
+                    </GridItem>
+                  </ul>
+                </Grid>
+              </div>
+            </Link>
+          </div>
+        </Card>
+      </div>
+    </ImageSlider>
+  </div>
+</LiveshoppingWidget>
+`;

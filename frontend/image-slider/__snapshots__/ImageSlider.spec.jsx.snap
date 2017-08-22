@@ -1,0 +1,1215 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ImageSliderWidget /> should map the correct image settings to the components 1`] = `
+<ImageSliderWidget
+  className=""
+  settings={
+    Object {
+      "autostart": false,
+      "delay": 7000,
+      "images": Array [
+        Object {
+          "image": "http://placehold.it/350x150",
+          "link": "http://example.com",
+        },
+        Object {
+          "image": "http://placehold.it/10x10",
+          "link": "http://other.example.com",
+        },
+      ],
+      "loop": false,
+      "pagination": true,
+    }
+  }
+>
+  <ImageSlider
+    autoPlay={false}
+    className=""
+    classNames={Object {}}
+    controls={false}
+    disabled={false}
+    indicators={true}
+    initialSlide={0}
+    interval={7000}
+    loop={false}
+    onSlideChange={null}
+    slidesPerView={1}
+    snapItems={true}
+  >
+    <Slider
+      autoPlay={false}
+      className=""
+      classNames={
+        Object {
+          "activeIndicator": "d-inline-block m-5 border-radius-50P w-8 h-8 bc-656565",
+          "container": "",
+          "inactiveIndicator": "d-inline-block m-5 border-radius-50P w-8 h-8 bc-ccc",
+          "indicator": "position-absolute bottom-2 left-50P _85ahhe z-index-10",
+          "slide": "",
+          "slider": "max-height-100P position-relative w-auto",
+        }
+      }
+      controls={false}
+      disabled={false}
+      indicators={true}
+      initialSlide={0}
+      interval={7000}
+      loop={false}
+      onSlideChange={null}
+      slidesPerView={1}
+      snapItems={true}
+    >
+      <div
+        className="position-relative max-height-100P "
+      >
+        <ReactIdSwiper
+          autoplay={null}
+          bulletActiveClass="d-inline-block m-5 border-radius-50P w-8 h-8 bc-656565"
+          bulletClass="d-inline-block m-5 border-radius-50P w-8 h-8 bc-ccc"
+          containerClass="sg-swiper-container overflow-hidden "
+          freeMode={false}
+          initialSlide={0}
+          loop={false}
+          nextButton={null}
+          onInit={[Function]}
+          onSlideChangeEnd={[Function]}
+          onTouchStart={[Function]}
+          onTransitionEnd={[Function]}
+          onTransitionStart={[Function]}
+          pagination=".position-absolute bottom-2 left-50P _85ahhe z-index-10"
+          paginationModifierClass="sg-swiper-pagination-"
+          prevButton={null}
+          slideClass="sg-swiper-slide"
+          slidesPerView={1}
+          wrapperClass="swiper-wrapper"
+        >
+          <div
+            className="sg-swiper-container overflow-hidden "
+          >
+            <div
+              className="swiper-wrapper"
+            >
+              <div
+                className="sg-swiper-slide flex-shrink-0 "
+              >
+                <SliderItem>
+                  <div
+                    className="position-relative h-100P"
+                  >
+                    <Link
+                      className="w-100P"
+                      href="http://example.com"
+                    >
+                      <div
+                        className="p-0 m-0 border-none text-align-left align-items-stretch w-100P w-100P"
+                        onClick={[Function]}
+                        role="link"
+                      >
+                        <Image
+                          alt={null}
+                          animating={true}
+                          className=""
+                          forcePlaceholder={false}
+                          highestResolutionLoaded={[Function]}
+                          onError={null}
+                          onLoad={null}
+                          ratio={null}
+                          resolutions={
+                            Array [
+                              Object {
+                                "blur": 2,
+                                "height": 50,
+                                "width": 50,
+                              },
+                              Object {
+                                "height": 440,
+                                "width": 440,
+                              },
+                            ]
+                          }
+                          src="http://placehold.it/350x150"
+                        >
+                          <Transition
+                            childrenStyles={
+                              Object {
+                                "appear": Object {
+                                  "opacity": 1,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "base": Object {
+                                  "opacity": 0,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "enter": Object {
+                                  "opacity": 1,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "leave": Object {
+                                  "opacity": 0,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                              }
+                            }
+                            className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                            component="div"
+                          >
+                            <TransitionHooks
+                              className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                              component="div"
+                            >
+                              <div
+                                className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                              />
+                            </TransitionHooks>
+                          </Transition>
+                        </Image>
+                      </div>
+                    </Link>
+                  </div>
+                </SliderItem>
+              </div>
+              <div
+                className="sg-swiper-slide flex-shrink-0 "
+              >
+                <SliderItem>
+                  <div
+                    className="position-relative h-100P"
+                  >
+                    <Link
+                      className="w-100P"
+                      href="http://other.example.com"
+                    >
+                      <div
+                        className="p-0 m-0 border-none text-align-left align-items-stretch w-100P w-100P"
+                        onClick={[Function]}
+                        role="link"
+                      >
+                        <Image
+                          alt={null}
+                          animating={true}
+                          className=""
+                          forcePlaceholder={false}
+                          highestResolutionLoaded={[Function]}
+                          onError={null}
+                          onLoad={null}
+                          ratio={null}
+                          resolutions={
+                            Array [
+                              Object {
+                                "blur": 2,
+                                "height": 50,
+                                "width": 50,
+                              },
+                              Object {
+                                "height": 440,
+                                "width": 440,
+                              },
+                            ]
+                          }
+                          src="http://placehold.it/10x10"
+                        >
+                          <Transition
+                            childrenStyles={
+                              Object {
+                                "appear": Object {
+                                  "opacity": 1,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "base": Object {
+                                  "opacity": 0,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "enter": Object {
+                                  "opacity": 1,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "leave": Object {
+                                  "opacity": 0,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                              }
+                            }
+                            className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                            component="div"
+                          >
+                            <TransitionHooks
+                              className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                              component="div"
+                            >
+                              <div
+                                className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                              />
+                            </TransitionHooks>
+                          </Transition>
+                        </Image>
+                      </div>
+                    </Link>
+                  </div>
+                </SliderItem>
+              </div>
+            </div>
+            <div
+              className="position-absolute bottom-2 left-50P _85ahhe z-index-10 "
+            />
+          </div>
+        </ReactIdSwiper>
+      </div>
+    </Slider>
+  </ImageSlider>
+</ImageSliderWidget>
+`;
+
+exports[`<ImageSliderWidget /> should render no slider with just a single image 1`] = `
+<ImageSliderWidget
+  className=""
+  settings={
+    Object {
+      "autostart": false,
+      "delay": 7000,
+      "images": Array [
+        Object {
+          "image": "http://placehold.it/350x150",
+          "link": "http://example.com",
+        },
+      ],
+      "loop": false,
+      "pagination": true,
+    }
+  }
+>
+  <ImageSlider
+    autoPlay={false}
+    className=""
+    classNames={Object {}}
+    controls={false}
+    disabled={false}
+    indicators={true}
+    initialSlide={0}
+    interval={7000}
+    loop={false}
+    onSlideChange={null}
+    slidesPerView={1}
+    snapItems={true}
+  >
+    <Link
+      className="w-100P"
+      href="http://example.com"
+    >
+      <div
+        className="p-0 m-0 border-none text-align-left align-items-stretch w-100P w-100P"
+        onClick={[Function]}
+        role="link"
+      >
+        <Image
+          alt={null}
+          animating={true}
+          className=""
+          forcePlaceholder={false}
+          highestResolutionLoaded={[Function]}
+          onError={null}
+          onLoad={null}
+          ratio={null}
+          resolutions={
+            Array [
+              Object {
+                "blur": 2,
+                "height": 50,
+                "width": 50,
+              },
+              Object {
+                "height": 440,
+                "width": 440,
+              },
+            ]
+          }
+          src="http://placehold.it/350x150"
+        >
+          <Transition
+            childrenStyles={
+              Object {
+                "appear": Object {
+                  "opacity": 1,
+                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                },
+                "base": Object {
+                  "opacity": 0,
+                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                },
+                "enter": Object {
+                  "opacity": 1,
+                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                },
+                "leave": Object {
+                  "opacity": 0,
+                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                },
+              }
+            }
+            className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+            component="div"
+          >
+            <TransitionHooks
+              className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+              component="div"
+            >
+              <div
+                className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+              />
+            </TransitionHooks>
+          </Transition>
+        </Image>
+      </div>
+    </Link>
+  </ImageSlider>
+</ImageSliderWidget>
+`;
+
+exports[`<ImageSliderWidget /> should render the images unlinked if no link is set 1`] = `
+<ImageSliderWidget
+  className=""
+  settings={
+    Object {
+      "autostart": false,
+      "delay": 7000,
+      "images": Array [
+        Object {
+          "image": "http://placehold.it/350x150",
+          "link": null,
+        },
+      ],
+      "loop": false,
+      "pagination": true,
+    }
+  }
+>
+  <ImageSlider
+    autoPlay={false}
+    className=""
+    classNames={Object {}}
+    controls={false}
+    disabled={false}
+    indicators={true}
+    initialSlide={0}
+    interval={7000}
+    loop={false}
+    onSlideChange={null}
+    slidesPerView={1}
+    snapItems={true}
+  >
+    <Image
+      alt={null}
+      animating={true}
+      className=""
+      forcePlaceholder={false}
+      highestResolutionLoaded={[Function]}
+      onError={null}
+      onLoad={null}
+      ratio={null}
+      resolutions={
+        Array [
+          Object {
+            "blur": 2,
+            "height": 50,
+            "width": 50,
+          },
+          Object {
+            "height": 440,
+            "width": 440,
+          },
+        ]
+      }
+      src="http://placehold.it/350x150"
+    >
+      <Transition
+        childrenStyles={
+          Object {
+            "appear": Object {
+              "opacity": 1,
+              "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+            },
+            "base": Object {
+              "opacity": 0,
+              "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+            },
+            "enter": Object {
+              "opacity": 1,
+              "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+            },
+            "leave": Object {
+              "opacity": 0,
+              "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+            },
+          }
+        }
+        className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+        component="div"
+      >
+        <TransitionHooks
+          className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+          component="div"
+        >
+          <div
+            className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+          />
+        </TransitionHooks>
+      </Transition>
+    </Image>
+  </ImageSlider>
+</ImageSliderWidget>
+`;
+
+exports[`<ImageSliderWidget /> should render the images with links 1`] = `
+<ImageSliderWidget
+  className=""
+  settings={
+    Object {
+      "autostart": false,
+      "delay": 7000,
+      "images": Array [
+        Object {
+          "image": "http://placehold.it/350x150",
+          "link": "http://example.com",
+        },
+        Object {
+          "image": "http://placehold.it/350x150",
+          "link": null,
+        },
+        Object {
+          "image": "http://placehold.it/350x150",
+          "link": "http://example.com",
+        },
+        Object {
+          "image": "http://placehold.it/350x150",
+          "link": "http://example.com",
+        },
+      ],
+      "loop": false,
+      "pagination": true,
+    }
+  }
+>
+  <ImageSlider
+    autoPlay={false}
+    className=""
+    classNames={Object {}}
+    controls={false}
+    disabled={false}
+    indicators={true}
+    initialSlide={0}
+    interval={7000}
+    loop={false}
+    onSlideChange={null}
+    slidesPerView={1}
+    snapItems={true}
+  >
+    <Slider
+      autoPlay={false}
+      className=""
+      classNames={
+        Object {
+          "activeIndicator": "d-inline-block m-5 border-radius-50P w-8 h-8 bc-656565",
+          "container": "",
+          "inactiveIndicator": "d-inline-block m-5 border-radius-50P w-8 h-8 bc-ccc",
+          "indicator": "position-absolute bottom-2 left-50P _85ahhe z-index-10",
+          "slide": "",
+          "slider": "max-height-100P position-relative w-auto",
+        }
+      }
+      controls={false}
+      disabled={false}
+      indicators={true}
+      initialSlide={0}
+      interval={7000}
+      loop={false}
+      onSlideChange={null}
+      slidesPerView={1}
+      snapItems={true}
+    >
+      <div
+        className="position-relative max-height-100P "
+      >
+        <ReactIdSwiper
+          autoplay={null}
+          bulletActiveClass="d-inline-block m-5 border-radius-50P w-8 h-8 bc-656565"
+          bulletClass="d-inline-block m-5 border-radius-50P w-8 h-8 bc-ccc"
+          containerClass="sg-swiper-container overflow-hidden "
+          freeMode={false}
+          initialSlide={0}
+          loop={false}
+          nextButton={null}
+          onInit={[Function]}
+          onSlideChangeEnd={[Function]}
+          onTouchStart={[Function]}
+          onTransitionEnd={[Function]}
+          onTransitionStart={[Function]}
+          pagination=".position-absolute bottom-2 left-50P _85ahhe z-index-10"
+          paginationModifierClass="sg-swiper-pagination-"
+          prevButton={null}
+          slideClass="sg-swiper-slide"
+          slidesPerView={1}
+          wrapperClass="swiper-wrapper"
+        >
+          <div
+            className="sg-swiper-container overflow-hidden "
+          >
+            <div
+              className="swiper-wrapper"
+            >
+              <div
+                className="sg-swiper-slide flex-shrink-0 "
+              >
+                <SliderItem>
+                  <div
+                    className="position-relative h-100P"
+                  >
+                    <Link
+                      className="w-100P"
+                      href="http://example.com"
+                    >
+                      <div
+                        className="p-0 m-0 border-none text-align-left align-items-stretch w-100P w-100P"
+                        onClick={[Function]}
+                        role="link"
+                      >
+                        <Image
+                          alt={null}
+                          animating={true}
+                          className=""
+                          forcePlaceholder={false}
+                          highestResolutionLoaded={[Function]}
+                          onError={null}
+                          onLoad={null}
+                          ratio={null}
+                          resolutions={
+                            Array [
+                              Object {
+                                "blur": 2,
+                                "height": 50,
+                                "width": 50,
+                              },
+                              Object {
+                                "height": 440,
+                                "width": 440,
+                              },
+                            ]
+                          }
+                          src="http://placehold.it/350x150"
+                        >
+                          <Transition
+                            childrenStyles={
+                              Object {
+                                "appear": Object {
+                                  "opacity": 1,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "base": Object {
+                                  "opacity": 0,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "enter": Object {
+                                  "opacity": 1,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "leave": Object {
+                                  "opacity": 0,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                              }
+                            }
+                            className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                            component="div"
+                          >
+                            <TransitionHooks
+                              className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                              component="div"
+                            >
+                              <div
+                                className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                              />
+                            </TransitionHooks>
+                          </Transition>
+                        </Image>
+                      </div>
+                    </Link>
+                  </div>
+                </SliderItem>
+              </div>
+              <div
+                className="sg-swiper-slide flex-shrink-0 "
+              >
+                <SliderItem>
+                  <div
+                    className="position-relative h-100P"
+                  >
+                    <Image
+                      alt={null}
+                      animating={true}
+                      className=""
+                      forcePlaceholder={false}
+                      highestResolutionLoaded={[Function]}
+                      onError={null}
+                      onLoad={null}
+                      ratio={null}
+                      resolutions={
+                        Array [
+                          Object {
+                            "blur": 2,
+                            "height": 50,
+                            "width": 50,
+                          },
+                          Object {
+                            "height": 440,
+                            "width": 440,
+                          },
+                        ]
+                      }
+                      src="http://placehold.it/350x150"
+                    >
+                      <Transition
+                        childrenStyles={
+                          Object {
+                            "appear": Object {
+                              "opacity": 1,
+                              "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                            },
+                            "base": Object {
+                              "opacity": 0,
+                              "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                            },
+                            "enter": Object {
+                              "opacity": 1,
+                              "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                            },
+                            "leave": Object {
+                              "opacity": 0,
+                              "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                            },
+                          }
+                        }
+                        className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                        component="div"
+                      >
+                        <TransitionHooks
+                          className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                          component="div"
+                        >
+                          <div
+                            className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                          />
+                        </TransitionHooks>
+                      </Transition>
+                    </Image>
+                  </div>
+                </SliderItem>
+              </div>
+              <div
+                className="sg-swiper-slide flex-shrink-0 "
+              >
+                <SliderItem>
+                  <div
+                    className="position-relative h-100P"
+                  >
+                    <Link
+                      className="w-100P"
+                      href="http://example.com"
+                    >
+                      <div
+                        className="p-0 m-0 border-none text-align-left align-items-stretch w-100P w-100P"
+                        onClick={[Function]}
+                        role="link"
+                      >
+                        <Image
+                          alt={null}
+                          animating={true}
+                          className=""
+                          forcePlaceholder={false}
+                          highestResolutionLoaded={[Function]}
+                          onError={null}
+                          onLoad={null}
+                          ratio={null}
+                          resolutions={
+                            Array [
+                              Object {
+                                "blur": 2,
+                                "height": 50,
+                                "width": 50,
+                              },
+                              Object {
+                                "height": 440,
+                                "width": 440,
+                              },
+                            ]
+                          }
+                          src="http://placehold.it/350x150"
+                        >
+                          <Transition
+                            childrenStyles={
+                              Object {
+                                "appear": Object {
+                                  "opacity": 1,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "base": Object {
+                                  "opacity": 0,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "enter": Object {
+                                  "opacity": 1,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "leave": Object {
+                                  "opacity": 0,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                              }
+                            }
+                            className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                            component="div"
+                          >
+                            <TransitionHooks
+                              className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                              component="div"
+                            >
+                              <div
+                                className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                              />
+                            </TransitionHooks>
+                          </Transition>
+                        </Image>
+                      </div>
+                    </Link>
+                  </div>
+                </SliderItem>
+              </div>
+              <div
+                className="sg-swiper-slide flex-shrink-0 "
+              >
+                <SliderItem>
+                  <div
+                    className="position-relative h-100P"
+                  >
+                    <Link
+                      className="w-100P"
+                      href="http://example.com"
+                    >
+                      <div
+                        className="p-0 m-0 border-none text-align-left align-items-stretch w-100P w-100P"
+                        onClick={[Function]}
+                        role="link"
+                      >
+                        <Image
+                          alt={null}
+                          animating={true}
+                          className=""
+                          forcePlaceholder={false}
+                          highestResolutionLoaded={[Function]}
+                          onError={null}
+                          onLoad={null}
+                          ratio={null}
+                          resolutions={
+                            Array [
+                              Object {
+                                "blur": 2,
+                                "height": 50,
+                                "width": 50,
+                              },
+                              Object {
+                                "height": 440,
+                                "width": 440,
+                              },
+                            ]
+                          }
+                          src="http://placehold.it/350x150"
+                        >
+                          <Transition
+                            childrenStyles={
+                              Object {
+                                "appear": Object {
+                                  "opacity": 1,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "base": Object {
+                                  "opacity": 0,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "enter": Object {
+                                  "opacity": 1,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "leave": Object {
+                                  "opacity": 0,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                              }
+                            }
+                            className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                            component="div"
+                          >
+                            <TransitionHooks
+                              className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                              component="div"
+                            >
+                              <div
+                                className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                              />
+                            </TransitionHooks>
+                          </Transition>
+                        </Image>
+                      </div>
+                    </Link>
+                  </div>
+                </SliderItem>
+              </div>
+            </div>
+            <div
+              className="position-absolute bottom-2 left-50P _85ahhe z-index-10 "
+            />
+          </div>
+        </ReactIdSwiper>
+      </div>
+    </Slider>
+  </ImageSlider>
+</ImageSliderWidget>
+`;
+
+exports[`<ImageSliderWidget /> should render the slider with the correct number of images 1`] = `
+<ImageSliderWidget
+  className=""
+  settings={
+    Object {
+      "autostart": false,
+      "delay": 7000,
+      "images": Array [
+        Object {
+          "image": "http://placehold.it/350x150",
+          "link": "http://example.com",
+        },
+        Object {
+          "image": "http://placehold.it/350x150",
+          "link": "http://example.com",
+        },
+        Object {
+          "image": "http://placehold.it/350x150",
+          "link": "http://example.com",
+        },
+      ],
+      "loop": false,
+      "pagination": true,
+    }
+  }
+>
+  <ImageSlider
+    autoPlay={false}
+    className=""
+    classNames={Object {}}
+    controls={false}
+    disabled={false}
+    indicators={true}
+    initialSlide={0}
+    interval={7000}
+    loop={false}
+    onSlideChange={null}
+    slidesPerView={1}
+    snapItems={true}
+  >
+    <Slider
+      autoPlay={false}
+      className=""
+      classNames={
+        Object {
+          "activeIndicator": "d-inline-block m-5 border-radius-50P w-8 h-8 bc-656565",
+          "container": "",
+          "inactiveIndicator": "d-inline-block m-5 border-radius-50P w-8 h-8 bc-ccc",
+          "indicator": "position-absolute bottom-2 left-50P _85ahhe z-index-10",
+          "slide": "",
+          "slider": "max-height-100P position-relative w-auto",
+        }
+      }
+      controls={false}
+      disabled={false}
+      indicators={true}
+      initialSlide={0}
+      interval={7000}
+      loop={false}
+      onSlideChange={null}
+      slidesPerView={1}
+      snapItems={true}
+    >
+      <div
+        className="position-relative max-height-100P "
+      >
+        <ReactIdSwiper
+          autoplay={null}
+          bulletActiveClass="d-inline-block m-5 border-radius-50P w-8 h-8 bc-656565"
+          bulletClass="d-inline-block m-5 border-radius-50P w-8 h-8 bc-ccc"
+          containerClass="sg-swiper-container overflow-hidden "
+          freeMode={false}
+          initialSlide={0}
+          loop={false}
+          nextButton={null}
+          onInit={[Function]}
+          onSlideChangeEnd={[Function]}
+          onTouchStart={[Function]}
+          onTransitionEnd={[Function]}
+          onTransitionStart={[Function]}
+          pagination=".position-absolute bottom-2 left-50P _85ahhe z-index-10"
+          paginationModifierClass="sg-swiper-pagination-"
+          prevButton={null}
+          slideClass="sg-swiper-slide"
+          slidesPerView={1}
+          wrapperClass="swiper-wrapper"
+        >
+          <div
+            className="sg-swiper-container overflow-hidden "
+          >
+            <div
+              className="swiper-wrapper"
+            >
+              <div
+                className="sg-swiper-slide flex-shrink-0 "
+              >
+                <SliderItem>
+                  <div
+                    className="position-relative h-100P"
+                  >
+                    <Link
+                      className="w-100P"
+                      href="http://example.com"
+                    >
+                      <div
+                        className="p-0 m-0 border-none text-align-left align-items-stretch w-100P w-100P"
+                        onClick={[Function]}
+                        role="link"
+                      >
+                        <Image
+                          alt={null}
+                          animating={true}
+                          className=""
+                          forcePlaceholder={false}
+                          highestResolutionLoaded={[Function]}
+                          onError={null}
+                          onLoad={null}
+                          ratio={null}
+                          resolutions={
+                            Array [
+                              Object {
+                                "blur": 2,
+                                "height": 50,
+                                "width": 50,
+                              },
+                              Object {
+                                "height": 440,
+                                "width": 440,
+                              },
+                            ]
+                          }
+                          src="http://placehold.it/350x150"
+                        >
+                          <Transition
+                            childrenStyles={
+                              Object {
+                                "appear": Object {
+                                  "opacity": 1,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "base": Object {
+                                  "opacity": 0,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "enter": Object {
+                                  "opacity": 1,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "leave": Object {
+                                  "opacity": 0,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                              }
+                            }
+                            className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                            component="div"
+                          >
+                            <TransitionHooks
+                              className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                              component="div"
+                            >
+                              <div
+                                className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                              />
+                            </TransitionHooks>
+                          </Transition>
+                        </Image>
+                      </div>
+                    </Link>
+                  </div>
+                </SliderItem>
+              </div>
+              <div
+                className="sg-swiper-slide flex-shrink-0 "
+              >
+                <SliderItem>
+                  <div
+                    className="position-relative h-100P"
+                  >
+                    <Link
+                      className="w-100P"
+                      href="http://example.com"
+                    >
+                      <div
+                        className="p-0 m-0 border-none text-align-left align-items-stretch w-100P w-100P"
+                        onClick={[Function]}
+                        role="link"
+                      >
+                        <Image
+                          alt={null}
+                          animating={true}
+                          className=""
+                          forcePlaceholder={false}
+                          highestResolutionLoaded={[Function]}
+                          onError={null}
+                          onLoad={null}
+                          ratio={null}
+                          resolutions={
+                            Array [
+                              Object {
+                                "blur": 2,
+                                "height": 50,
+                                "width": 50,
+                              },
+                              Object {
+                                "height": 440,
+                                "width": 440,
+                              },
+                            ]
+                          }
+                          src="http://placehold.it/350x150"
+                        >
+                          <Transition
+                            childrenStyles={
+                              Object {
+                                "appear": Object {
+                                  "opacity": 1,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "base": Object {
+                                  "opacity": 0,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "enter": Object {
+                                  "opacity": 1,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "leave": Object {
+                                  "opacity": 0,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                              }
+                            }
+                            className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                            component="div"
+                          >
+                            <TransitionHooks
+                              className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                              component="div"
+                            >
+                              <div
+                                className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                              />
+                            </TransitionHooks>
+                          </Transition>
+                        </Image>
+                      </div>
+                    </Link>
+                  </div>
+                </SliderItem>
+              </div>
+              <div
+                className="sg-swiper-slide flex-shrink-0 "
+              >
+                <SliderItem>
+                  <div
+                    className="position-relative h-100P"
+                  >
+                    <Link
+                      className="w-100P"
+                      href="http://example.com"
+                    >
+                      <div
+                        className="p-0 m-0 border-none text-align-left align-items-stretch w-100P w-100P"
+                        onClick={[Function]}
+                        role="link"
+                      >
+                        <Image
+                          alt={null}
+                          animating={true}
+                          className=""
+                          forcePlaceholder={false}
+                          highestResolutionLoaded={[Function]}
+                          onError={null}
+                          onLoad={null}
+                          ratio={null}
+                          resolutions={
+                            Array [
+                              Object {
+                                "blur": 2,
+                                "height": 50,
+                                "width": 50,
+                              },
+                              Object {
+                                "height": 440,
+                                "width": 440,
+                              },
+                            ]
+                          }
+                          src="http://placehold.it/350x150"
+                        >
+                          <Transition
+                            childrenStyles={
+                              Object {
+                                "appear": Object {
+                                  "opacity": 1,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "base": Object {
+                                  "opacity": 0,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "enter": Object {
+                                  "opacity": 1,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                                "leave": Object {
+                                  "opacity": 0,
+                                  "transition": "opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                                },
+                              }
+                            }
+                            className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                            component="div"
+                          >
+                            <TransitionHooks
+                              className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                              component="div"
+                            >
+                              <div
+                                className="position-relative b-f2f2f2 z-index-0 _before-d-block _before-content-__ _before-w-100P _before-pt-100p000P "
+                              />
+                            </TransitionHooks>
+                          </Transition>
+                        </Image>
+                      </div>
+                    </Link>
+                  </div>
+                </SliderItem>
+              </div>
+            </div>
+            <div
+              className="position-absolute bottom-2 left-50P _85ahhe z-index-10 "
+            />
+          </div>
+        </ReactIdSwiper>
+      </div>
+    </Slider>
+  </ImageSlider>
+</ImageSliderWidget>
+`;

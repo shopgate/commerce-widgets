@@ -1,0 +1,13 @@
+{
+  "name": "@shopgate/commerce-widgets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": "shopgate/commerce-widgets",
+  "bugs": "https://github.com/shopgate/commerce-widgets/issues",
+  "homepage": "https://github.com/shopgate/commerce-widgets",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "Apache-2.0"
+}
