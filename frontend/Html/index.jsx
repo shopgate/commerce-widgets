@@ -1,6 +1,14 @@
-import React, { Component, PropTypes } from 'react';
-import { history } from 'Library/helpers/router';
-import ParsedLink from 'Library/helpers/parsed-link';
+/**
+ * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
+ *
+ * This source code is licensed under the Apache 2.0 license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { history } from '@shopgate/pwa-common/helpers/router';
+import ParsedLink from '@shopgate/pwa-common/helpers/parsed-link';
 import parseHTML from './helpers/parseHTML';
 
 /**

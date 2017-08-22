@@ -1,10 +1,18 @@
-import React, { Component, PropTypes } from 'react';
-import connect from 'Library/connectors';
-import { bin2hex } from 'Library/helpers/data';
-import { Image } from 'Library/components';
-import { List } from 'Templates/components';
+/**
+ * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
+ *
+ * This source code is licensed under the Apache 2.0 license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { bin2hex } from '@shopgate/pwa-common/helpers/data';
+import Image from '@shopgate/pwa-common/components/Image';
+import List from 'Components/List';
 import isEqual from 'lodash/isEqual';
-import styles from './CategoryList.style';
+import connect from './connector';
+import styles from './style';
 
 /**
  * Core category list widget.

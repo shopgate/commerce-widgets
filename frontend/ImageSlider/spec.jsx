@@ -1,7 +1,16 @@
+/**
+ * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
+ *
+ * This source code is licensed under the Apache 2.0 license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
 import React from 'react';
 import { mount } from 'enzyme';
-import { Image, Slider, Link } from 'Library/components';
-import ImageSliderWidget from './ImageSlider';
+import Link from '@shopgate/pwa-common/components/Router/components/Link';
+import Image from '@shopgate/pwa-common/components/Image';
+import Slider from '@shopgate/pwa-common/components/Slider';
+import ImageSliderWidget from './index';
 
 describe('<ImageSliderWidget />', () => {
   const testImage = {

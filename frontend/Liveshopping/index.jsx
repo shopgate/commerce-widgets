@@ -1,11 +1,17 @@
-import React, { PropTypes } from 'react';
-import {
-  CountdownTimer,
-  Ellipsis,
-  Link,
-  Grid,
-} from 'Library/components';
-import { bin2hex } from 'Library/helpers/data';
+/**
+ * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
+ *
+ * This source code is licensed under the Apache 2.0 license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import CountdownTimer from '@shopgate/pwa-common/components/CountdownTimer';
+import Ellipsis from '@shopgate/pwa-common/components/Ellipsis';
+import Link from '@shopgate/pwa-common/components/Router/components/Link';
+import Grid from '@shopgate/pwa-common/components/Grid';
+import { bin2hex } from '@shopgate/pwa-common/helpers/data';
 import connect from 'Library/connectors';
 import {
   Card,
@@ -15,7 +21,7 @@ import {
   PriceStriked,
   ProductImage,
 } from 'Templates/components';
-import styles from './Liveshopping.style';
+import styles from './style';
 
 /**
  * Calculates the timeout from a set of live-shopping settings. The highest 'to' timestamp
