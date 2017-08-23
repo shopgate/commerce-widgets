@@ -167,4 +167,4 @@ LiveshoppingWidget.propTypes = {
   products: PropTypes.arrayOf(PropTypes.shape()).isRequired,
 };
 
-export default connect.liveshopping(LiveshoppingWidget);
+export default connect(LiveshoppingWidget);

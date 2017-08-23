@@ -1,9 +1,18 @@
-import React, { PropTypes } from 'react';
-import { Slider } from 'Library/components';
-import connect from 'Library/connectors/widgets';
-import { Card, ProductCard } from 'Templates/components';
-import { transformDisplayOptions } from 'Library/helpers/data';
-import styles from './ProductSlider.style';
+/**
+ * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
+ *
+ * This source code is licensed under the Apache 2.0 license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import Slider from '@shopgate/pwa-common/components/Slider';
+import Card from 'Components/Card';
+import ProductCard from 'Components/ProductCard';
+import { transformDisplayOptions } from '@shopgate/pwa-common/helpers/data';
+import connect from './connector';
+import styles from './style';
 
 /**
  * Creates an item for a single product.
@@ -136,4 +145,4 @@ class ProductSliderWidget extends React.Component {
   }
 }
 
-export default connect.productSlider(ProductSliderWidget);
+export default connect(ProductSliderWidget);

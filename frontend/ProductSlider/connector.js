@@ -6,26 +6,32 @@
  */
 
 import connect from '@shopgate/pwa-common/helpers/routedConnect';
-import getLiveshoppingProducts from '@shopgate/pwa-common-commerce/product/actions/getLiveshoppingProducts';
+import getProductsByQuery from '@shopgate/pwa-common-commerce/product/actions/getProductsByQuery';
 import { getProductsResult } from './selectors';
 
 /**
  * Maps the contents of the state to the component props.
  * @param {Object} state The current application state.
+ * @param {Object} props The component properties.
  * @return {Object} The extended component props.
  */
-const mapStateToProps = state => ({
-  products: getProductsResult(state).products,
+const mapStateToProps = (state, props) => ({
+  products: getProductsResult(state, props.settings.queryType, {
+    sort: props.settings.sortOrder,
+    value: props.settings.queryParams,
+  }).products,
 });
 
 /**
- * Connects the dispatch function to a callable function in the props.
- * @param {Function} dispatch The redux dispatch function.
- * @param {Object} props The component props.
+ * Maps the contents of the state to the component props.
+ * @param  {Function} dispatch The redux dispatch function.
  * @return {Object} The extended component props.
  */
 const mapDispatchToProps = dispatch => ({
-  getLiveshoppingProducts: () => dispatch(getLiveshoppingProducts()),
+  getProducts: (type, value, sort) =>
+    dispatch(
+      getProductsByQuery(type, value, sort)
+    ),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps);

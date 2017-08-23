@@ -1,8 +1,16 @@
-import React, { PropTypes } from 'react';
+/**
+ * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
+ *
+ * This source code is licensed under the Apache 2.0 license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+import React from 'react';
+import PropTypes from 'prop-types';
 import sortBy from 'lodash/sortBy';
 import extensions from 'Extensions';
-import Widget from 'Templates/components/widgets/Widget';
-import styles from './WidgetGrid.style';
+import Widget from 'Components/Widgets/components/Widget';
+import styles from './style';
 
 // One grid row has 12 columns.
 const GRID_COLUMNS = 12;
