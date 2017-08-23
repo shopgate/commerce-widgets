@@ -1,10 +1,15 @@
+/**
+ * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
+ *
+ * This source code is licensed under the Apache 2.0 license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import {
-  Card,
-  PriceStriked,
-} from 'Templates/components';
-import LiveshoppingWidget from './Liveshopping';
+import Card from 'Components/Card';
+import PriceStriked from 'Components/PriceStriked';
+import LiveshoppingWidget from './index';
 
 // Mock the redux connect() method instead of providing a fake store.
 jest.mock('Library/connectors/liveshopping', () => obj => obj);

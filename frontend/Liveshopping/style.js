@@ -1,13 +1,21 @@
-import cxs from 'cxs';
-import { colors, variables } from 'Templates/styles';
+/**
+ * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
+ *
+ * This source code is licensed under the Apache 2.0 license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
 
-const cardsWrapper = cxs({
+import css from 'glamor';
+import colors from 'Styles/colors';
+import variables from 'Styles/variables';
+
+const cardsWrapper = css({
   padding: '16px 0px 0px',
-});
+}).toString();
 
-const card = cxs({
+const card = css({
   padding: '0px 10px',
-});
+}).toString();
 
 const pane = {
   width: '50%',
@@ -15,69 +23,69 @@ const pane = {
   background: colors.light,
 };
 
-const discountBadge = cxs({
+const discountBadge = css({
   width: 'auto',
   fontWeight: 400,
   marginBottom: variables.gap.small,
   borderRadius: 3,
-});
+}).toString();
 
-const imagePane = cxs({
+const imagePane = css({
   ...pane,
-});
+}).toString();
 
-const infoPane = cxs({
+const infoPane = css({
   ...pane,
   padding: 16,
-});
+}).toString();
 
-const priceWrapper = cxs({
+const priceWrapper = css({
   position: 'absolute',
   left: 15,
   bottom: 15,
   right: 15,
-});
+}).toString();
 
-const priceGrid = cxs({
+const priceGrid = css({
   alignItems: 'flex-end',
-});
+}).toString();
 
-const priceStrikedItem = cxs({
+const priceStrikedItem = css({
   flexGrow: 1,
-});
+}).toString();
 
-const priceItem = cxs({
+const priceItem = css({
   flexGrow: 1,
   textAlign: 'right',
-});
+}).toString();
 
-const priceBase = cxs({
+const priceBase = css({
   padding: '0 15px',
-});
+}).toString();
 
-const priceStriked = cxs({
+const priceStriked = css({
   ...priceBase,
   fontSize: '0.875rem',
-});
+}).toString();
 
-const price = cxs({
+const price = css({
   ...priceBase,
   color: colors.primary,
   fontSize: '1.25rem',
-});
+}).toString();
 
-const cardTitle = cxs({
+const cardTitle = css({
   fontWeight: 500,
   lineHeight: 1.25,
   marginBottom: variables.gap.small * 0.5,
-});
+}).toString();
 
-const timer = cxs({
+const timer = css({
   fontSize: '0.875rem',
   color: colors.primary,
   fontStyle: 'italic',
   fontWeight: 500,
-});
+}).toString();
 
 const indicator = {
   position: 'relative',

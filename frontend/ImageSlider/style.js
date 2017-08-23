@@ -5,11 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import cxs from 'cxs';
+import css from 'glamor';
 
-const link = cxs({
+const link = css({
   width: '100%',
-});
+}).toString();
 
 export default {
   link,

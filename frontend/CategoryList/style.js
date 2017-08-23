@@ -5,20 +5,20 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import cxs from 'cxs';
+import css from 'glamor';
 import colors from 'Styles/colors';
 import variables from 'Styles/variables';
 
-const container = cxs({
+const container = css({
   background: colors.light,
-});
+}).toString();
 
-const headline = cxs({
+const headline = css({
   fontSize: 18,
   padding: `${variables.gap.big}px 0 0`,
   marginTop: 0,
   textAlign: 'center',
-});
+}).toString();
 
 export default {
   container,

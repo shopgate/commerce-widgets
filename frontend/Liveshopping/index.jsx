@@ -12,15 +12,13 @@ import Ellipsis from '@shopgate/pwa-common/components/Ellipsis';
 import Link from '@shopgate/pwa-common/components/Router/components/Link';
 import Grid from '@shopgate/pwa-common/components/Grid';
 import { bin2hex } from '@shopgate/pwa-common/helpers/data';
-import connect from 'Library/connectors';
-import {
-  Card,
-  DiscountBadge,
-  ImageSlider,
-  Price,
-  PriceStriked,
-  ProductImage,
-} from 'Templates/components';
+import ImageSlider from 'Components/ImageSlider';
+import Card from 'Components/Card';
+import DiscountBadge from 'Components/DiscountBadge';
+import Price from 'Components/Price';
+import PriceStriked from 'Components/PriceStriked';
+import ProductImage from 'Components/ProductImage';
+import connect from './connector';
 import styles from './style';
 
 /**
