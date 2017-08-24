@@ -6,8 +6,50 @@
   "repository": "shopgate/commerce-widgets",
   "bugs": "https://github.com/shopgate/commerce-widgets/issues",
   "homepage": "https://github.com/shopgate/commerce-widgets",
+  "license": "Apache-2.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel frontend/src --out-dir frontend/dist",
+    "post-build": "git add -A"
   },
-  "license": "Apache-2.0"
+  "pre-commit": [
+    "build",
+    "post-build"
+  ],
+  "babel": {
+    "presets": [
+      "latest",
+      "react"
+    ],
+    "plugins": [
+      "transform-object-rest-spread",
+      "transform-class-properties",
+      "transform-export-extensions",
+      "transform-react-jsx-source",
+      [
+        "module-resolver",
+        {
+          "alias": {
+            "Components": "../../components",
+            "Config": "../../config",
+            "Pages": "../../pages",
+            "Styles": "../../styles"
+          }
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-module-resolver": "^3.0.0-beta.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx-source": "^6.22.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1"
+  },
+  "devDependencies": {
+    "pre-commit": "^1.2.2"
+  }
 }

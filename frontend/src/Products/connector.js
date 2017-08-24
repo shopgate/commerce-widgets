@@ -7,7 +7,7 @@
 
 import connect from '@shopgate/pwa-common/helpers/routedConnect';
 import getProductsByQuery from '@shopgate/pwa-common-commerce/product/actions/getProductsByQuery';
-import { getProductsResult } from './selectors';
+import { getProductsResult } from '../selectors';
 
 /**
  * Maps the contents of the state to the component props.
@@ -28,10 +28,7 @@ const mapStateToProps = (state, props) => ({
  * @return {Object} The extended component props.
  */
 const mapDispatchToProps = dispatch => ({
-  getProducts: (type, value, sort) =>
-    dispatch(
-      getProductsByQuery(type, value, sort)
-    ),
+  getProducts: (type, value, sort) => dispatch(getProductsByQuery(type, value, sort)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps);

@@ -1,19 +1,25 @@
-import React, { Component, PropTypes } from 'react';
-import connect from 'Library/connectors';
-import { I18n } from 'Library/components';
+/**
+ * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
+ *
+ * This source code is licensed under the Apache 2.0 license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import isEqual from 'lodash/isEqual';
-import { transformDisplayOptions } from 'Library/helpers/data';
+import I18n from '@shopgate/pwa-common/components/I18n';
+import { transformDisplayOptions } from '@shopgate/pwa-common/helpers/data';
 import {
   GRID_VIEW,
   LIST_VIEW,
-} from 'Library/constants/DisplayOptions';
-import {
-  ActionButton,
-  Headline,
-} from 'Templates/components';
-import ProductGrid from './ProductGrid';
-import ProductList from './ProductList';
-import styles from './Products.style';
+} from '@shopgate/pwa-common/constants/DisplayOptions';
+import ActionButton from 'Components/ActionButton';
+import Headline from 'Components/Headline';
+import ProductGrid from './components/ProductGrid';
+import ProductList from './components/ProductList';
+import connect from './connector';
+import styles from './style';
 
 /**
  * The product widget component.
@@ -23,9 +29,7 @@ export class ProductsWidget extends Component {
     getProducts: PropTypes.func.isRequired,
     id: PropTypes.string.isRequired,
     settings: PropTypes.shape().isRequired,
-    products: PropTypes.arrayOf(
-      PropTypes.shape()
-    ),
+    products: PropTypes.arrayOf(PropTypes.shape()),
     totalProductCount: PropTypes.number,
   };
 
@@ -36,7 +40,7 @@ export class ProductsWidget extends Component {
   }
 
   /**
-   * The constructor
+   * The constructor.
    * @param {Object} props The component props.
    */
   constructor(props) {
@@ -97,7 +101,6 @@ export class ProductsWidget extends Component {
 
   /**
    * Build the params for requesting products and then make the request.
-   * @param {number} offset The offset for the product request.
    */
   getProducts = () => {
     const { getProducts, id } = this.props;
@@ -207,4 +210,4 @@ export class ProductsWidget extends Component {
   }
 }
 
-export default connect.widget.productList(ProductsWidget);
+export default connect(ProductsWidget);
