@@ -43,7 +43,7 @@ const createSliderItem = (product, { showName, showPrice, showReviews }) => {
 /**
  * The core product slider widget.
  */
-class ProductSliderWidget extends React.Component {
+class ProductSlider extends React.Component {
 
   static propTypes = {
     getProducts: PropTypes.func.isRequired,
@@ -145,4 +145,4 @@ class ProductSliderWidget extends React.Component {
   }
 }
 
-export default connect(ProductSliderWidget);
+export default connect(ProductSlider);

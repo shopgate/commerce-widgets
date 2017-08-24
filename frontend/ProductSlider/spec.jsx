@@ -1,14 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import {
-  Card,
-} from 'Templates/components';
-import ProductSliderWidget from './ProductSlider';
+import Card from 'Components/Card';
+import ProductSlider from './index';
 
 // Mock the redux connect() method instead of providing a fake store.
 jest.mock('Library/connectors/widgets/productSlider', () => obj => obj);
 
-describe('<ProductSliderWidget />', () => {
+describe('<ProductSlider />', () => {
   /**
    * Mocks the products pipeline request.
    */
@@ -90,7 +88,7 @@ describe('<ProductSliderWidget />', () => {
     const getProducts = jest.fn();
 
     const wrapper = shallow(
-      <ProductSliderWidget
+      <ProductSlider
         settings={getSettings()}
         getProducts={getProducts}
         products={[]}
@@ -105,7 +103,7 @@ describe('<ProductSliderWidget />', () => {
 
   it('should not render the widget without any data', () => {
     const wrapper = shallow(
-      <ProductSliderWidget
+      <ProductSlider
         settings={getSettings()}
         getProducts={getProductsMock}
         products={createProducts(0)}
@@ -120,7 +118,7 @@ describe('<ProductSliderWidget />', () => {
     const products = createProducts();
 
     const wrapper = shallow(
-      <ProductSliderWidget
+      <ProductSlider
         settings={getSettings()}
         getProducts={getProductsMock}
         products={products}
@@ -133,7 +131,7 @@ describe('<ProductSliderWidget />', () => {
 
   it('should not render an empty headline', () => {
     const wrapper = shallow(
-      <ProductSliderWidget
+      <ProductSlider
         settings={getSettings(false)}
         getProducts={getProductsMock}
         products={createProducts()}
@@ -146,7 +144,7 @@ describe('<ProductSliderWidget />', () => {
 
   it('should render the headline', () => {
     const wrapper = shallow(
-      <ProductSliderWidget
+      <ProductSlider
         settings={getSettings(true)}
         getProducts={getProductsMock}
         products={createProducts()}
@@ -159,7 +157,7 @@ describe('<ProductSliderWidget />', () => {
 
   it('should limit output to a maximum of 30 products', () => {
     const wrapper = shallow(
-      <ProductSliderWidget
+      <ProductSlider
         settings={getSettings(true)}
         getProducts={getProductsMock}
         products={createProducts(40)}
