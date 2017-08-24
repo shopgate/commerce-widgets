@@ -4,49 +4,49 @@
   "components": [
     {
       "id": "image",
-      "path": "Image/index.jsx",
+      "path": "Image",
       "title": "Commerce Image Widget",
       "description": "This widget shows an image"
     },
     {
       "id": "image_slider",
-      "path": "ImageSlider/index.jsx",
+      "path": "ImageSlider",
       "title": "Commerce Image Slider Widget",
       "description": "This widget shows an image slider"
     },
     {
       "id": "html",
-      "path": "Html/index.jsx",
+      "path": "Html",
       "title": "Commerce HTML Widget",
       "description": "This widget shows custom HTML"
     },
     {
       "id": "product_slider",
-      "path": "ProductSlider/index.jsx",
+      "path": "ProductSlider",
       "title": "Commerce Product Slider Widget",
       "description": "This widget shows a product slider"
     },
     {
       "id": "widget-grid",
-      "path": "WidgetGrid/index.jsx",
+      "path": "WidgetGrid",
       "title": "Commerce Widget Grid Widget",
       "description": "This widget shows a grid of widgets"
     },
     {
       "id": "category_list",
-      "path": "CategoryList/index.jsx",
+      "path": "CategoryList",
       "title": "Commerce Category list Widget",
       "description": "This widget shows a list of categories"
     },
     {
       "id": "product_list",
-      "path": "Products/index.jsx",
+      "path": "Products",
       "title": "Product Grid/List  Widget",
       "description": "This widget shows products in a grid or list view"
     },
     {
       "id": "liveshopping",
-      "path": "Liveshopping/index.jsx",
+      "path": "Liveshopping",
       "title": "Deal of the Day Widget",
       "description": "This widget shows the deal of the day slider"
     }
