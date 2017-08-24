@@ -107,4 +107,18 @@ ImageSliderWidget.defaultProps = {
   className: ''
 };
 
-exports.default = ImageSliderWidget;
+var _default = ImageSliderWidget;
+exports.default = _default;
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(ImageSliderWidget, 'ImageSliderWidget', 'frontend/src/ImageSlider/index.jsx');
+
+  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/ImageSlider/index.jsx');
+}();
+
+;

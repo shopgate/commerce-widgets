@@ -34,7 +34,23 @@ var headline = (0, _glamor2.default)({
   textAlign: 'center'
 }).toString();
 
-exports.default = {
+var _default = {
   container: container,
   headline: headline
 };
+exports.default = _default;
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(container, 'container', 'frontend/src/CategoryList/style.js');
+
+  __REACT_HOT_LOADER__.register(headline, 'headline', 'frontend/src/CategoryList/style.js');
+
+  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/CategoryList/style.js');
+}();
+
+;

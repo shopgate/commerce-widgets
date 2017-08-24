@@ -70,4 +70,18 @@ ProductListWidget.defaultProps = {
   flags: {}
 };
 
-exports.default = ProductListWidget;
+var _default = ProductListWidget;
+exports.default = _default;
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(ProductListWidget, 'ProductListWidget', 'frontend/src/Products/components/ProductList/index.jsx');
+
+  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/Products/components/ProductList/index.jsx');
+}();
+
+;

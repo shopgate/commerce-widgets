@@ -26,6 +26,20 @@ var container = (0, _glamor2.default)({
   position: 'relative'
 }).toString();
 
-exports.default = {
+var _default = {
   container: container
 };
+exports.default = _default;
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(container, 'container', 'frontend/src/WidgetGrid/style.js');
+
+  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/WidgetGrid/style.js');
+}();
+
+;

@@ -48,4 +48,21 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   };
 };
 
-exports.default = (0, _routedConnect2.default)(mapStateToProps, mapDispatchToProps);
+var _default = (0, _routedConnect2.default)(mapStateToProps, mapDispatchToProps);
+
+exports.default = _default;
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', 'frontend/src/Liveshopping/connector.js');
+
+  __REACT_HOT_LOADER__.register(mapDispatchToProps, 'mapDispatchToProps', 'frontend/src/Liveshopping/connector.js');
+
+  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/Liveshopping/connector.js');
+}();
+
+;

@@ -8,8 +8,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import pure from 'recompose/pure';
-import ProductGridIterator from 'Components/ProductGridIterator';
-import ProductGridLayout from 'Components/ProductGridLayout';
+import Iterator from 'Components/ProductGrid/components/Iterator';
+import Layout from 'Components/ProductGrid/components/Layout';
 
 /**
  * The product grid widget component.
@@ -17,11 +17,11 @@ import ProductGridLayout from 'Components/ProductGridLayout';
  * @returns {JSX}
  */
 const ProductGridWidget = pure(({ products, flags }) => (
-  <ProductGridLayout>
+  <Layout>
     {products.map(product =>
-      <ProductGridIterator {...product} display={flags} key={product.id} />
+      <Iterator {...product} display={flags} key={product.id} />
     )}
-  </ProductGridLayout>
+  </Layout>
 ));
 
 ProductGridWidget.propTypes = {

@@ -25,13 +25,13 @@ var _pure = require('recompose/pure');
 
 var _pure2 = _interopRequireDefault(_pure);
 
-var _ProductGridIterator = require('../../../../../../../components/ProductGridIterator');
+var _Iterator = require('../../../../../../../components/ProductGrid/components/Iterator');
 
-var _ProductGridIterator2 = _interopRequireDefault(_ProductGridIterator);
+var _Iterator2 = _interopRequireDefault(_Iterator);
 
-var _ProductGridLayout = require('../../../../../../../components/ProductGridLayout');
+var _Layout = require('../../../../../../../components/ProductGrid/components/Layout');
 
-var _ProductGridLayout2 = _interopRequireDefault(_ProductGridLayout);
+var _Layout2 = _interopRequireDefault(_Layout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -44,7 +44,7 @@ var ProductGridWidget = (0, _pure2.default)(function (_ref) {
   var products = _ref.products,
       flags = _ref.flags;
   return _react2.default.createElement(
-    _ProductGridLayout2.default,
+    _Layout2.default,
     {
       __source: {
         fileName: _jsxFileName,
@@ -52,7 +52,7 @@ var ProductGridWidget = (0, _pure2.default)(function (_ref) {
       }
     },
     products.map(function (product) {
-      return _react2.default.createElement(_ProductGridIterator2.default, _extends({}, product, { display: flags, key: product.id, __source: {
+      return _react2.default.createElement(_Iterator2.default, _extends({}, product, { display: flags, key: product.id, __source: {
           fileName: _jsxFileName,
           lineNumber: 22
         }
@@ -70,4 +70,18 @@ ProductGridWidget.defaultProps = {
   flags: {}
 };
 
-exports.default = ProductGridWidget;
+var _default = ProductGridWidget;
+exports.default = _default;
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(ProductGridWidget, 'ProductGridWidget', 'frontend/src/Products/components/ProductGrid/index.jsx');
+
+  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/Products/components/ProductGrid/index.jsx');
+}();
+
+;

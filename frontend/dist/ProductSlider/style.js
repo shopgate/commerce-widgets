@@ -89,7 +89,7 @@ var headline = (0, _glamor2.default)({
   textAlign: 'center'
 }).toString();
 
-exports.default = {
+var _default = {
   card: card,
   headline: headline,
   sliderContainer: sliderContainer,
@@ -104,3 +104,41 @@ exports.default = {
   priceStriked: priceStriked,
   price: price
 };
+exports.default = _default;
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(sliderContainer, 'sliderContainer', 'frontend/src/ProductSlider/style.js');
+
+  __REACT_HOT_LOADER__.register(slider, 'slider', 'frontend/src/ProductSlider/style.js');
+
+  __REACT_HOT_LOADER__.register(sliderItem, 'sliderItem', 'frontend/src/ProductSlider/style.js');
+
+  __REACT_HOT_LOADER__.register(productInfo, 'productInfo', 'frontend/src/ProductSlider/style.js');
+
+  __REACT_HOT_LOADER__.register(productName, 'productName', 'frontend/src/ProductSlider/style.js');
+
+  __REACT_HOT_LOADER__.register(priceGrid, 'priceGrid', 'frontend/src/ProductSlider/style.js');
+
+  __REACT_HOT_LOADER__.register(priceStrikedItem, 'priceStrikedItem', 'frontend/src/ProductSlider/style.js');
+
+  __REACT_HOT_LOADER__.register(priceItem, 'priceItem', 'frontend/src/ProductSlider/style.js');
+
+  __REACT_HOT_LOADER__.register(priceBase, 'priceBase', 'frontend/src/ProductSlider/style.js');
+
+  __REACT_HOT_LOADER__.register(priceStriked, 'priceStriked', 'frontend/src/ProductSlider/style.js');
+
+  __REACT_HOT_LOADER__.register(price, 'price', 'frontend/src/ProductSlider/style.js');
+
+  __REACT_HOT_LOADER__.register(card, 'card', 'frontend/src/ProductSlider/style.js');
+
+  __REACT_HOT_LOADER__.register(headline, 'headline', 'frontend/src/ProductSlider/style.js');
+
+  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/ProductSlider/style.js');
+}();
+
+;

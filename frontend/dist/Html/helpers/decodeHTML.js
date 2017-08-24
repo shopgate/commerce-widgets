@@ -23,4 +23,18 @@ var decodeHTML = function decodeHTML(input) {
   return e.childNodes.length === 0 ? '' : e.childNodes[0].nodeValue;
 };
 
-exports.default = decodeHTML;
+var _default = decodeHTML;
+exports.default = _default;
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(decodeHTML, 'decodeHTML', 'frontend/src/Html/helpers/decodeHTML.js');
+
+  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/Html/helpers/decodeHTML.js');
+}();
+
+;

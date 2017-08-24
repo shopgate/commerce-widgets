@@ -150,3 +150,14 @@ describe('<HtmlWidget />', function () {
     });
   });
 });
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(mockConstructor, 'mockConstructor', 'frontend/src/Html/spec.jsx');
+}();
+
+;

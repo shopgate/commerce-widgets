@@ -106,7 +106,7 @@ var indicator = {
   textAlign: 'center'
 };
 
-exports.default = {
+var _default = {
   card: card,
   discountBadge: discountBadge,
   imagePane: imagePane,
@@ -122,3 +122,47 @@ exports.default = {
   cardTitle: cardTitle,
   timer: timer
 };
+exports.default = _default;
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(cardsWrapper, 'cardsWrapper', 'frontend/src/Liveshopping/style.js');
+
+  __REACT_HOT_LOADER__.register(card, 'card', 'frontend/src/Liveshopping/style.js');
+
+  __REACT_HOT_LOADER__.register(pane, 'pane', 'frontend/src/Liveshopping/style.js');
+
+  __REACT_HOT_LOADER__.register(discountBadge, 'discountBadge', 'frontend/src/Liveshopping/style.js');
+
+  __REACT_HOT_LOADER__.register(imagePane, 'imagePane', 'frontend/src/Liveshopping/style.js');
+
+  __REACT_HOT_LOADER__.register(infoPane, 'infoPane', 'frontend/src/Liveshopping/style.js');
+
+  __REACT_HOT_LOADER__.register(priceWrapper, 'priceWrapper', 'frontend/src/Liveshopping/style.js');
+
+  __REACT_HOT_LOADER__.register(priceGrid, 'priceGrid', 'frontend/src/Liveshopping/style.js');
+
+  __REACT_HOT_LOADER__.register(priceStrikedItem, 'priceStrikedItem', 'frontend/src/Liveshopping/style.js');
+
+  __REACT_HOT_LOADER__.register(priceItem, 'priceItem', 'frontend/src/Liveshopping/style.js');
+
+  __REACT_HOT_LOADER__.register(priceBase, 'priceBase', 'frontend/src/Liveshopping/style.js');
+
+  __REACT_HOT_LOADER__.register(priceStriked, 'priceStriked', 'frontend/src/Liveshopping/style.js');
+
+  __REACT_HOT_LOADER__.register(price, 'price', 'frontend/src/Liveshopping/style.js');
+
+  __REACT_HOT_LOADER__.register(cardTitle, 'cardTitle', 'frontend/src/Liveshopping/style.js');
+
+  __REACT_HOT_LOADER__.register(timer, 'timer', 'frontend/src/Liveshopping/style.js');
+
+  __REACT_HOT_LOADER__.register(indicator, 'indicator', 'frontend/src/Liveshopping/style.js');
+
+  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/Liveshopping/style.js');
+}();
+
+;

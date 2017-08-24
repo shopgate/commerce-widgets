@@ -3,13 +3,24 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = 'frontend/src/Html/index.jsx';
+
+var _redboxReact2 = require('redbox-react');
+
+var _redboxReact3 = _interopRequireDefault(_redboxReact2);
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _reactTransformCatchErrors3 = require('react-transform-catch-errors');
+
+var _reactTransformCatchErrors4 = _interopRequireDefault(_reactTransformCatchErrors3);
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
+var _class,
+    _temp,
+    _jsxFileName = 'frontend/src/Html/index.jsx';
 
 var _propTypes = require('prop-types');
 
@@ -31,17 +42,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * This source code is licensed under the Apache 2.0 license found in the
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * LICENSE file in the root directory of this source tree.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+  Html: {
+    displayName: 'Html'
+  }
+};
+
+var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
+  filename: 'frontend/src/Html/index.jsx',
+  components: _components,
+  locals: [],
+  imports: [_react3.default, _redboxReact3.default]
+});
+
+function _wrapComponent(id) {
+  return function (Component) {
+    return _reactTransformCatchErrors2(Component, id);
+  };
+} /**
+   * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
+   *
+   * This source code is licensed under the Apache 2.0 license found in the
+   * LICENSE file in the root directory of this source tree.
+   */
 
 /**
  * The custom HTML widget.
  */
-var Html = function (_Component) {
+var Html = _wrapComponent('Html')((_temp = _class = function (_Component) {
   _inherits(Html, _Component);
 
   /**
@@ -55,16 +85,8 @@ var Html = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (Html.__proto__ || Object.getPrototypeOf(Html)).call(this, props, context));
 
-    _this.handleTap = function (event) {
-      var aTag = event.target.closest('a');
-
-      if (aTag && aTag.attributes.href) {
-        var href = aTag.attributes.href.value;
-        var link = new _parsedLink2.default(href);
-
-        event.preventDefault();
-        link.open(_router.history);
-      }
+    _this.handleTap = function () {
+      return _this.__handleTap__REACT_HOT_LOADER__.apply(_this, arguments);
     };
 
     _this.state = {
@@ -120,17 +142,30 @@ var Html = function (_Component) {
      */
 
   }, {
-    key: 'render',
+    key: '__handleTap__REACT_HOT_LOADER__',
 
 
     /**
      * Renders the component.
      * @returns {JSX}
      */
+    value: function __handleTap__REACT_HOT_LOADER__(event) {
+      var aTag = event.target.closest('a');
+
+      if (aTag && aTag.attributes.href) {
+        var href = aTag.attributes.href.value;
+        var link = new _parsedLink2.default(href);
+
+        event.preventDefault();
+        link.open(_router.history);
+      }
+    }
+  }, {
+    key: 'render',
     value: function render() {
       var _this2 = this;
 
-      return _react2.default.createElement('div', {
+      return _react3.default.createElement('div', {
         dangerouslySetInnerHTML: { __html: this.state.html },
         ref: function ref(domElm) {
           _this2.htmlContainer = domElm;
@@ -144,11 +179,24 @@ var Html = function (_Component) {
   }]);
 
   return Html;
-}(_react.Component);
-
-Html.propTypes = {
+}(_react2.Component), _class.propTypes = {
   settings: _propTypes2.default.shape({
     html: _propTypes2.default.string.isRequired
   }).isRequired
-};
-exports.default = Html;
+}, _temp));
+
+var _default = Html;
+exports.default = _default;
+;
+
+var _temp2 = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(Html, 'Html', 'frontend/src/Html/index.jsx');
+
+  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/Html/index.jsx');
+}();
+
+;

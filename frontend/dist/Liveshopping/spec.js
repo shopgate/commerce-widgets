@@ -119,3 +119,12 @@ describe('<LiveshoppingWidget />', function () {
     expect(wrapper.find(_PriceStriked2.default).length).toBe(expectedCards);
   });
 });
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+}();
+
+;

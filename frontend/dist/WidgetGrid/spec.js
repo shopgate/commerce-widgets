@@ -13,9 +13,9 @@ var _react2 = _interopRequireDefault(_react);
 
 var _enzyme = require('enzyme');
 
-var _Extensions = require('Extensions');
+var _ = require('../../../..');
 
-var _Extensions2 = _interopRequireDefault(_Extensions);
+var _2 = _interopRequireDefault(_);
 
 var _index = require('./index');
 
@@ -44,7 +44,7 @@ describe('<WidgetGrid />', function () {
     }));
 
     expect(wrapper).toMatchSnapshot();
-    expect(wrapper.find(_Extensions2.default['core-widgets/image']).exists()).toBe(true);
+    expect(wrapper.find(_2.default['core-widgets/image']).exists()).toBe(true);
   });
 
   it('should not render without a `config` prop', function () {
@@ -59,3 +59,12 @@ describe('<WidgetGrid />', function () {
     expect(wrapper.find('div').children().length).toBe(0);
   });
 });
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+}();
+
+;

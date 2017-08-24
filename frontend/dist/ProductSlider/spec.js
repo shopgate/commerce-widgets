@@ -207,3 +207,12 @@ describe('<ProductSlider />', function () {
     expect(wrapper.find(_Card2.default).length).toBe(30);
   });
 });
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+}();
+
+;

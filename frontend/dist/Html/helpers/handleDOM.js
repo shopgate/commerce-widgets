@@ -118,3 +118,20 @@ var getDOMContainer = exports.getDOMContainer = function getDOMContainer(contain
 
   return container;
 };
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(getExternalScripts, 'getExternalScripts', 'frontend/src/Html/helpers/handleDOM.js');
+
+  __REACT_HOT_LOADER__.register(getInlineScripts, 'getInlineScripts', 'frontend/src/Html/helpers/handleDOM.js');
+
+  __REACT_HOT_LOADER__.register(getHTMLContent, 'getHTMLContent', 'frontend/src/Html/helpers/handleDOM.js');
+
+  __REACT_HOT_LOADER__.register(getDOMContainer, 'getDOMContainer', 'frontend/src/Html/helpers/handleDOM.js');
+}();
+
+;

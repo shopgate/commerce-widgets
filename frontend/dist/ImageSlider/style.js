@@ -19,6 +19,20 @@ var link = (0, _glamor2.default)({
                 * LICENSE file in the root directory of this source tree.
                 */
 
-exports.default = {
+var _default = {
   link: link
 };
+exports.default = _default;
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(link, 'link', 'frontend/src/ImageSlider/style.js');
+
+  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/ImageSlider/style.js');
+}();
+
+;

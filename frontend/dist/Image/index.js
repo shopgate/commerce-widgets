@@ -72,4 +72,18 @@ ImageWidget.propTypes = {
   }).isRequired
 };
 
-exports.default = ImageWidget;
+var _default = ImageWidget;
+exports.default = _default;
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(ImageWidget, 'ImageWidget', 'frontend/src/Image/index.jsx');
+
+  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/Image/index.jsx');
+}();
+
+;

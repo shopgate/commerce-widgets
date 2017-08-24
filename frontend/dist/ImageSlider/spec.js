@@ -155,3 +155,12 @@ describe('<ImageSliderWidget />', function () {
     expect(wrapper.find(_Link2.default).length).toBe(mySettings.images.length - 1);
   });
 });
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+}();
+
+;

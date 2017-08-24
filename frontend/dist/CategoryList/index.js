@@ -4,13 +4,24 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.CategoryListWidget = undefined;
-var _jsxFileName = 'frontend/src/CategoryList/index.jsx';
+
+var _redboxReact2 = require('redbox-react');
+
+var _redboxReact3 = _interopRequireDefault(_redboxReact2);
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _reactTransformCatchErrors3 = require('react-transform-catch-errors');
+
+var _reactTransformCatchErrors4 = _interopRequireDefault(_reactTransformCatchErrors3);
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
+var _class,
+    _temp,
+    _jsxFileName = 'frontend/src/CategoryList/index.jsx';
 
 var _propTypes = require('prop-types');
 
@@ -44,19 +55,38 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * This source code is licensed under the Apache 2.0 license found in the
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * LICENSE file in the root directory of this source tree.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+  CategoryListWidget: {
+    displayName: 'CategoryListWidget'
+  }
+};
+
+var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
+  filename: 'frontend/src/CategoryList/index.jsx',
+  components: _components,
+  locals: [],
+  imports: [_react3.default, _redboxReact3.default]
+});
+
+function _wrapComponent(id) {
+  return function (Component) {
+    return _reactTransformCatchErrors2(Component, id);
+  };
+} /**
+   * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
+   *
+   * This source code is licensed under the Apache 2.0 license found in the
+   * LICENSE file in the root directory of this source tree.
+   */
 
 /**
  * Core category list widget.
  * @param {Object} props The widget properties
  * @returns {JSX}
  */
-var CategoryListWidget = exports.CategoryListWidget = function (_Component) {
+var CategoryListWidget = exports.CategoryListWidget = _wrapComponent('CategoryListWidget')((_temp = _class = function (_Component) {
   _inherits(CategoryListWidget, _Component);
 
   function CategoryListWidget() {
@@ -107,14 +137,14 @@ var CategoryListWidget = exports.CategoryListWidget = function (_Component) {
         return null;
       }
 
-      return _react2.default.createElement(
+      return _react3.default.createElement(
         'div',
         { className: _style2.default.container, __source: {
             fileName: _jsxFileName,
             lineNumber: 66
           }
         },
-        settings.headline ? _react2.default.createElement(
+        settings.headline ? _react3.default.createElement(
           'h3',
           { className: _style2.default.headline, __source: {
               fileName: _jsxFileName,
@@ -123,7 +153,7 @@ var CategoryListWidget = exports.CategoryListWidget = function (_Component) {
           },
           settings.headline
         ) : null,
-        _react2.default.createElement(
+        _react3.default.createElement(
           _List2.default,
           {
             __source: {
@@ -136,13 +166,13 @@ var CategoryListWidget = exports.CategoryListWidget = function (_Component) {
             var link = '/category/' + (0, _data.bin2hex)(item.id);
 
             // Only show an avatar if the setting `showImages` is true.
-            var Avatar = settings.showImages ? _react2.default.createElement(_Image2.default, { src: item.imageUrl, __source: {
+            var Avatar = settings.showImages ? _react3.default.createElement(_Image2.default, { src: item.imageUrl, __source: {
                 fileName: _jsxFileName,
                 lineNumber: 74
               }
             }) : null;
 
-            return _react2.default.createElement(_List2.default.Item, {
+            return _react3.default.createElement(_List2.default.Item, {
               image: Avatar,
               link: link,
               key: item.id,
@@ -159,15 +189,28 @@ var CategoryListWidget = exports.CategoryListWidget = function (_Component) {
   }]);
 
   return CategoryListWidget;
-}(_react.Component);
-
-CategoryListWidget.propTypes = {
+}(_react2.Component), _class.propTypes = {
   settings: _propTypes2.default.shape().isRequired,
   getCategory: _propTypes2.default.func,
   items: _propTypes2.default.arrayOf(_propTypes2.default.shape())
-};
-CategoryListWidget.defaultProps = {
+}, _class.defaultProps = {
   getCategory: function getCategory() {},
   items: null
-};
-exports.default = _connector2.default.widget.categoryList(CategoryListWidget);
+}, _temp));
+
+var _default = _connector2.default.widget.categoryList(CategoryListWidget);
+
+exports.default = _default;
+;
+
+var _temp2 = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(CategoryListWidget, 'CategoryListWidget', 'frontend/src/CategoryList/index.jsx');
+
+  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/CategoryList/index.jsx');
+}();
+
+;

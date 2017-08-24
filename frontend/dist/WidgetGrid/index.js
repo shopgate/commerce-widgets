@@ -22,9 +22,9 @@ var _sortBy = require('lodash/sortBy');
 
 var _sortBy2 = _interopRequireDefault(_sortBy);
 
-var _Extensions = require('Extensions');
+var _ = require('../../../..');
 
-var _Extensions2 = _interopRequireDefault(_Extensions);
+var _2 = _interopRequireDefault(_);
 
 var _Widget = require('../../../../../components/Widgets/components/Widget');
 
@@ -83,7 +83,7 @@ var WidgetGrid = function WidgetGrid(props) {
       var widget = widgets[key];
       var widgetKey = 'w' + key;
       // Map to the correct widget component using the `type` key inside the widget.
-      var WidgetComponent = _Extensions2.default[widget.type];
+      var WidgetComponent = _2.default[widget.type];
 
       return _react2.default.createElement(_Widget2.default, {
         cellSize: cellSize,
@@ -107,4 +107,22 @@ WidgetGrid.defaultProps = {
   config: []
 };
 
-exports.default = WidgetGrid;
+var _default = WidgetGrid;
+exports.default = _default;
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(GRID_COLUMNS, 'GRID_COLUMNS', 'frontend/src/WidgetGrid/index.jsx');
+
+  __REACT_HOT_LOADER__.register(getMaxHeight, 'getMaxHeight', 'frontend/src/WidgetGrid/index.jsx');
+
+  __REACT_HOT_LOADER__.register(WidgetGrid, 'WidgetGrid', 'frontend/src/WidgetGrid/index.jsx');
+
+  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/WidgetGrid/index.jsx');
+}();
+
+;

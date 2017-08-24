@@ -4,13 +4,24 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.ProductsWidget = undefined;
-var _jsxFileName = 'frontend/src/Products/index.jsx';
+
+var _redboxReact2 = require('redbox-react');
+
+var _redboxReact3 = _interopRequireDefault(_redboxReact2);
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _reactTransformCatchErrors3 = require('react-transform-catch-errors');
+
+var _reactTransformCatchErrors4 = _interopRequireDefault(_reactTransformCatchErrors3);
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
+var _class,
+    _temp,
+    _jsxFileName = 'frontend/src/Products/index.jsx';
 
 var _propTypes = require('prop-types');
 
@@ -58,17 +69,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * This source code is licensed under the Apache 2.0 license found in the
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * LICENSE file in the root directory of this source tree.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+  ProductsWidget: {
+    displayName: 'ProductsWidget'
+  }
+};
+
+var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
+  filename: 'frontend/src/Products/index.jsx',
+  components: _components,
+  locals: [],
+  imports: [_react3.default, _redboxReact3.default]
+});
+
+function _wrapComponent(id) {
+  return function (Component) {
+    return _reactTransformCatchErrors2(Component, id);
+  };
+} /**
+   * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
+   *
+   * This source code is licensed under the Apache 2.0 license found in the
+   * LICENSE file in the root directory of this source tree.
+   */
 
 /**
  * The product widget component.
  */
-var ProductsWidget = exports.ProductsWidget = function (_Component) {
+var ProductsWidget = exports.ProductsWidget = _wrapComponent('ProductsWidget')((_temp = _class = function (_Component) {
   _inherits(ProductsWidget, _Component);
 
   /**
@@ -81,57 +111,19 @@ var ProductsWidget = exports.ProductsWidget = function (_Component) {
     var _this = _possibleConstructorReturn(this, (ProductsWidget.__proto__ || Object.getPrototypeOf(ProductsWidget)).call(this, props));
 
     _this.getProducts = function () {
-      var _this$props = _this.props,
-          getProducts = _this$props.getProducts,
-          id = _this$props.id;
-      var _this$props$settings = _this.props.settings,
-          productLimit = _this$props$settings.productLimit,
-          queryParams = _this$props$settings.queryParams,
-          queryType = _this$props$settings.queryType;
-
-
-      var sort = (0, _data.transformDisplayOptions)(_this.props.settings.sortOrder);
-
-      var options = {
-        limit: productLimit,
-        offset: _this.productCount,
-        sort: sort
-      };
-
-      getProducts(queryType, queryParams, options, id);
+      return _this.__getProducts__REACT_HOT_LOADER__.apply(_this, arguments);
     };
 
     _this.loadProducts = function () {
-      _this.setState({
-        fetching: true
-      }, _this.getProducts);
+      return _this.__loadProducts__REACT_HOT_LOADER__.apply(_this, arguments);
     };
 
     _this.hasAllProducts = function () {
-      return _this.props.totalProductCount !== null && _this.props.products.length >= _this.props.totalProductCount;
+      return _this.__hasAllProducts__REACT_HOT_LOADER__.apply(_this, arguments);
     };
 
     _this.renderMoreButton = function () {
-      if (!_this.props.settings.showLoadMore || _this.hasAllProducts()) {
-        return null;
-      }
-
-      return _react2.default.createElement(
-        _ActionButton2.default,
-        {
-          loading: _this.state.fetching,
-          onClick: _this.loadProducts,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 151
-          }
-        },
-        _react2.default.createElement(_I18n2.default.Text, { string: 'product.load_more', __source: {
-            fileName: _jsxFileName,
-            lineNumber: 155
-          }
-        })
-      );
+      return _this.__renderMoreButton__REACT_HOT_LOADER__.apply(_this, arguments);
     };
 
     _this.productCount = props.products.length;
@@ -196,31 +188,89 @@ var ProductsWidget = exports.ProductsWidget = function (_Component) {
      * Build the params for requesting products and then make the request.
      */
 
+  }, {
+    key: '__getProducts__REACT_HOT_LOADER__',
+
 
     /**
      * Set the state accordingly and then call getProducts().
      */
+    value: function __getProducts__REACT_HOT_LOADER__() {
+      var _props = this.props,
+          getProducts = _props.getProducts,
+          id = _props.id;
+      var _props$settings = this.props.settings,
+          productLimit = _props$settings.productLimit,
+          queryParams = _props$settings.queryParams,
+          queryType = _props$settings.queryType;
+
+
+      var sort = (0, _data.transformDisplayOptions)(this.props.settings.sortOrder);
+
+      var options = {
+        limit: productLimit,
+        offset: this.productCount,
+        sort: sort
+      };
+
+      getProducts(queryType, queryParams, options, id);
+    }
+  }, {
+    key: '__loadProducts__REACT_HOT_LOADER__',
 
 
     /**
      * Determines whether or not we already have all products.
      * @returns {boolean}
      */
+    value: function __loadProducts__REACT_HOT_LOADER__() {
+      this.setState({
+        fetching: true
+      }, this.getProducts);
+    }
+  }, {
+    key: '__hasAllProducts__REACT_HOT_LOADER__',
 
 
     /**
      * Renders a 'Load More' button if there are more products to load.
      * @returns {JSX}
      */
-
+    value: function __hasAllProducts__REACT_HOT_LOADER__() {
+      return this.props.totalProductCount !== null && this.props.products.length >= this.props.totalProductCount;
+    }
   }, {
-    key: 'render',
+    key: '__renderMoreButton__REACT_HOT_LOADER__',
 
 
     /**
      * The render function.
      * @returns {JSX}
      */
+    value: function __renderMoreButton__REACT_HOT_LOADER__() {
+      if (!this.props.settings.showLoadMore || this.hasAllProducts()) {
+        return null;
+      }
+
+      return _react3.default.createElement(
+        _ActionButton2.default,
+        {
+          loading: this.state.fetching,
+          onClick: this.loadProducts,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 151
+          }
+        },
+        _react3.default.createElement(_I18n2.default.Text, { string: 'product.load_more', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 155
+          }
+        })
+      );
+    }
+  }, {
+    key: 'render',
     value: function render() {
       var products = this.props.products;
 
@@ -232,12 +282,12 @@ var ProductsWidget = exports.ProductsWidget = function (_Component) {
 
       // Only show the number of products that we want, not everything coming via props.
       var productSlice = products.slice(0, this.productCount);
-      var _props$settings = this.props.settings,
-          headline = _props$settings.headline,
-          layout = _props$settings.layout,
-          showName = _props$settings.showName,
-          showPrice = _props$settings.showPrice,
-          showReviews = _props$settings.showReviews;
+      var _props$settings2 = this.props.settings,
+          headline = _props$settings2.headline,
+          layout = _props$settings2.layout,
+          showName = _props$settings2.showName,
+          showPrice = _props$settings2.showPrice,
+          showReviews = _props$settings2.showReviews;
 
       var flags = {
         name: showName,
@@ -246,7 +296,7 @@ var ProductsWidget = exports.ProductsWidget = function (_Component) {
       };
 
       if (layout === _DisplayOptions.GRID_VIEW) {
-        return _react2.default.createElement(
+        return _react3.default.createElement(
           'div',
           {
             __source: {
@@ -254,12 +304,12 @@ var ProductsWidget = exports.ProductsWidget = function (_Component) {
               lineNumber: 189
             }
           },
-          _react2.default.createElement(_Headline2.default, { text: headline, __source: {
+          _react3.default.createElement(_Headline2.default, { text: headline, __source: {
               fileName: _jsxFileName,
               lineNumber: 190
             }
           }),
-          _react2.default.createElement(_ProductGrid2.default, { products: productSlice, flags: flags, __source: {
+          _react3.default.createElement(_ProductGrid2.default, { products: productSlice, flags: flags, __source: {
               fileName: _jsxFileName,
               lineNumber: 191
             }
@@ -271,19 +321,19 @@ var ProductsWidget = exports.ProductsWidget = function (_Component) {
         flags.name = true;
         flags.manufacturer = false;
 
-        return _react2.default.createElement(
+        return _react3.default.createElement(
           'div',
           { className: _style2.default.listView, __source: {
               fileName: _jsxFileName,
               lineNumber: 201
             }
           },
-          _react2.default.createElement(_Headline2.default, { text: headline, __source: {
+          _react3.default.createElement(_Headline2.default, { text: headline, __source: {
               fileName: _jsxFileName,
               lineNumber: 202
             }
           }),
-          _react2.default.createElement(_ProductList2.default, { products: productSlice, flags: flags, __source: {
+          _react3.default.createElement(_ProductList2.default, { products: productSlice, flags: flags, __source: {
               fileName: _jsxFileName,
               lineNumber: 203
             }
@@ -297,17 +347,30 @@ var ProductsWidget = exports.ProductsWidget = function (_Component) {
   }]);
 
   return ProductsWidget;
-}(_react.Component);
-
-ProductsWidget.propTypes = {
+}(_react2.Component), _class.propTypes = {
   getProducts: _propTypes2.default.func.isRequired,
   id: _propTypes2.default.string.isRequired,
   settings: _propTypes2.default.shape().isRequired,
   products: _propTypes2.default.arrayOf(_propTypes2.default.shape()),
   totalProductCount: _propTypes2.default.number
-};
-ProductsWidget.defaultProps = {
+}, _class.defaultProps = {
   getProducts: function getProducts() {},
   products: null,
-  totalProductCount: null };
-exports.default = (0, _connector2.default)(ProductsWidget);
+  totalProductCount: null }, _temp));
+
+var _default = (0, _connector2.default)(ProductsWidget);
+
+exports.default = _default;
+;
+
+var _temp2 = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(ProductsWidget, 'ProductsWidget', 'frontend/src/Products/index.jsx');
+
+  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/Products/index.jsx');
+}();
+
+;
