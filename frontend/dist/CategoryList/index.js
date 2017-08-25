@@ -198,7 +198,7 @@ var CategoryListWidget = exports.CategoryListWidget = _wrapComponent('CategoryLi
   items: null
 }, _temp));
 
-var _default = _connector2.default.widget.categoryList(CategoryListWidget);
+var _default = (0, _connector2.default)(CategoryListWidget);
 
 exports.default = _default;
 ;

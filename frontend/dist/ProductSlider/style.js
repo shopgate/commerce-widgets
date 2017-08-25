@@ -13,8 +13,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _glamor = require('glamor');
 
-var _glamor2 = _interopRequireDefault(_glamor);
-
 var _colors = require('../../../../../styles/colors');
 
 var _colors2 = _interopRequireDefault(_colors);
@@ -25,65 +23,65 @@ var _variables2 = _interopRequireDefault(_variables);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var sliderContainer = (0, _glamor2.default)({
+var sliderContainer = (0, _glamor.css)({
   marginLeft: 'auto',
   marginRight: 'auto',
   position: 'relative',
   paddingBottom: 8
 }).toString();
 
-var slider = (0, _glamor2.default)({
+var slider = (0, _glamor.css)({
   width: '100%',
   flex: 1,
   paddingTop: 16,
   paddingBottom: 16
 }).toString();
 
-var sliderItem = (0, _glamor2.default)({
+var sliderItem = (0, _glamor.css)({
   width: '50%'
 }).toString();
 
-var productInfo = (0, _glamor2.default)({
+var productInfo = (0, _glamor.css)({
   padding: 15
 }).toString();
 
-var productName = (0, _glamor2.default)({
+var productName = (0, _glamor.css)({
   fontWeight: 500
 }).toString();
 
-var priceGrid = (0, _glamor2.default)({
+var priceGrid = (0, _glamor.css)({
   alignItems: 'flex-end'
 }).toString();
 
-var priceStrikedItem = (0, _glamor2.default)({
+var priceStrikedItem = (0, _glamor.css)({
   flexGrow: 1
 }).toString();
 
-var priceItem = (0, _glamor2.default)({
+var priceItem = (0, _glamor.css)({
   flexGrow: 1,
   textAlign: 'right'
 }).toString();
 
-var priceBase = (0, _glamor2.default)({
+var priceBase = (0, _glamor.css)({
   padding: '0 15px'
 }).toString();
 
-var priceStriked = (0, _glamor2.default)(_extends({}, priceBase, {
+var priceStriked = (0, _glamor.css)(_extends({}, priceBase, {
   fontSize: '0.875rem'
 })).toString();
 
-var price = (0, _glamor2.default)(_extends({}, priceBase, {
+var price = (0, _glamor.css)(_extends({}, priceBase, {
   color: _colors2.default.primary,
   fontSize: '1rem'
 })).toString();
 
-var card = (0, _glamor2.default)({
+var card = (0, _glamor.css)({
   background: '#FFF',
   height: '100%',
   margin: '0px 8px'
 }).toString();
 
-var headline = (0, _glamor2.default)({
+var headline = (0, _glamor.css)({
   fontSize: 18,
   margin: '0 0 ' + _variables2.default.gap.big + 'px',
   textAlign: 'center'

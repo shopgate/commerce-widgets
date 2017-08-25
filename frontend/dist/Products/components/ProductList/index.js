@@ -25,13 +25,13 @@ var _pure = require('recompose/pure');
 
 var _pure2 = _interopRequireDefault(_pure);
 
-var _ProductListIterator = require('../../../../../../../components/ProductListIterator');
+var _Iterator = require('../../../../../../../components/ProductList/components/Iterator');
 
-var _ProductListIterator2 = _interopRequireDefault(_ProductListIterator);
+var _Iterator2 = _interopRequireDefault(_Iterator);
 
-var _ProductListLayout = require('../../../../../../../components/ProductListLayout');
+var _Layout = require('../../../../../../../components/ProductList/components/Layout');
 
-var _ProductListLayout2 = _interopRequireDefault(_ProductListLayout);
+var _Layout2 = _interopRequireDefault(_Layout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -44,7 +44,7 @@ var ProductListWidget = (0, _pure2.default)(function (_ref) {
   var products = _ref.products,
       flags = _ref.flags;
   return _react2.default.createElement(
-    _ProductListLayout2.default,
+    _Layout2.default,
     {
       __source: {
         fileName: _jsxFileName,
@@ -52,7 +52,7 @@ var ProductListWidget = (0, _pure2.default)(function (_ref) {
       }
     },
     products.map(function (product) {
-      return _react2.default.createElement(_ProductListIterator2.default, _extends({}, product, { display: flags, key: product.id, __source: {
+      return _react2.default.createElement(_Iterator2.default, _extends({}, product, { display: flags, key: product.id, __source: {
           fileName: _jsxFileName,
           lineNumber: 22
         }

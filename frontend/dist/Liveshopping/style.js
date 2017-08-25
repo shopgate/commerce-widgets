@@ -13,8 +13,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _glamor = require('glamor');
 
-var _glamor2 = _interopRequireDefault(_glamor);
-
 var _colors = require('../../../../../styles/colors');
 
 var _colors2 = _interopRequireDefault(_colors);
@@ -25,11 +23,11 @@ var _variables2 = _interopRequireDefault(_variables);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var cardsWrapper = (0, _glamor2.default)({
+var cardsWrapper = (0, _glamor.css)({
   padding: '16px 0px 0px'
 }).toString();
 
-var card = (0, _glamor2.default)({
+var card = (0, _glamor.css)({
   padding: '0px 10px'
 }).toString();
 
@@ -39,59 +37,59 @@ var pane = {
   background: _colors2.default.light
 };
 
-var discountBadge = (0, _glamor2.default)({
+var discountBadge = (0, _glamor.css)({
   width: 'auto',
   fontWeight: 400,
   marginBottom: _variables2.default.gap.small,
   borderRadius: 3
 }).toString();
 
-var imagePane = (0, _glamor2.default)(_extends({}, pane)).toString();
+var imagePane = (0, _glamor.css)(_extends({}, pane)).toString();
 
-var infoPane = (0, _glamor2.default)(_extends({}, pane, {
+var infoPane = (0, _glamor.css)(_extends({}, pane, {
   padding: 16
 })).toString();
 
-var priceWrapper = (0, _glamor2.default)({
+var priceWrapper = (0, _glamor.css)({
   position: 'absolute',
   left: 15,
   bottom: 15,
   right: 15
 }).toString();
 
-var priceGrid = (0, _glamor2.default)({
+var priceGrid = (0, _glamor.css)({
   alignItems: 'flex-end'
 }).toString();
 
-var priceStrikedItem = (0, _glamor2.default)({
+var priceStrikedItem = (0, _glamor.css)({
   flexGrow: 1
 }).toString();
 
-var priceItem = (0, _glamor2.default)({
+var priceItem = (0, _glamor.css)({
   flexGrow: 1,
   textAlign: 'right'
 }).toString();
 
-var priceBase = (0, _glamor2.default)({
+var priceBase = (0, _glamor.css)({
   padding: '0 15px'
 }).toString();
 
-var priceStriked = (0, _glamor2.default)(_extends({}, priceBase, {
+var priceStriked = (0, _glamor.css)(_extends({}, priceBase, {
   fontSize: '0.875rem'
 })).toString();
 
-var price = (0, _glamor2.default)(_extends({}, priceBase, {
+var price = (0, _glamor.css)(_extends({}, priceBase, {
   color: _colors2.default.primary,
   fontSize: '1.25rem'
 })).toString();
 
-var cardTitle = (0, _glamor2.default)({
+var cardTitle = (0, _glamor.css)({
   fontWeight: 500,
   lineHeight: 1.25,
   marginBottom: _variables2.default.gap.small * 0.5
 }).toString();
 
-var timer = (0, _glamor2.default)({
+var timer = (0, _glamor.css)({
   fontSize: '0.875rem',
   color: _colors2.default.primary,
   fontStyle: 'italic',

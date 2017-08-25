@@ -6,8 +6,6 @@ Object.defineProperty(exports, "__esModule", {
 
 var _glamor = require('glamor');
 
-var _glamor2 = _interopRequireDefault(_glamor);
-
 var _colors = require('../../../../../styles/colors');
 
 var _colors2 = _interopRequireDefault(_colors);
@@ -18,7 +16,7 @@ var _variables2 = _interopRequireDefault(_variables);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var container = (0, _glamor2.default)({
+var container = (0, _glamor.css)({
   background: _colors2.default.light
 }).toString(); /**
                 * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
@@ -27,7 +25,7 @@ var container = (0, _glamor2.default)({
                 * LICENSE file in the root directory of this source tree.
                 */
 
-var headline = (0, _glamor2.default)({
+var headline = (0, _glamor.css)({
   fontSize: 18,
   padding: _variables2.default.gap.big + 'px 0 0',
   marginTop: 0,

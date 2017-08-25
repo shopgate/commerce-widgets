@@ -8,8 +8,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import pure from 'recompose/pure';
-import ProductListIterator from 'Components/ProductListIterator';
-import ProductListLayout from 'Components/ProductListLayout';
+import Iterator from 'Components/ProductList/components/Iterator';
+import Layout from 'Components/ProductList/components/Layout';
 
 /**
  * The product list widget component.
@@ -17,11 +17,11 @@ import ProductListLayout from 'Components/ProductListLayout';
  * @returns {JSX}
  */
 const ProductListWidget = pure(({ products, flags }) => (
-  <ProductListLayout>
+  <Layout>
     {products.map(product =>
-      <ProductListIterator {...product} display={flags} key={product.id} />
+      <Iterator {...product} display={flags} key={product.id} />
     )}
-  </ProductListLayout>
+  </Layout>
 ));
 
 ProductListWidget.propTypes = {

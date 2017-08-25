@@ -88,4 +88,4 @@ export class CategoryListWidget extends Component {
   }
 }
 
-export default connect.widget.categoryList(CategoryListWidget);
+export default connect(CategoryListWidget);

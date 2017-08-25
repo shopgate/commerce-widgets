@@ -6,11 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _glamor = require('glamor');
 
-var _glamor2 = _interopRequireDefault(_glamor);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var link = (0, _glamor2.default)({
+var link = (0, _glamor.css)({
   width: '100%'
 }).toString(); /**
                 * Copyright (c) 2017, Shopgate, Inc. All rights reserved.

@@ -6,8 +6,6 @@ Object.defineProperty(exports, "__esModule", {
 
 var _glamor = require('glamor');
 
-var _glamor2 = _interopRequireDefault(_glamor);
-
 var _colors = require('../../../../../styles/colors');
 
 var _colors2 = _interopRequireDefault(_colors);
@@ -21,7 +19,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * LICENSE file in the root directory of this source tree.
  */
 
-var listView = (0, _glamor2.default)({
+var listView = (0, _glamor.css)({
   background: _colors2.default.light,
   overflow: 'auto',
   '> ul > li:first-child': {
