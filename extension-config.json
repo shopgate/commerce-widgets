@@ -4,49 +4,49 @@
   "components": [
     {
       "id": "image",
-      "path": "Image",
+      "path": "dist/Image",
       "title": "Commerce Image Widget",
       "description": "This widget shows an image"
     },
     {
       "id": "image_slider",
-      "path": "ImageSlider",
+      "path": "dist/ImageSlider",
       "title": "Commerce Image Slider Widget",
       "description": "This widget shows an image slider"
     },
     {
       "id": "html",
-      "path": "Html",
+      "path": "dist/Html",
       "title": "Commerce HTML Widget",
       "description": "This widget shows custom HTML"
     },
     {
       "id": "product_slider",
-      "path": "ProductSlider",
+      "path": "dist/ProductSlider",
       "title": "Commerce Product Slider Widget",
       "description": "This widget shows a product slider"
     },
     {
       "id": "widget-grid",
-      "path": "WidgetGrid",
+      "path": "dist/WidgetGrid",
       "title": "Commerce Widget Grid Widget",
       "description": "This widget shows a grid of widgets"
     },
     {
       "id": "category_list",
-      "path": "CategoryList",
+      "path": "dist/CategoryList",
       "title": "Commerce Category list Widget",
       "description": "This widget shows a list of categories"
     },
     {
       "id": "product_list",
-      "path": "Products",
+      "path": "dist/Products",
       "title": "Product Grid/List  Widget",
       "description": "This widget shows products in a grid or list view"
     },
     {
       "id": "liveshopping",
-      "path": "Liveshopping",
+      "path": "dist/Liveshopping",
       "title": "Deal of the Day Widget",
       "description": "This widget shows the deal of the day slider"
     }
