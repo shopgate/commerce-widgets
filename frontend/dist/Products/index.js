@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ProductsWidget = undefined;
+exports.Unwrapped = undefined;
 
 var _redboxReact2 = require('redbox-react');
 
@@ -98,11 +98,11 @@ function _wrapComponent(id) {
 /**
  * The product widget component.
  */
-var ProductsWidget = exports.ProductsWidget = _wrapComponent('ProductsWidget')((_temp = _class = function (_Component) {
+var ProductsWidget = _wrapComponent('ProductsWidget')((_temp = _class = function (_Component) {
   _inherits(ProductsWidget, _Component);
 
   /**
-   * The constructor.
+   * Constructor.
    * @param {Object} props The component props.
    */
   function ProductsWidget(props) {
@@ -245,7 +245,7 @@ var ProductsWidget = exports.ProductsWidget = _wrapComponent('ProductsWidget')((
 
     /**
      * The render function.
-     * @returns {JSX}
+     * @returns {JSX|null}
      */
     value: function __renderMoreButton__REACT_HOT_LOADER__() {
       if (!this.props.settings.showLoadMore || this.hasAllProducts()) {
@@ -356,11 +356,13 @@ var ProductsWidget = exports.ProductsWidget = _wrapComponent('ProductsWidget')((
 }, _class.defaultProps = {
   getProducts: function getProducts() {},
   products: null,
-  totalProductCount: null }, _temp));
+  totalProductCount: null
+}, _temp));
 
 var _default = (0, _connector2.default)(ProductsWidget);
 
 exports.default = _default;
+exports.Unwrapped = ProductsWidget;
 ;
 
 var _temp2 = function () {

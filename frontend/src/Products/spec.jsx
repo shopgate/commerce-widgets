@@ -7,7 +7,7 @@
 
 import React from 'react';
 import { shallow } from 'enzyme';
-import { ProductsWidget } from './index';
+import { Unwrapped as ProductsWidget } from './index';
 import ProductGrid from './components/ProductGrid';
 import ProductList from './components/ProductList';
 

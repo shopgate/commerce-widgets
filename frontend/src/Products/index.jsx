@@ -24,7 +24,7 @@ import styles from './style';
 /**
  * The product widget component.
  */
-export class ProductsWidget extends Component {
+class ProductsWidget extends Component {
   static propTypes = {
     getProducts: PropTypes.func.isRequired,
     id: PropTypes.string.isRequired,
@@ -37,10 +37,10 @@ export class ProductsWidget extends Component {
     getProducts: () => {},
     products: null,
     totalProductCount: null,
-  }
+  };
 
   /**
-   * The constructor.
+   * Constructor.
    * @param {Object} props The component props.
    */
   constructor(props) {
@@ -159,7 +159,7 @@ export class ProductsWidget extends Component {
 
   /**
    * The render function.
-   * @returns {JSX}
+   * @returns {JSX|null}
    */
   render() {
     const { products } = this.props;
@@ -211,3 +211,5 @@ export class ProductsWidget extends Component {
 }
 
 export default connect(ProductsWidget);
+
+export { ProductsWidget as Unwrapped };

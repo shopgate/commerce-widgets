@@ -42,7 +42,7 @@ describe('<ProductsWidget />', function () {
   };
 
   it('should render the grid only when products are received', function () {
-    var wrapper = (0, _enzyme.shallow)(_react2.default.createElement(_index.ProductsWidget, _extends({}, props, {
+    var wrapper = (0, _enzyme.shallow)(_react2.default.createElement(_index.Unwrapped, _extends({}, props, {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 30
@@ -62,7 +62,7 @@ describe('<ProductsWidget />', function () {
   });
 
   it('should render the products in the list view', function () {
-    var wrapper = (0, _enzyme.shallow)(_react2.default.createElement(_index.ProductsWidget, _extends({}, props, {
+    var wrapper = (0, _enzyme.shallow)(_react2.default.createElement(_index.Unwrapped, _extends({}, props, {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 47
