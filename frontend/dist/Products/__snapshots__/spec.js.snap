@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductsWidget /> should render the grid only when products are received 1`] = `null`;
+
+exports[`<ProductsWidget /> should render the products in the list view 1`] = `null`;

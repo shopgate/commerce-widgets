@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import logger from '@shopgate/pwa-core/classes/Logger';
+import { logger } from '@shopgate/pwa-core/helpers';
 import CryptoJs from 'crypto-js';
 import decodeHTML from './decodeHTML';
 import {

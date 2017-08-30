@@ -4,9 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Logger = require('@shopgate/pwa-core/classes/Logger');
-
-var _Logger2 = _interopRequireDefault(_Logger);
+var _helpers = require('@shopgate/pwa-core/helpers');
 
 var _cryptoJs = require('crypto-js');
 
@@ -80,7 +78,7 @@ var parseHTML = function parseHTML(html, widgetSettings) {
 
     return (0, _handleDOM.getHTMLContent)(dom.body.childNodes).innerHTML;
   } catch (err) {
-    _Logger2.default.error(err);
+    _helpers.logger.error(err);
     return html;
   }
 };
