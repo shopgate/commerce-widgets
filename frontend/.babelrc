@@ -10,11 +10,11 @@
     "transform-react-jsx-source",
     ["module-resolver", {
       "alias": {
-        "Components": "../../../components",
-        "Config": "../../../config",
-        "Extensions": "../../../extensions",
-        "Pages": "../../../pages",
-        "Styles": "../../../styles"
+        "Components": "../../../../components",
+        "Config": "../../../../config",
+        "Extensions": "../../../../extensions",
+        "Pages": "../../../../pages",
+        "Styles": "../../../../styles"
       }
     }]
   ],
@@ -41,11 +41,11 @@
         ["module-resolver", {
           "cwd": "babelrc",
           "alias": {
-            "Components": "../../../components",
-            "Config": "../../../config",
-            "Extensions": "../../../extensions",
-            "Pages": "../../../pages",
-            "Styles": "../../../styles"
+            "Components": "../../../../components",
+            "Config": "../../../../config",
+            "Extensions": "../../../../extensions",
+            "Pages": "../../../../pages",
+            "Styles": "../../../../styles"
           }
         }]
       ]
