@@ -1,11 +1,14 @@
 install:
+  # Move to root
   - cd ../../
-  - git clone --branch=development https://github.com/shopgate/${SHOPGATE_THEME}.git ${SHOPGATE_THEME}
-  - cd ${SHOPGATE_THEME} && npm i
-  - cd ${SHOPGATE_EXTENSIONS}/
-  - git clone --branch=development https://github.com/${TRAVIS_REPO_SLUG}.git @${TRAVIS_REPO_SLUG}
-  - cd @${TRAVIS_REPO_SLUG}
-  - cd frontend/ && npm i
+  # Clone the theme reposirory
+  - git clone --branch=${TRAVIS_BRANCH} https://github.com/shopgate/${SHOPGATE_THEME}.git ${SHOPGATE_THEME}
+  # Install node modules and switch into extensions folder
+  - cd ${SHOPGATE_THEME} && npm i && cd ${SHOPGATE_EXTENSIONS}/
+  # Clone the current repository
+  - git clone --branch=${TRAVIS_BRANCH} https://github.com/${TRAVIS_REPO_SLUG}.git @${TRAVIS_REPO_SLUG}
+  # Move into the folder and install node modules
+  - cd @${TRAVIS_REPO_SLUG}/frontend/ && npm i
 language: node_js
 node_js: node
 script: "npm run coverage"
