@@ -1,10 +1,12 @@
 install:
+  - cd ../../
   - git clone --branch=development https://github.com/shopgate/${SHOPGATE_THEME}.git ${SHOPGATE_THEME}
-  - cd ${SHOPGATE_THEME}/${EXTENSIONS}/
+  - cd ${EXTENSIONS}/
   - git clone --branch=development https://github.com/${TRAVIS_REPO_SLUG}.git @${TRAVIS_REPO_SLUG}
-  - find ../ -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"
-  - cd @${TRAVIS_REPO_SLUG}/frontend/
+  #- find ../ -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"
+  - cd frontend/
   - ls -al
+  - pwd
 language: node_js
 node_js: node
 script: "npm run coverage"
