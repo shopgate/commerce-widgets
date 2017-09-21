@@ -3,13 +3,13 @@ install:
   - pwd
   - git clone --branch=development https://github.com/shopgate/${SHOPGATE_THEME}.git ${SHOPGATE_THEME}
   - cd ${SHOPGATE_THEME}
-  - pwd
-  - cd ${EXTENSIONS}/
+  - pwd && ls -al
+  - cd ${SHOPGATE_EXTENSIONS}/
   - pwd
   - git clone --branch=development https://github.com/${TRAVIS_REPO_SLUG}.git @${TRAVIS_REPO_SLUG}
-  - pwd
+  - pwd && ls -al
   - cd @${TRAVIS_REPO_SLUG}
-  - pwd
+  - pwd && ls -al
   #- find ../ -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"
   - cd frontend/
   - ls -al
