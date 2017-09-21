@@ -8,12 +8,7 @@ var _glamor = require('glamor');
 
 var link = (0, _glamor.css)({
   width: '100%'
-}).toString(); /**
-                * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
-                *
-                * This source code is licensed under the Apache 2.0 license found in the
-                * LICENSE file in the root directory of this source tree.
-                */
+}).toString();
 
 var _default = {
   link: link
@@ -26,9 +21,9 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(link, 'link', 'frontend/src/ImageSlider/style.js');
+  __REACT_HOT_LOADER__.register(link, 'link', 'src/ImageSlider/style.js');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/ImageSlider/style.js');
+  __REACT_HOT_LOADER__.register(_default, 'default', 'src/ImageSlider/style.js');
 }();
 
 ;

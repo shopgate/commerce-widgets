@@ -3,12 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = 'frontend/src/WidgetGrid/index.jsx'; /**
-                                                         * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
-                                                         *
-                                                         * This source code is licensed under the Apache 2.0 license found in the
-                                                         * LICENSE file in the root directory of this source tree.
-                                                         */
+var _jsxFileName = 'src/WidgetGrid/index.jsx';
 
 var _react = require('react');
 
@@ -36,40 +31,25 @@ var _style2 = _interopRequireDefault(_style);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// One grid row has 12 columns.
 var GRID_COLUMNS = 12;
 
-/**
- * Iterate through all widgets and return the maxium
- * height based on row and height information.
- * @param {Array} widgets Array of widgets.
- * @returns {number} Height of the widget grid.
- */
 var getMaxHeight = function getMaxHeight(widgets) {
   return widgets.reduce(function (max, widget) {
     return Math.max(widget.row + widget.height, max);
   }, 0);
 };
 
-/**
- * The widget grid widget component.
- * @param {Object} props The component properties.
- * @returns {JSX} The widget grid.
- */
 var WidgetGrid = function WidgetGrid(props) {
   var rowCount = getMaxHeight(props.config);
 
-  // The cell size is 1/12 of the viewport width.
   var cellSize = Math.floor(window.innerWidth / GRID_COLUMNS);
 
   if (!props.config || !rowCount) {
     return null;
   }
 
-  // Sort the widgets by row. This has to happen to take care of the z-index flow.
   var widgets = (0, _sortBy2.default)(props.config, ['row']);
 
-  // The height of the widget area.
   var height = rowCount * cellSize + 'px';
 
   return _react2.default.createElement(
@@ -82,7 +62,7 @@ var WidgetGrid = function WidgetGrid(props) {
     Object.keys(widgets).map(function (key) {
       var widget = widgets[key];
       var widgetKey = 'w' + key;
-      // Map to the correct widget component using the `type` key inside the widget.
+
       var WidgetComponent = _2.default[widget.type];
 
       return _react2.default.createElement(_Widget2.default, {
@@ -116,13 +96,13 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(GRID_COLUMNS, 'GRID_COLUMNS', 'frontend/src/WidgetGrid/index.jsx');
+  __REACT_HOT_LOADER__.register(GRID_COLUMNS, 'GRID_COLUMNS', 'src/WidgetGrid/index.jsx');
 
-  __REACT_HOT_LOADER__.register(getMaxHeight, 'getMaxHeight', 'frontend/src/WidgetGrid/index.jsx');
+  __REACT_HOT_LOADER__.register(getMaxHeight, 'getMaxHeight', 'src/WidgetGrid/index.jsx');
 
-  __REACT_HOT_LOADER__.register(WidgetGrid, 'WidgetGrid', 'frontend/src/WidgetGrid/index.jsx');
+  __REACT_HOT_LOADER__.register(WidgetGrid, 'WidgetGrid', 'src/WidgetGrid/index.jsx');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/WidgetGrid/index.jsx');
+  __REACT_HOT_LOADER__.register(_default, 'default', 'src/WidgetGrid/index.jsx');
 }();
 
 ;

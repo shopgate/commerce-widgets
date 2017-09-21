@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.CategoryListWidget = undefined;
+exports.Unwrapped = undefined;
 
 var _redboxReact2 = require('redbox-react');
 
@@ -21,7 +21,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _class,
     _temp,
-    _jsxFileName = 'frontend/src/CategoryList/index.jsx';
+    _jsxFileName = 'src/CategoryList/index.jsx';
 
 var _propTypes = require('prop-types');
 
@@ -64,7 +64,7 @@ var _components = {
 };
 
 var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-  filename: 'frontend/src/CategoryList/index.jsx',
+  filename: 'src/CategoryList/index.jsx',
   components: _components,
   locals: [],
   imports: [_react3.default, _redboxReact3.default]
@@ -74,19 +74,9 @@ function _wrapComponent(id) {
   return function (Component) {
     return _reactTransformCatchErrors2(Component, id);
   };
-} /**
-   * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
-   *
-   * This source code is licensed under the Apache 2.0 license found in the
-   * LICENSE file in the root directory of this source tree.
-   */
+}
 
-/**
- * Core category list widget.
- * @param {Object} props The widget properties
- * @returns {JSX}
- */
-var CategoryListWidget = exports.CategoryListWidget = _wrapComponent('CategoryListWidget')((_temp = _class = function (_Component) {
+var CategoryListWidget = _wrapComponent('CategoryListWidget')((_temp = _class = function (_Component) {
   _inherits(CategoryListWidget, _Component);
 
   function CategoryListWidget() {
@@ -97,34 +87,16 @@ var CategoryListWidget = exports.CategoryListWidget = _wrapComponent('CategoryLi
 
   _createClass(CategoryListWidget, [{
     key: 'componentDidMount',
-
-
-    /**
-     * Get the category data once the component has mounted.
-     */
     value: function componentDidMount() {
       if (!this.props.items) {
         this.props.getCategory(this.props.settings.categoryNumber);
       }
     }
-
-    /**
-     * Only update when we have category items.
-     * @param {Object} nextProps The next set of component props.
-     * @returns {boolean}
-     */
-
   }, {
     key: 'shouldComponentUpdate',
     value: function shouldComponentUpdate(nextProps) {
       return nextProps.items && !(0, _isEqual2.default)(this.props.items, nextProps.items);
     }
-
-    /**
-     * The render function.
-     * @returns {JSX}
-     */
-
   }, {
     key: 'render',
     value: function render() {
@@ -162,10 +134,8 @@ var CategoryListWidget = exports.CategoryListWidget = _wrapComponent('CategoryLi
             }
           },
           items.map(function (item) {
-            // We have to decode the link before using it.
             var link = '/category/' + (0, _data.bin2hex)(item.id);
 
-            // Only show an avatar if the setting `showImages` is true.
             var Avatar = settings.showImages ? _react3.default.createElement(_Image2.default, { src: item.imageUrl, __source: {
                 fileName: _jsxFileName,
                 lineNumber: 74
@@ -201,6 +171,7 @@ var CategoryListWidget = exports.CategoryListWidget = _wrapComponent('CategoryLi
 var _default = (0, _connector2.default)(CategoryListWidget);
 
 exports.default = _default;
+exports.Unwrapped = CategoryListWidget;
 ;
 
 var _temp2 = function () {
@@ -208,9 +179,9 @@ var _temp2 = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(CategoryListWidget, 'CategoryListWidget', 'frontend/src/CategoryList/index.jsx');
+  __REACT_HOT_LOADER__.register(CategoryListWidget, 'CategoryListWidget', 'src/CategoryList/index.jsx');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/CategoryList/index.jsx');
+  __REACT_HOT_LOADER__.register(_default, 'default', 'src/CategoryList/index.jsx');
 }();
 
 ;

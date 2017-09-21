@@ -18,7 +18,7 @@ var _reactTransformCatchErrors4 = _interopRequireDefault(_reactTransformCatchErr
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _jsxFileName = 'frontend/src/Liveshopping/index.jsx';
+var _jsxFileName = 'src/Liveshopping/index.jsx';
 
 var _propTypes = require('prop-types');
 
@@ -89,7 +89,7 @@ var _components = {
 };
 
 var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-  filename: 'frontend/src/Liveshopping/index.jsx',
+  filename: 'src/Liveshopping/index.jsx',
   components: _components,
   locals: [],
   imports: [_react3.default, _redboxReact3.default]
@@ -99,50 +99,25 @@ function _wrapComponent(id) {
   return function (Component) {
     return _reactTransformCatchErrors2(Component, id);
   };
-} /**
-   * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
-   *
-   * This source code is licensed under the Apache 2.0 license found in the
-   * LICENSE file in the root directory of this source tree.
-   */
+}
 
-/**
- * Calculates the timeout from a set of live-shopping settings. The highest 'to' timestamp
- * with an active time period (that is a time span with from <= current time <= to) is
- * considered to represent the current timeout.
- * @param {Object} liveshoppings The live-shopping settings.
- * @returns {number} the unix timestamp for the timeout or null if there is no active timeout.
- */
 var getLiveshoppingTimeout = function getLiveshoppingTimeout(liveshoppings) {
   var now = Date.now();
 
   var result = liveshoppings.reduce(function (best, item) {
-    // Get the time span limits.
     var from = new Date(item.from).getTime();
     var to = new Date(item.to).getTime();
 
     if (from <= now && to >= now) {
-      // This time span is currently active.
       return Math.max(best, to);
     }
 
     return best;
   }, null);
 
-  // Cut milliseconds from the result to make it a unix compatible timestamp.
   return Math.floor(result / 1000);
 };
 
-/**
- * Creates a new product slider item.
- * @param {Object} product The product.
- * @param {string} product.id The product id.
- * @param {string} product.name The product name.
- * @param {string} product.featuredImageUrl The featured image url.
- * @param {Object} product.price The product price object.
- * @param {number} timeout The timeout of the live-shopping deal.
- * @returns {JSX}
- */
 var createProductSliderItem = function createProductSliderItem(_ref, timeout) {
   var id = _ref.id,
       name = _ref.name,
@@ -301,10 +276,6 @@ createProductSliderItem.propTypes = {
   price: _propTypes2.default.shape().isRequired
 };
 
-/**
- * The live shopping (deal of the day) widget.
- */
-
 var LiveshoppingWidget = _wrapComponent('LiveshoppingWidget')(function (_React$Component) {
   _inherits(LiveshoppingWidget, _React$Component);
 
@@ -316,19 +287,9 @@ var LiveshoppingWidget = _wrapComponent('LiveshoppingWidget')(function (_React$C
 
   _createClass(LiveshoppingWidget, [{
     key: 'componentDidMount',
-
-    /**
-     * Requests the liveshopping product data when the component is mounted.
-     */
     value: function componentDidMount() {
       this.props.getLiveshoppingProducts();
     }
-
-    /**
-     * Renders the component.
-     * @return {JSX}
-     */
-
   }, {
     key: 'render',
     value: function render() {
@@ -378,13 +339,13 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(getLiveshoppingTimeout, 'getLiveshoppingTimeout', 'frontend/src/Liveshopping/index.jsx');
+  __REACT_HOT_LOADER__.register(getLiveshoppingTimeout, 'getLiveshoppingTimeout', 'src/Liveshopping/index.jsx');
 
-  __REACT_HOT_LOADER__.register(createProductSliderItem, 'createProductSliderItem', 'frontend/src/Liveshopping/index.jsx');
+  __REACT_HOT_LOADER__.register(createProductSliderItem, 'createProductSliderItem', 'src/Liveshopping/index.jsx');
 
-  __REACT_HOT_LOADER__.register(LiveshoppingWidget, 'LiveshoppingWidget', 'frontend/src/Liveshopping/index.jsx');
+  __REACT_HOT_LOADER__.register(LiveshoppingWidget, 'LiveshoppingWidget', 'src/Liveshopping/index.jsx');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/Liveshopping/index.jsx');
+  __REACT_HOT_LOADER__.register(_default, 'default', 'src/Liveshopping/index.jsx');
 }();
 
 ;

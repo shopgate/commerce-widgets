@@ -6,12 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _jsxFileName = 'frontend/src/Products/components/ProductList/index.jsx'; /**
-                                                                              * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
-                                                                              *
-                                                                              * This source code is licensed under the Apache 2.0 license found in the
-                                                                              * LICENSE file in the root directory of this source tree.
-                                                                              */
+var _jsxFileName = 'src/Products/components/ProductList/index.jsx';
 
 var _react = require('react');
 
@@ -35,11 +30,6 @@ var _Layout2 = _interopRequireDefault(_Layout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * The product list widget component.
- * @param {Object} props The component props.
- * @returns {JSX}
- */
 var ProductListWidget = (0, _pure2.default)(function (_ref) {
   var products = _ref.products,
       flags = _ref.flags;
@@ -79,9 +69,9 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(ProductListWidget, 'ProductListWidget', 'frontend/src/Products/components/ProductList/index.jsx');
+  __REACT_HOT_LOADER__.register(ProductListWidget, 'ProductListWidget', 'src/Products/components/ProductList/index.jsx');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/Products/components/ProductList/index.jsx');
+  __REACT_HOT_LOADER__.register(_default, 'default', 'src/Products/components/ProductList/index.jsx');
 }();
 
 ;

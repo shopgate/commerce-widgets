@@ -21,7 +21,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _class,
     _temp,
-    _jsxFileName = 'frontend/src/Products/index.jsx';
+    _jsxFileName = 'src/Products/index.jsx';
 
 var _propTypes = require('prop-types');
 
@@ -78,7 +78,7 @@ var _components = {
 };
 
 var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-  filename: 'frontend/src/Products/index.jsx',
+  filename: 'src/Products/index.jsx',
   components: _components,
   locals: [],
   imports: [_react3.default, _redboxReact3.default]
@@ -88,23 +88,11 @@ function _wrapComponent(id) {
   return function (Component) {
     return _reactTransformCatchErrors2(Component, id);
   };
-} /**
-   * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
-   *
-   * This source code is licensed under the Apache 2.0 license found in the
-   * LICENSE file in the root directory of this source tree.
-   */
+}
 
-/**
- * The product widget component.
- */
 var ProductsWidget = _wrapComponent('ProductsWidget')((_temp = _class = function (_Component) {
   _inherits(ProductsWidget, _Component);
 
-  /**
-   * Constructor.
-   * @param {Object} props The component props.
-   */
   function ProductsWidget(props) {
     _classCallCheck(this, ProductsWidget);
 
@@ -134,11 +122,6 @@ var ProductsWidget = _wrapComponent('ProductsWidget')((_temp = _class = function
     return _this;
   }
 
-  /**
-   * Request the products when the component mounts.
-   */
-
-
   _createClass(ProductsWidget, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
@@ -146,22 +129,11 @@ var ProductsWidget = _wrapComponent('ProductsWidget')((_temp = _class = function
         this.loadProducts();
       }
     }
-
-    /**
-     * When we receive new products then we can adjust the state.
-     * @param {Object} nextProps The next set of component props.
-     */
-
   }, {
     key: 'componentWillReceiveProps',
     value: function componentWillReceiveProps(nextProps) {
-      // Set the total product count.
       this.totalProductCount = nextProps.totalProductCount;
 
-      /**
-       * Only update to stop 'fetching' when we receive new products or
-       * if we have received all expected products.
-       */
       if (this.props.products.length !== nextProps.products.length || nextProps.products.length === this.totalProductCount) {
         this.productCount = Math.min(nextProps.products.length, this.totalProductCount);
 
@@ -170,31 +142,13 @@ var ProductsWidget = _wrapComponent('ProductsWidget')((_temp = _class = function
         });
       }
     }
-
-    /**
-     * Only update when we are fetching products or we have new products.
-     * @param {Object} nextProps The next set of component props.
-     * @param {Object} nextState The next component state..
-     * @returns {boolean}
-     */
-
   }, {
     key: 'shouldComponentUpdate',
     value: function shouldComponentUpdate(nextProps, nextState) {
       return this.state.fetching !== nextState.fetching || nextProps.products && !(0, _isEqual2.default)(this.props.products, nextProps.products);
     }
-
-    /**
-     * Build the params for requesting products and then make the request.
-     */
-
   }, {
     key: '__getProducts__REACT_HOT_LOADER__',
-
-
-    /**
-     * Set the state accordingly and then call getProducts().
-     */
     value: function __getProducts__REACT_HOT_LOADER__() {
       var _props = this.props,
           getProducts = _props.getProducts,
@@ -217,12 +171,6 @@ var ProductsWidget = _wrapComponent('ProductsWidget')((_temp = _class = function
     }
   }, {
     key: '__loadProducts__REACT_HOT_LOADER__',
-
-
-    /**
-     * Determines whether or not we already have all products.
-     * @returns {boolean}
-     */
     value: function __loadProducts__REACT_HOT_LOADER__() {
       this.setState({
         fetching: true
@@ -230,23 +178,11 @@ var ProductsWidget = _wrapComponent('ProductsWidget')((_temp = _class = function
     }
   }, {
     key: '__hasAllProducts__REACT_HOT_LOADER__',
-
-
-    /**
-     * Renders a 'Load More' button if there are more products to load.
-     * @returns {JSX}
-     */
     value: function __hasAllProducts__REACT_HOT_LOADER__() {
       return this.props.totalProductCount !== null && this.props.products.length >= this.props.totalProductCount;
     }
   }, {
     key: '__renderMoreButton__REACT_HOT_LOADER__',
-
-
-    /**
-     * The render function.
-     * @returns {JSX|null}
-     */
     value: function __renderMoreButton__REACT_HOT_LOADER__() {
       if (!this.props.settings.showLoadMore || this.hasAllProducts()) {
         return null;
@@ -274,13 +210,10 @@ var ProductsWidget = _wrapComponent('ProductsWidget')((_temp = _class = function
     value: function render() {
       var products = this.props.products;
 
-      // Don't render if we don't have any products.
-
       if (!products || !products.length) {
         return null;
       }
 
-      // Only show the number of products that we want, not everything coming via props.
       var productSlice = products.slice(0, this.productCount);
       var _props$settings2 = this.props.settings,
           headline = _props$settings2.headline,
@@ -317,7 +250,6 @@ var ProductsWidget = _wrapComponent('ProductsWidget')((_temp = _class = function
           this.renderMoreButton()
         );
       } else if (layout === _DisplayOptions.LIST_VIEW) {
-        // We have to overwrite some flags here because of the design of the Product List.
         flags.name = true;
         flags.manufacturer = false;
 
@@ -370,9 +302,9 @@ var _temp2 = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(ProductsWidget, 'ProductsWidget', 'frontend/src/Products/index.jsx');
+  __REACT_HOT_LOADER__.register(ProductsWidget, 'ProductsWidget', 'src/Products/index.jsx');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/Products/index.jsx');
+  __REACT_HOT_LOADER__.register(_default, 'default', 'src/Products/index.jsx');
 }();
 
 ;

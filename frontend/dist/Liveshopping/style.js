@@ -4,12 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; /**
-                                                                                                                                                                                                                                                                   * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
-                                                                                                                                                                                                                                                                   *
-                                                                                                                                                                                                                                                                   * This source code is licensed under the Apache 2.0 license found in the
-                                                                                                                                                                                                                                                                   * LICENSE file in the root directory of this source tree.
-                                                                                                                                                                                                                                                                   */
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _glamor = require('glamor');
 
@@ -128,39 +123,39 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(cardsWrapper, 'cardsWrapper', 'frontend/src/Liveshopping/style.js');
+  __REACT_HOT_LOADER__.register(cardsWrapper, 'cardsWrapper', 'src/Liveshopping/style.js');
 
-  __REACT_HOT_LOADER__.register(card, 'card', 'frontend/src/Liveshopping/style.js');
+  __REACT_HOT_LOADER__.register(card, 'card', 'src/Liveshopping/style.js');
 
-  __REACT_HOT_LOADER__.register(pane, 'pane', 'frontend/src/Liveshopping/style.js');
+  __REACT_HOT_LOADER__.register(pane, 'pane', 'src/Liveshopping/style.js');
 
-  __REACT_HOT_LOADER__.register(discountBadge, 'discountBadge', 'frontend/src/Liveshopping/style.js');
+  __REACT_HOT_LOADER__.register(discountBadge, 'discountBadge', 'src/Liveshopping/style.js');
 
-  __REACT_HOT_LOADER__.register(imagePane, 'imagePane', 'frontend/src/Liveshopping/style.js');
+  __REACT_HOT_LOADER__.register(imagePane, 'imagePane', 'src/Liveshopping/style.js');
 
-  __REACT_HOT_LOADER__.register(infoPane, 'infoPane', 'frontend/src/Liveshopping/style.js');
+  __REACT_HOT_LOADER__.register(infoPane, 'infoPane', 'src/Liveshopping/style.js');
 
-  __REACT_HOT_LOADER__.register(priceWrapper, 'priceWrapper', 'frontend/src/Liveshopping/style.js');
+  __REACT_HOT_LOADER__.register(priceWrapper, 'priceWrapper', 'src/Liveshopping/style.js');
 
-  __REACT_HOT_LOADER__.register(priceGrid, 'priceGrid', 'frontend/src/Liveshopping/style.js');
+  __REACT_HOT_LOADER__.register(priceGrid, 'priceGrid', 'src/Liveshopping/style.js');
 
-  __REACT_HOT_LOADER__.register(priceStrikedItem, 'priceStrikedItem', 'frontend/src/Liveshopping/style.js');
+  __REACT_HOT_LOADER__.register(priceStrikedItem, 'priceStrikedItem', 'src/Liveshopping/style.js');
 
-  __REACT_HOT_LOADER__.register(priceItem, 'priceItem', 'frontend/src/Liveshopping/style.js');
+  __REACT_HOT_LOADER__.register(priceItem, 'priceItem', 'src/Liveshopping/style.js');
 
-  __REACT_HOT_LOADER__.register(priceBase, 'priceBase', 'frontend/src/Liveshopping/style.js');
+  __REACT_HOT_LOADER__.register(priceBase, 'priceBase', 'src/Liveshopping/style.js');
 
-  __REACT_HOT_LOADER__.register(priceStriked, 'priceStriked', 'frontend/src/Liveshopping/style.js');
+  __REACT_HOT_LOADER__.register(priceStriked, 'priceStriked', 'src/Liveshopping/style.js');
 
-  __REACT_HOT_LOADER__.register(price, 'price', 'frontend/src/Liveshopping/style.js');
+  __REACT_HOT_LOADER__.register(price, 'price', 'src/Liveshopping/style.js');
 
-  __REACT_HOT_LOADER__.register(cardTitle, 'cardTitle', 'frontend/src/Liveshopping/style.js');
+  __REACT_HOT_LOADER__.register(cardTitle, 'cardTitle', 'src/Liveshopping/style.js');
 
-  __REACT_HOT_LOADER__.register(timer, 'timer', 'frontend/src/Liveshopping/style.js');
+  __REACT_HOT_LOADER__.register(timer, 'timer', 'src/Liveshopping/style.js');
 
-  __REACT_HOT_LOADER__.register(indicator, 'indicator', 'frontend/src/Liveshopping/style.js');
+  __REACT_HOT_LOADER__.register(indicator, 'indicator', 'src/Liveshopping/style.js');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/Liveshopping/style.js');
+  __REACT_HOT_LOADER__.register(_default, 'default', 'src/Liveshopping/style.js');
 }();
 
 ;

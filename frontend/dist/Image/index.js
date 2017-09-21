@@ -3,12 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = 'frontend/src/Image/index.jsx'; /**
-                                                    * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
-                                                    *
-                                                    * This source code is licensed under the Apache 2.0 license found in the
-                                                    * LICENSE file in the root directory of this source tree.
-                                                    */
+var _jsxFileName = 'src/Image/index.jsx';
 
 var _react = require('react');
 
@@ -32,11 +27,6 @@ var _style2 = _interopRequireDefault(_style);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * The image widget.
- * @param {Object} props Props of the component
- * @returns {JSX}
- */
 var ImageWidget = function ImageWidget(props) {
   var content = _react2.default.createElement(_Image2.default, {
     ratio: props.ratio,
@@ -48,7 +38,6 @@ var ImageWidget = function ImageWidget(props) {
     }
   });
 
-  // Wrap a Link around the Image if needed.
   if (props.settings.link) {
     content = _react2.default.createElement(
       _Link2.default,
@@ -81,9 +70,9 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(ImageWidget, 'ImageWidget', 'frontend/src/Image/index.jsx');
+  __REACT_HOT_LOADER__.register(ImageWidget, 'ImageWidget', 'src/Image/index.jsx');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/Image/index.jsx');
+  __REACT_HOT_LOADER__.register(_default, 'default', 'src/Image/index.jsx');
 }();
 
 ;

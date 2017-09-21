@@ -11,7 +11,7 @@ import Card from 'Components/Card';
 import ProductSlider from './index';
 
 // Mock the redux connect() method instead of providing a fake store.
-jest.mock('Library/connectors/widgets/productSlider', () => obj => obj);
+jest.mock('./connector', () => obj => obj);
 
 describe('<ProductSlider />', () => {
   /**

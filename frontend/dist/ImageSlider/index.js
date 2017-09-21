@@ -3,12 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = 'frontend/src/ImageSlider/index.jsx'; /**
-                                                          * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
-                                                          *
-                                                          * This source code is licensed under the Apache 2.0 license found in the
-                                                          * LICENSE file in the root directory of this source tree.
-                                                          */
+var _jsxFileName = 'src/ImageSlider/index.jsx';
 
 var _react = require('react');
 
@@ -36,11 +31,6 @@ var _style2 = _interopRequireDefault(_style);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * Core image slider widget.
- * @param {Object} props The widget properties
- * @returns {JSX}
- */
 var ImageSliderWidget = function ImageSliderWidget(props) {
   var settings = props.settings;
 
@@ -58,10 +48,6 @@ var ImageSliderWidget = function ImageSliderWidget(props) {
       }
     },
     settings.images.map(function (image, index) {
-      /**
-       * Create an array of images, each one with a unique key
-       * (to prevent conflicts when using the exact same image).
-       */
       var key = 'si' + index;
       var imageComponent = _react2.default.createElement(_Image2.default, { key: key, src: image.image, alt: image.alt, __source: {
           fileName: _jsxFileName,
@@ -87,21 +73,17 @@ var ImageSliderWidget = function ImageSliderWidget(props) {
 };
 
 ImageSliderWidget.propTypes = {
-  // The settings as received by the pipeline request
   settings: _propTypes2.default.shape({
-    autostart: _propTypes2.default.bool.isRequired, // Should the slider start automatically?
-    delay: _propTypes2.default.number.isRequired, // The delay between the automatic slides
-    pagination: _propTypes2.default.bool.isRequired, // Show the pagination (dots)?
-    loop: _propTypes2.default.bool.isRequired, // Wrap the slider content when it reached the last image?
-    images: _propTypes2.default.arrayOf( // An array of images to display
-    _propTypes2.default.shape({
-      image: _propTypes2.default.string.isRequired, // The image URL
-      link: _propTypes2.default.string, // The link to the image
-      alt: _propTypes2.default.string // The alternative title for images that could not be loaded.
-    })).isRequired
+    autostart: _propTypes2.default.bool.isRequired,
+    delay: _propTypes2.default.number.isRequired,
+    pagination: _propTypes2.default.bool.isRequired,
+    loop: _propTypes2.default.bool.isRequired,
+    images: _propTypes2.default.arrayOf(_propTypes2.default.shape({
+      image: _propTypes2.default.string.isRequired,
+      link: _propTypes2.default.string,
+      alt: _propTypes2.default.string })).isRequired
   }).isRequired,
-  className: _propTypes2.default.string // Additional styles to append to the image slider.
-};
+  className: _propTypes2.default.string };
 
 ImageSliderWidget.defaultProps = {
   className: ''
@@ -116,9 +98,9 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(ImageSliderWidget, 'ImageSliderWidget', 'frontend/src/ImageSlider/index.jsx');
+  __REACT_HOT_LOADER__.register(ImageSliderWidget, 'ImageSliderWidget', 'src/ImageSlider/index.jsx');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/ImageSlider/index.jsx');
+  __REACT_HOT_LOADER__.register(_default, 'default', 'src/ImageSlider/index.jsx');
 }();
 
 ;

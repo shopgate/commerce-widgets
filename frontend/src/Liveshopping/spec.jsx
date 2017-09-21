@@ -12,7 +12,7 @@ import PriceStriked from 'Components/PriceStriked';
 import LiveshoppingWidget from './index';
 
 // Mock the redux connect() method instead of providing a fake store.
-jest.mock('Library/connectors/liveshopping', () => obj => obj);
+jest.mock('./connector', () => obj => obj);
 
 describe('<LiveshoppingWidget />', () => {
   /**

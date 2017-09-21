@@ -20,7 +20,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _class,
     _temp,
-    _jsxFileName = 'frontend/src/Html/index.jsx';
+    _jsxFileName = 'src/Html/index.jsx';
 
 var _propTypes = require('prop-types');
 
@@ -51,7 +51,7 @@ var _components = {
 };
 
 var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-  filename: 'frontend/src/Html/index.jsx',
+  filename: 'src/Html/index.jsx',
   components: _components,
   locals: [],
   imports: [_react3.default, _redboxReact3.default]
@@ -61,25 +61,11 @@ function _wrapComponent(id) {
   return function (Component) {
     return _reactTransformCatchErrors2(Component, id);
   };
-} /**
-   * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
-   *
-   * This source code is licensed under the Apache 2.0 license found in the
-   * LICENSE file in the root directory of this source tree.
-   */
+}
 
-/**
- * The custom HTML widget.
- */
 var Html = _wrapComponent('Html')((_temp = _class = function (_Component) {
   _inherits(Html, _Component);
 
-  /**
-   * Get the escaped HTML from the props, remove and execute the scripts (if any) and put
-   * it unescaped in the state.
-   * @param {Object} props The component props.
-   * @param {Object} context The component context.
-   */
   function Html(props, context) {
     _classCallCheck(this, Html);
 
@@ -95,60 +81,25 @@ var Html = _wrapComponent('Html')((_temp = _class = function (_Component) {
     return _this;
   }
 
-  /**
-   * Registers the event handler for when the user taps inside the widget.
-   */
-
-  /**
-   * The widget properties.
-   * @type {Object}
-   */
-
-
   _createClass(Html, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
       this.htmlContainer.addEventListener('touchstart', this.handleTap, true);
       this.htmlContainer.addEventListener('click', this.handleTap, true);
     }
-
-    /**
-     * Only update if the HTML changed.
-     * @param  {Object} nextProps The next props for the component.
-     * @return {boolean}
-     */
-
   }, {
     key: 'shouldComponentUpdate',
     value: function shouldComponentUpdate(nextProps) {
       return nextProps.settings.html !== this.props.settings.html;
     }
-
-    /**
-     * Removes the event handler.
-     */
-
   }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
       this.htmlContainer.removeEventListener('touchstart', this.handleTap, true);
       this.htmlContainer.removeEventListener('click', this.handleTap, true);
     }
-
-    /**
-     * If the user tapped a link element, prevent the default behaviour
-     * and handle them via ParsedLink.
-     * @param {Object} event The touchstart event.
-     */
-
   }, {
     key: '__handleTap__REACT_HOT_LOADER__',
-
-
-    /**
-     * Renders the component.
-     * @returns {JSX}
-     */
     value: function __handleTap__REACT_HOT_LOADER__(event) {
       var aTag = event.target.closest('a');
 
@@ -194,9 +145,9 @@ var _temp2 = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(Html, 'Html', 'frontend/src/Html/index.jsx');
+  __REACT_HOT_LOADER__.register(Html, 'Html', 'src/Html/index.jsx');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/Html/index.jsx');
+  __REACT_HOT_LOADER__.register(_default, 'default', 'src/Html/index.jsx');
 }();
 
 ;

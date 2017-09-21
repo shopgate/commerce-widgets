@@ -8,7 +8,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import List from 'Components/List';
-import { CategoryListWidget } from './index';
+import { Unwrapped as CategoryListWidget } from './index';
 
 describe('<CategoryListWidget />', () => {
   it('should not render the CategoryListWidget', () => {

@@ -19,7 +19,7 @@ import styles from './style';
  * @param {Object} props The widget properties
  * @returns {JSX}
  */
-export class CategoryListWidget extends Component {
+class CategoryListWidget extends Component {
   static propTypes = {
     settings: PropTypes.shape().isRequired,
     getCategory: PropTypes.func,
@@ -89,3 +89,5 @@ export class CategoryListWidget extends Component {
 }
 
 export default connect(CategoryListWidget);
+
+export { CategoryListWidget as Unwrapped };

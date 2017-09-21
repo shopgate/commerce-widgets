@@ -18,7 +18,7 @@ var _reactTransformCatchErrors4 = _interopRequireDefault(_reactTransformCatchErr
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _jsxFileName = 'frontend/src/ProductSlider/index.jsx',
+var _jsxFileName = 'src/ProductSlider/index.jsx',
     _class,
     _temp2;
 
@@ -63,7 +63,7 @@ var _components = {
 };
 
 var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-  filename: 'frontend/src/ProductSlider/index.jsx',
+  filename: 'src/ProductSlider/index.jsx',
   components: _components,
   locals: [],
   imports: [_react3.default, _redboxReact3.default]
@@ -73,21 +73,8 @@ function _wrapComponent(id) {
   return function (Component) {
     return _reactTransformCatchErrors2(Component, id);
   };
-} /**
-   * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
-   *
-   * This source code is licensed under the Apache 2.0 license found in the
-   * LICENSE file in the root directory of this source tree.
-   */
+}
 
-/**
- * Creates an item for a single product.
- * @param {Object} product The product data.
- * @param {boolean} settings.showName Show the product name?
- * @param {boolean} settings.showPrice Show the product price?
- * @param {boolean} settings.showReviews Show the product reviews?
- * @return {JSX} The rendered product card.
- */
 var createSliderItem = function createSliderItem(product, _ref) {
   var showName = _ref.showName,
       showPrice = _ref.showPrice,
@@ -124,10 +111,6 @@ var createSliderItem = function createSliderItem(product, _ref) {
   );
 };
 
-/**
- * The core product slider widget.
- */
-
 var ProductSlider = _wrapComponent('ProductSlider')((_temp2 = _class = function (_React$Component) {
   _inherits(ProductSlider, _React$Component);
 
@@ -151,11 +134,6 @@ var ProductSlider = _wrapComponent('ProductSlider')((_temp2 = _class = function 
 
   _createClass(ProductSlider, [{
     key: 'componentDidMount',
-
-
-    /**
-     * Called when the component is mounted, requests the products.
-     */
     value: function componentDidMount() {
       var getProducts = this.props.getProducts;
       var _props$settings = this.props.settings,
@@ -167,20 +145,8 @@ var ProductSlider = _wrapComponent('ProductSlider')((_temp2 = _class = function 
         sort: (0, _data.transformDisplayOptions)(this.props.settings.sortOrder)
       });
     }
-
-    /**
-     * Renders a headline if we have one.
-     * @returns {JSX}
-     */
-
   }, {
     key: '__renderHeadline__REACT_HOT_LOADER__',
-
-
-    /**
-     * Renders the widget.
-     * @return {JSX}
-     */
     value: function __renderHeadline__REACT_HOT_LOADER__() {
       if (this.props.settings.headline) {
         return _react3.default.createElement(
@@ -202,7 +168,6 @@ var ProductSlider = _wrapComponent('ProductSlider')((_temp2 = _class = function 
       var settings = this.props.settings;
       var sliderSettings = settings.sliderSettings;
 
-      // Create the slides for each product, only displays the first 30 products.
       var items = this.props.products.slice(0, 30).map(function (product) {
         return createSliderItem(product, settings);
       });
@@ -211,7 +176,6 @@ var ProductSlider = _wrapComponent('ProductSlider')((_temp2 = _class = function 
         return null;
       }
 
-      // Finally, build the slider.
       return _react3.default.createElement(
         'div',
         { className: _style2.default.slider, __source: {
@@ -245,21 +209,19 @@ var ProductSlider = _wrapComponent('ProductSlider')((_temp2 = _class = function 
   return ProductSlider;
 }(_react3.default.Component), _class.propTypes = {
   getProducts: _propTypes2.default.func.isRequired,
-  // The settings as received by the pipeline request
+
   settings: _propTypes2.default.shape({
-    headline: _propTypes2.default.string.isRequired, // The headline of the product slider.
-    layout: _propTypes2.default.string.isRequired, // The layout of the product slider.
-    queryParams: _propTypes2.default.oneOfType([// The query parameters for this slider.
-    _propTypes2.default.string, _propTypes2.default.array]),
-    queryType: _propTypes2.default.number.isRequired, // The query type ID.
-    showName: _propTypes2.default.bool.isRequired, // Should the product name be displayed?
-    showPrice: _propTypes2.default.bool.isRequired, // Should the product price be displayed?
-    showReviews: _propTypes2.default.bool.isRequired, // Should the user ratings be displayed?
-    sortOrder: _propTypes2.default.string.isRequired, // The sort order.
+    headline: _propTypes2.default.string.isRequired,
+    layout: _propTypes2.default.string.isRequired,
+    queryParams: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array]),
+    queryType: _propTypes2.default.number.isRequired,
+    showName: _propTypes2.default.bool.isRequired,
+    showPrice: _propTypes2.default.bool.isRequired,
+    showReviews: _propTypes2.default.bool.isRequired,
+    sortOrder: _propTypes2.default.string.isRequired,
     sliderSettings: _propTypes2.default.shape({
-      autostart: _propTypes2.default.bool.isRequired, // Should the slider start automatically?
-      delay: _propTypes2.default.oneOfType([// The delay between the automatic slides loops
-      _propTypes2.default.string, _propTypes2.default.number]).isRequired
+      autostart: _propTypes2.default.bool.isRequired,
+      delay: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]).isRequired
     }).isRequired
   }).isRequired,
   products: _propTypes2.default.arrayOf(_propTypes2.default.shape())
@@ -277,11 +239,11 @@ var _temp3 = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(createSliderItem, 'createSliderItem', 'frontend/src/ProductSlider/index.jsx');
+  __REACT_HOT_LOADER__.register(createSliderItem, 'createSliderItem', 'src/ProductSlider/index.jsx');
 
-  __REACT_HOT_LOADER__.register(ProductSlider, 'ProductSlider', 'frontend/src/ProductSlider/index.jsx');
+  __REACT_HOT_LOADER__.register(ProductSlider, 'ProductSlider', 'src/ProductSlider/index.jsx');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/ProductSlider/index.jsx');
+  __REACT_HOT_LOADER__.register(_default, 'default', 'src/ProductSlider/index.jsx');
 }();
 
 ;

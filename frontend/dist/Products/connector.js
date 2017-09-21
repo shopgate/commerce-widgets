@@ -16,12 +16,6 @@ var _selectors = require('../selectors');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * Maps the contents of the state to the component props.
- * @param {Object} state The current application state.
- * @param {Object} props The component properties.
- * @return {Object} The extended component props.
- */
 var mapStateToProps = function mapStateToProps(state, props) {
   return {
     products: (0, _selectors.getProductsResult)(state, props.settings.queryType, {
@@ -30,18 +24,6 @@ var mapStateToProps = function mapStateToProps(state, props) {
     }).products
   };
 };
-
-/**
- * Maps the contents of the state to the component props.
- * @param  {Function} dispatch The redux dispatch function.
- * @return {Object} The extended component props.
- */
-/**
- * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
- *
- * This source code is licensed under the Apache 2.0 license found in the
- * LICENSE file in the root directory of this source tree.
- */
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
@@ -61,11 +43,11 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', 'frontend/src/Products/connector.js');
+  __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', 'src/Products/connector.js');
 
-  __REACT_HOT_LOADER__.register(mapDispatchToProps, 'mapDispatchToProps', 'frontend/src/Products/connector.js');
+  __REACT_HOT_LOADER__.register(mapDispatchToProps, 'mapDispatchToProps', 'src/Products/connector.js');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/Products/connector.js');
+  __REACT_HOT_LOADER__.register(_default, 'default', 'src/Products/connector.js');
 }();
 
 ;

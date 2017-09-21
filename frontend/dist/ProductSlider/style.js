@@ -4,12 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; /**
-                                                                                                                                                                                                                                                                   * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
-                                                                                                                                                                                                                                                                   *
-                                                                                                                                                                                                                                                                   * This source code is licensed under the Apache 2.0 license found in the
-                                                                                                                                                                                                                                                                   * LICENSE file in the root directory of this source tree.
-                                                                                                                                                                                                                                                                   */
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _glamor = require('glamor');
 
@@ -110,33 +105,33 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(sliderContainer, 'sliderContainer', 'frontend/src/ProductSlider/style.js');
+  __REACT_HOT_LOADER__.register(sliderContainer, 'sliderContainer', 'src/ProductSlider/style.js');
 
-  __REACT_HOT_LOADER__.register(slider, 'slider', 'frontend/src/ProductSlider/style.js');
+  __REACT_HOT_LOADER__.register(slider, 'slider', 'src/ProductSlider/style.js');
 
-  __REACT_HOT_LOADER__.register(sliderItem, 'sliderItem', 'frontend/src/ProductSlider/style.js');
+  __REACT_HOT_LOADER__.register(sliderItem, 'sliderItem', 'src/ProductSlider/style.js');
 
-  __REACT_HOT_LOADER__.register(productInfo, 'productInfo', 'frontend/src/ProductSlider/style.js');
+  __REACT_HOT_LOADER__.register(productInfo, 'productInfo', 'src/ProductSlider/style.js');
 
-  __REACT_HOT_LOADER__.register(productName, 'productName', 'frontend/src/ProductSlider/style.js');
+  __REACT_HOT_LOADER__.register(productName, 'productName', 'src/ProductSlider/style.js');
 
-  __REACT_HOT_LOADER__.register(priceGrid, 'priceGrid', 'frontend/src/ProductSlider/style.js');
+  __REACT_HOT_LOADER__.register(priceGrid, 'priceGrid', 'src/ProductSlider/style.js');
 
-  __REACT_HOT_LOADER__.register(priceStrikedItem, 'priceStrikedItem', 'frontend/src/ProductSlider/style.js');
+  __REACT_HOT_LOADER__.register(priceStrikedItem, 'priceStrikedItem', 'src/ProductSlider/style.js');
 
-  __REACT_HOT_LOADER__.register(priceItem, 'priceItem', 'frontend/src/ProductSlider/style.js');
+  __REACT_HOT_LOADER__.register(priceItem, 'priceItem', 'src/ProductSlider/style.js');
 
-  __REACT_HOT_LOADER__.register(priceBase, 'priceBase', 'frontend/src/ProductSlider/style.js');
+  __REACT_HOT_LOADER__.register(priceBase, 'priceBase', 'src/ProductSlider/style.js');
 
-  __REACT_HOT_LOADER__.register(priceStriked, 'priceStriked', 'frontend/src/ProductSlider/style.js');
+  __REACT_HOT_LOADER__.register(priceStriked, 'priceStriked', 'src/ProductSlider/style.js');
 
-  __REACT_HOT_LOADER__.register(price, 'price', 'frontend/src/ProductSlider/style.js');
+  __REACT_HOT_LOADER__.register(price, 'price', 'src/ProductSlider/style.js');
 
-  __REACT_HOT_LOADER__.register(card, 'card', 'frontend/src/ProductSlider/style.js');
+  __REACT_HOT_LOADER__.register(card, 'card', 'src/ProductSlider/style.js');
 
-  __REACT_HOT_LOADER__.register(headline, 'headline', 'frontend/src/ProductSlider/style.js');
+  __REACT_HOT_LOADER__.register(headline, 'headline', 'src/ProductSlider/style.js');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/ProductSlider/style.js');
+  __REACT_HOT_LOADER__.register(_default, 'default', 'src/ProductSlider/style.js');
 }();
 
 ;

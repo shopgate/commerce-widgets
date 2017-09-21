@@ -13,18 +13,6 @@ var _history = require('@shopgate/pwa-common/selectors/history');
 
 var _product = require('@shopgate/pwa-common-commerce/product/selectors/product');
 
-/**
- * Retrieves the result hash.
- * @param {Object} state The application state.
- * @returns {string} The result hash.
- */
-/**
- * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
- *
- * This source code is licensed under the Apache 2.0 license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
 var getResultHash = function getResultHash(state) {
   return (0, _redux.generateResultHash)({
     pipeline: 'getLiveshoppingProducts',
@@ -32,24 +20,12 @@ var getResultHash = function getResultHash(state) {
   });
 };
 
-/**
- * Retrieves the result by hash.
- * @param {Object} state The application state.
- * @param {Object} props The component props.
- * @returns {Object} The result.
- */
 var getResultByHash = (0, _reselect.createSelector)(function (state) {
   return state.product;
 }, getResultHash, function (productState, hash) {
   return productState.resultsByHash[hash];
 });
 
-/**
- * Retrieves the populated product result.
- * @param {Object} state The application state.
- * @param {Object} props The component props.
- * @returns {Object} The product result.
- */
 var getProductsResult = exports.getProductsResult = (0, _reselect.createSelector)(function (state) {
   return state;
 }, getResultHash, getResultByHash, _product.getPopulatedProductsResult);
@@ -60,11 +36,11 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(getResultHash, 'getResultHash', 'frontend/src/Liveshopping/selectors.js');
+  __REACT_HOT_LOADER__.register(getResultHash, 'getResultHash', 'src/Liveshopping/selectors.js');
 
-  __REACT_HOT_LOADER__.register(getResultByHash, 'getResultByHash', 'frontend/src/Liveshopping/selectors.js');
+  __REACT_HOT_LOADER__.register(getResultByHash, 'getResultByHash', 'src/Liveshopping/selectors.js');
 
-  __REACT_HOT_LOADER__.register(getProductsResult, 'getProductsResult', 'frontend/src/Liveshopping/selectors.js');
+  __REACT_HOT_LOADER__.register(getProductsResult, 'getProductsResult', 'src/Liveshopping/selectors.js');
 }();
 
 ;

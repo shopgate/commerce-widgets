@@ -16,11 +16,6 @@ var _selectors = require('@shopgate/pwa-common-commerce/category/selectors');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * Connects the dispatch function to a calleble function in the props.
- * @param  {Function} dispatch The redux dispatch function.
- * @return {Object} The extended component props.
- */
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     getCategory: function getCategory(categoryId) {
@@ -28,19 +23,6 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     }
   };
 };
-
-/**
- * Maps the contents of the state to the component props.
- * @param {Object} state The current application state.
- * @param {Object} props The component props.
- * @return {Object} The extended component props.
- */
-/**
- * Copyright (c) 2017, Shopgate, Inc. All rights reserved.
- *
- * This source code is licensed under the Apache 2.0 license found in the
- * LICENSE file in the root directory of this source tree.
- */
 
 var mapStateToProps = function mapStateToProps(state, props) {
   return {
@@ -58,11 +40,11 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(mapDispatchToProps, 'mapDispatchToProps', 'frontend/src/CategoryList/connector.js');
+  __REACT_HOT_LOADER__.register(mapDispatchToProps, 'mapDispatchToProps', 'src/CategoryList/connector.js');
 
-  __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', 'frontend/src/CategoryList/connector.js');
+  __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', 'src/CategoryList/connector.js');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', 'frontend/src/CategoryList/connector.js');
+  __REACT_HOT_LOADER__.register(_default, 'default', 'src/CategoryList/connector.js');
 }();
 
 ;
