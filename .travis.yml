@@ -2,6 +2,7 @@ install:
   - git clone -b development https://github.com/${SHOPGATE_THEME_SLUG}.git
   - cd ${SHOPGATE_THEME_EXTENSIONS}
   - git clone -b development https://github.com/${TRAVIS_REPO_SLUG}.git @${TRAVIS_REPO_SLUG}
+  - find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"
 language: node_js
 node_js: node
 before_script: "cd @${TRAVIS_REPO_SLUG}/frontend/ && NODE_ENV=development npm i"
