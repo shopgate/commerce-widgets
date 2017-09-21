@@ -1,7 +1,7 @@
 install:
-  - git clone https://github.com/${SHOPGATE_THEME_SLUG}#development
+  - git clone -b development https://github.com/${SHOPGATE_THEME_SLUG}.git
   - cd ${SHOPGATE_THEME_EXTENSIONS}
-  - git clone https://github.com/${TRAVIS_REPO_SLUG}.git @${TRAVIS_REPO_SLUG}
+  - git clone -b development https://github.com/${TRAVIS_REPO_SLUG}.git @${TRAVIS_REPO_SLUG}
 language: node_js
 node_js: node
 before_script: "cd @${TRAVIS_REPO_SLUG}/frontend/ && NODE_ENV=development npm i"
