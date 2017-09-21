@@ -1,11 +1,11 @@
 install:
   - git clone -b development https://github.com/shopgate/${SHOPGATE_THEME}.git
-  - cd ${SHOPGATE_THEME} && npm i && cd ${EXTENSIONS}
+  - cd ${SHOPGATE_THEME} && cd ${EXTENSIONS}
   - git clone -b development https://github.com/${TRAVIS_REPO_SLUG}.git @${TRAVIS_REPO_SLUG}
   - find ../ -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"
 language: node_js
 node_js: node
-before_script: "cd @${TRAVIS_REPO_SLUG}/frontend/ && NODE_ENV=development npm i"
+before_script: "cd @${TRAVIS_REPO_SLUG}/frontend/"
 script: "npm run coverage"
 # Send coverage report to coveralls.io
 after_script: "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
