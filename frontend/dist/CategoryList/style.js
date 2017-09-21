@@ -6,11 +6,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _glamor = require('glamor');
 
-var _colors = require('../../../../../styles/colors');
+var _colors = require('../../../../../../styles/colors');
 
 var _colors2 = _interopRequireDefault(_colors);
 
-var _variables = require('../../../../../styles/variables');
+var _variables = require('../../../../../../styles/variables');
 
 var _variables2 = _interopRequireDefault(_variables);
 

@@ -39,11 +39,11 @@ var _data = require('@shopgate/pwa-common/helpers/data');
 
 var _DisplayOptions = require('@shopgate/pwa-common/constants/DisplayOptions');
 
-var _ActionButton = require('../../../../../components/ActionButton');
+var _ActionButton = require('../../../../../../components/ActionButton');
 
 var _ActionButton2 = _interopRequireDefault(_ActionButton);
 
-var _Headline = require('../../../../../components/Headline');
+var _Headline = require('../../../../../../components/Headline');
 
 var _Headline2 = _interopRequireDefault(_Headline);
 

@@ -33,7 +33,7 @@ var _Image = require('@shopgate/pwa-common/components/Image');
 
 var _Image2 = _interopRequireDefault(_Image);
 
-var _List = require('../../../../../components/List');
+var _List = require('../../../../../../components/List');
 
 var _List2 = _interopRequireDefault(_List);
 

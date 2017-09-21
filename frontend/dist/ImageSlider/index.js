@@ -21,7 +21,7 @@ var _Image = require('@shopgate/pwa-common/components/Image');
 
 var _Image2 = _interopRequireDefault(_Image);
 
-var _ImageSlider = require('../../../../../components/ImageSlider');
+var _ImageSlider = require('../../../../../../components/ImageSlider');
 
 var _ImageSlider2 = _interopRequireDefault(_ImageSlider);
 

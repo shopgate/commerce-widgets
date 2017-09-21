@@ -17,11 +17,11 @@ var _sortBy = require('lodash/sortBy');
 
 var _sortBy2 = _interopRequireDefault(_sortBy);
 
-var _ = require('../../../..');
+var _ = require('../../../../..');
 
 var _2 = _interopRequireDefault(_);
 
-var _Widget = require('../../../../../components/Widgets/components/Widget');
+var _Widget = require('../../../../../../components/Widgets/components/Widget');
 
 var _Widget2 = _interopRequireDefault(_Widget);
 

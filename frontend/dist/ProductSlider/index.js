@@ -30,11 +30,11 @@ var _Slider = require('@shopgate/pwa-common/components/Slider');
 
 var _Slider2 = _interopRequireDefault(_Slider);
 
-var _Card = require('../../../../../components/Card');
+var _Card = require('../../../../../../components/Card');
 
 var _Card2 = _interopRequireDefault(_Card);
 
-var _ProductCard = require('../../../../../components/ProductCard');
+var _ProductCard = require('../../../../../../components/ProductCard');
 
 var _ProductCard2 = _interopRequireDefault(_ProductCard);
 

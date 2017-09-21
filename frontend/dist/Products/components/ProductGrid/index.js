@@ -20,11 +20,11 @@ var _pure = require('recompose/pure');
 
 var _pure2 = _interopRequireDefault(_pure);
 
-var _Iterator = require('../../../../../../../components/ProductGrid/components/Iterator');
+var _Iterator = require('../../../../../../../../components/ProductGrid/components/Iterator');
 
 var _Iterator2 = _interopRequireDefault(_Iterator);
 
-var _Layout = require('../../../../../../../components/ProductGrid/components/Layout');
+var _Layout = require('../../../../../../../../components/ProductGrid/components/Layout');
 
 var _Layout2 = _interopRequireDefault(_Layout);
 

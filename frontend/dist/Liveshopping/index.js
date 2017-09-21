@@ -42,27 +42,27 @@ var _Grid2 = _interopRequireDefault(_Grid);
 
 var _data = require('@shopgate/pwa-common/helpers/data');
 
-var _ImageSlider = require('../../../../../components/ImageSlider');
+var _ImageSlider = require('../../../../../../components/ImageSlider');
 
 var _ImageSlider2 = _interopRequireDefault(_ImageSlider);
 
-var _Card = require('../../../../../components/Card');
+var _Card = require('../../../../../../components/Card');
 
 var _Card2 = _interopRequireDefault(_Card);
 
-var _DiscountBadge = require('../../../../../components/DiscountBadge');
+var _DiscountBadge = require('../../../../../../components/DiscountBadge');
 
 var _DiscountBadge2 = _interopRequireDefault(_DiscountBadge);
 
-var _Price = require('../../../../../components/Price');
+var _Price = require('../../../../../../components/Price');
 
 var _Price2 = _interopRequireDefault(_Price);
 
-var _PriceStriked = require('../../../../../components/PriceStriked');
+var _PriceStriked = require('../../../../../../components/PriceStriked');
 
 var _PriceStriked2 = _interopRequireDefault(_PriceStriked);
 
-var _ProductImage = require('../../../../../components/ProductImage');
+var _ProductImage = require('../../../../../../components/ProductImage');
 
 var _ProductImage2 = _interopRequireDefault(_ProductImage);
 
