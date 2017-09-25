@@ -4,6 +4,26 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
 var _redboxReact2 = require('redbox-react');
 
 var _redboxReact3 = _interopRequireDefault(_redboxReact2);
@@ -15,8 +35,6 @@ var _react3 = _interopRequireDefault(_react2);
 var _reactTransformCatchErrors3 = require('react-transform-catch-errors');
 
 var _reactTransformCatchErrors4 = _interopRequireDefault(_reactTransformCatchErrors3);
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _class,
     _temp,
@@ -38,12 +56,6 @@ var _parseHTML2 = _interopRequireDefault(_parseHTML);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
 var _components = {
   Html: {
     displayName: 'Html'
@@ -64,12 +76,12 @@ function _wrapComponent(id) {
 }
 
 var Html = _wrapComponent('Html')((_temp = _class = function (_Component) {
-  _inherits(Html, _Component);
+  (0, _inherits3.default)(Html, _Component);
 
   function Html(props, context) {
-    _classCallCheck(this, Html);
+    (0, _classCallCheck3.default)(this, Html);
 
-    var _this = _possibleConstructorReturn(this, (Html.__proto__ || Object.getPrototypeOf(Html)).call(this, props, context));
+    var _this = (0, _possibleConstructorReturn3.default)(this, (Html.__proto__ || (0, _getPrototypeOf2.default)(Html)).call(this, props, context));
 
     _this.handleTap = function () {
       return _this.__handleTap__REACT_HOT_LOADER__.apply(_this, arguments);
@@ -81,7 +93,7 @@ var Html = _wrapComponent('Html')((_temp = _class = function (_Component) {
     return _this;
   }
 
-  _createClass(Html, [{
+  (0, _createClass3.default)(Html, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
       this.htmlContainer.addEventListener('touchstart', this.handleTap, true);
@@ -128,7 +140,6 @@ var Html = _wrapComponent('Html')((_temp = _class = function (_Component) {
       });
     }
   }]);
-
   return Html;
 }(_react2.Component), _class.propTypes = {
   settings: _propTypes2.default.shape({

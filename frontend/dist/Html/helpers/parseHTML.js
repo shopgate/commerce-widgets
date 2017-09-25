@@ -4,6 +4,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _stringify = require('babel-runtime/core-js/json/stringify');
+
+var _stringify2 = _interopRequireDefault(_stringify);
+
 var _helpers = require('@shopgate/pwa-core/helpers');
 
 var _cryptoJs = require('crypto-js');
@@ -19,7 +23,7 @@ var _handleDOM = require('./handleDOM');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var parseHTML = function parseHTML(html, widgetSettings) {
-  var widgetID = _cryptoJs2.default.MD5(JSON.stringify(widgetSettings)).toString();
+  var widgetID = _cryptoJs2.default.MD5((0, _stringify2.default)(widgetSettings)).toString();
   var container = (0, _handleDOM.getDOMContainer)('html-widget-' + widgetID);
 
   try {
