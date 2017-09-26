@@ -4,9 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _extends2 = require('babel-runtime/helpers/extends');
-
-var _extends3 = _interopRequireDefault(_extends2);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _jsxFileName = 'src/Products/components/ProductGrid/index.jsx';
 
@@ -44,7 +42,7 @@ var ProductGridWidget = (0, _pure2.default)(function (_ref) {
       }
     },
     products.map(function (product) {
-      return _react2.default.createElement(_Iterator2.default, (0, _extends3.default)({}, product, { display: flags, key: product.id, __source: {
+      return _react2.default.createElement(_Iterator2.default, _extends({}, product, { display: flags, key: product.id, __source: {
           fileName: _jsxFileName,
           lineNumber: 22
         }

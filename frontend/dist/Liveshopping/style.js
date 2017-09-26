@@ -4,9 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _extends2 = require('babel-runtime/helpers/extends');
-
-var _extends3 = _interopRequireDefault(_extends2);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _glamor = require('glamor');
 
@@ -41,9 +39,9 @@ var discountBadge = (0, _glamor.css)({
   borderRadius: 3
 }).toString();
 
-var imagePane = (0, _glamor.css)((0, _extends3.default)({}, pane)).toString();
+var imagePane = (0, _glamor.css)(_extends({}, pane)).toString();
 
-var infoPane = (0, _glamor.css)((0, _extends3.default)({}, pane, {
+var infoPane = (0, _glamor.css)(_extends({}, pane, {
   padding: 16
 })).toString();
 
@@ -71,11 +69,11 @@ var priceBase = (0, _glamor.css)({
   padding: '0 15px'
 }).toString();
 
-var priceStriked = (0, _glamor.css)((0, _extends3.default)({}, priceBase, {
+var priceStriked = (0, _glamor.css)(_extends({}, priceBase, {
   fontSize: '0.875rem'
 })).toString();
 
-var price = (0, _glamor.css)((0, _extends3.default)({}, priceBase, {
+var price = (0, _glamor.css)(_extends({}, priceBase, {
   color: _colors2.default.primary,
   fontSize: '1.25rem'
 })).toString();
