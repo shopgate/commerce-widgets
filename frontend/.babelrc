@@ -12,7 +12,7 @@
       "helpers": false,
       "polyfill": false,
       "regenerator": true
-    }]
+    }],
     ["module-resolver", {
       "alias": {
         "Components": "../../../../components",

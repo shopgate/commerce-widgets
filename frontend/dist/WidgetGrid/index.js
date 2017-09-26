@@ -3,11 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _keys = require('babel-runtime/core-js/object/keys');
-
-var _keys2 = _interopRequireDefault(_keys);
-
 var _jsxFileName = 'src/WidgetGrid/index.jsx';
 
 var _react = require('react');
@@ -64,7 +59,7 @@ var WidgetGrid = function WidgetGrid(props) {
         lineNumber: 53
       }
     },
-    (0, _keys2.default)(widgets).map(function (key) {
+    Object.keys(widgets).map(function (key) {
       var widget = widgets[key];
       var widgetKey = 'w' + key;
 
