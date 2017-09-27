@@ -27,8 +27,8 @@ var mapStateToProps = function mapStateToProps(state, props) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    getProducts: function getProducts(type, value, sort) {
-      return dispatch((0, _getProductsByQuery2.default)(type, value, sort));
+    getProducts: function getProducts(type, value, options, id) {
+      return dispatch((0, _getProductsByQuery2.default)(type, value, options, id));
     }
   };
 };
