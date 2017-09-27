@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "eslint --parser babel-eslint --ignore-path .gitignore --ignore-path .eslintignore  --ext .js --ext .jsx .",
     "pre-build": "rimraf ./dist",
-    "build-process": "NODE_ENV=production babel src --out-dir dist --no-comments --ignore spec.js,spec.jsx,__snapshots__,.eslintrc.js,dist,coverage,node_modules",
+    "build-process": "NODE_ENV=production babel src --out-dir dist --no-comments --ignore tests,spec.js,spec.jsx,__snapshots__,.eslintrc.js,jest.config.js,dist,coverage,node_modules",
     "post-build": "git add -A",
     "build": "npm run pre-build && npm run build-process && npm run post-build",
     "test": "jest",

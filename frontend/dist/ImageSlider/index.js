@@ -3,7 +3,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = 'src/ImageSlider/index.jsx';
+
+var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
 
 var _react = require('react');
 
@@ -34,42 +35,28 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var ImageSliderWidget = function ImageSliderWidget(props) {
   var settings = props.settings;
 
-  return _react2.default.createElement(
-    _ImageSlider2.default,
-    {
-      className: props.className,
-      autoPlay: settings.autostart,
-      indicators: settings.pagination,
-      interval: settings.delay,
-      loop: settings.loop,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 24
-      }
-    },
-    settings.images.map(function (image, index) {
-      var key = 'si' + index;
-      var imageComponent = _react2.default.createElement(_Image2.default, { key: key, src: image.image, alt: image.alt, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 37
-        }
-      });
+  return _jsx(_ImageSlider2.default, {
+    className: props.className,
+    autoPlay: settings.autostart,
+    indicators: settings.pagination,
+    interval: settings.delay,
+    loop: settings.loop
+  }, void 0, settings.images.map(function (image, index) {
+    var key = 'si' + index;
+    var imageComponent = _jsx(_Image2.default, {
+      src: image.image,
+      alt: image.alt
+    }, key);
 
-      if (image.link) {
-        imageComponent = _react2.default.createElement(
-          _Link2.default,
-          { key: key, href: image.link, className: _style2.default.link, __source: {
-              fileName: _jsxFileName,
-              lineNumber: 41
-            }
-          },
-          imageComponent
-        );
-      }
+    if (image.link) {
+      imageComponent = _jsx(_Link2.default, {
+        href: image.link,
+        className: _style2.default.link
+      }, key, imageComponent);
+    }
 
-      return imageComponent;
-    })
-  );
+    return imageComponent;
+  }));
 };
 
 ImageSliderWidget.propTypes = {
@@ -89,18 +76,4 @@ ImageSliderWidget.defaultProps = {
   className: ''
 };
 
-var _default = ImageSliderWidget;
-exports.default = _default;
-;
-
-var _temp = function () {
-  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-    return;
-  }
-
-  __REACT_HOT_LOADER__.register(ImageSliderWidget, 'ImageSliderWidget', 'src/ImageSlider/index.jsx');
-
-  __REACT_HOT_LOADER__.register(_default, 'default', 'src/ImageSlider/index.jsx');
-}();
-
-;
+exports.default = ImageSliderWidget;

@@ -33,21 +33,4 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   };
 };
 
-var _default = (0, _routedConnect2.default)(mapStateToProps, mapDispatchToProps);
-
-exports.default = _default;
-;
-
-var _temp = function () {
-  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-    return;
-  }
-
-  __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', 'src/Products/connector.js');
-
-  __REACT_HOT_LOADER__.register(mapDispatchToProps, 'mapDispatchToProps', 'src/Products/connector.js');
-
-  __REACT_HOT_LOADER__.register(_default, 'default', 'src/Products/connector.js');
-}();
-
-;
+exports.default = (0, _routedConnect2.default)(mapStateToProps, mapDispatchToProps);

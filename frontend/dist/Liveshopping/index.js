@@ -4,21 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redboxReact2 = require('redbox-react');
-
-var _redboxReact3 = _interopRequireDefault(_redboxReact2);
-
-var _react2 = require('react');
-
-var _react3 = _interopRequireDefault(_react2);
-
-var _reactTransformCatchErrors3 = require('react-transform-catch-errors');
-
-var _reactTransformCatchErrors4 = _interopRequireDefault(_reactTransformCatchErrors3);
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _jsxFileName = 'src/Liveshopping/index.jsx';
+var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
 
 var _propTypes = require('prop-types');
 
@@ -82,25 +74,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var _components = {
-  LiveshoppingWidget: {
-    displayName: 'LiveshoppingWidget'
-  }
-};
-
-var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-  filename: 'src/Liveshopping/index.jsx',
-  components: _components,
-  locals: [],
-  imports: [_react3.default, _redboxReact3.default]
-});
-
-function _wrapComponent(id) {
-  return function (Component) {
-    return _reactTransformCatchErrors2(Component, id);
-  };
-}
-
 var getLiveshoppingTimeout = function getLiveshoppingTimeout(liveshoppings) {
   var now = Date.now();
 
@@ -126,147 +99,47 @@ var createProductSliderItem = function createProductSliderItem(_ref, timeout) {
 
   var priceStriked = price.unitPriceStriked > 0 ? price.unitPriceStriked : price.msrp;
 
-  return _react3.default.createElement(
-    'div',
-    { key: id, className: _style2.default.card, __source: {
-        fileName: _jsxFileName,
-        lineNumber: 65
-      }
-    },
-    _react3.default.createElement(
-      _Card2.default,
-      {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 66
-        }
-      },
-      _react3.default.createElement(
-        _Link2.default,
-        { href: '/item/' + (0, _data.bin2hex)(id), __source: {
-            fileName: _jsxFileName,
-            lineNumber: 67
-          }
-        },
-        _react3.default.createElement(
-          _Grid2.default,
-          {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 68
-            }
-          },
-          _react3.default.createElement(
-            _Grid2.default.Item,
-            { className: _style2.default.imagePane, __source: {
-                fileName: _jsxFileName,
-                lineNumber: 69
-              }
-            },
-            _react3.default.createElement(_ProductImage2.default, { src: featuredImageUrl, alt: name, __source: {
-                fileName: _jsxFileName,
-                lineNumber: 70
-              }
-            })
-          ),
-          _react3.default.createElement(
-            _Grid2.default.Item,
-            { className: _style2.default.infoPane, __source: {
-                fileName: _jsxFileName,
-                lineNumber: 72
-              }
-            },
-            price.discount > 0 ? _react3.default.createElement(_DiscountBadge2.default, {
-              text: 'liveshopping.discount_badge',
-              discount: price.discount,
-              display: 'big',
-              className: _style2.default.discountBadge,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 74
-              }
-            }) : null,
-            _react3.default.createElement(
-              _Ellipsis2.default,
-              {
-                rows: 2,
-                className: _style2.default.cardTitle,
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 82
-                }
-              },
-              name
-            ),
-            timeout ? _react3.default.createElement(
-              'span',
-              { className: _style2.default.timer, __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 89
-                }
-              },
-              _react3.default.createElement(_CountdownTimer2.default, { timeout: timeout, __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 90
-                }
-              })
-            ) : null,
-            _react3.default.createElement(
-              'div',
-              { className: _style2.default.priceWrapper, __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 94
-                }
-              },
-              _react3.default.createElement(
-                _Grid2.default,
-                { className: _style2.default.priceGrid, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 95
-                  }
-                },
-                priceStriked > 0 ? _react3.default.createElement(
-                  _Grid2.default.Item,
-                  { className: _style2.default.priceStrikedItem, __source: {
-                      fileName: _jsxFileName,
-                      lineNumber: 97
-                    }
-                  },
-                  _react3.default.createElement(_PriceStriked2.default, {
-                    className: _style2.default.priceStriked,
-                    value: priceStriked,
-                    currency: price.currency,
-                    __source: {
-                      fileName: _jsxFileName,
-                      lineNumber: 98
-                    }
-                  })
-                ) : null,
-                _react3.default.createElement(
-                  _Grid2.default.Item,
-                  { className: _style2.default.priceItem, __source: {
-                      fileName: _jsxFileName,
-                      lineNumber: 106
-                    }
-                  },
-                  _react3.default.createElement(_Price2.default, {
-                    className: priceStriked > 0 ? _style2.default.price : '',
-                    unitPrice: price.unitPrice,
-                    unitPriceMin: price.unitPriceMin,
-                    currency: price.currency,
-                    __source: {
-                      fileName: _jsxFileName,
-                      lineNumber: 107
-                    }
-                  })
-                )
-              )
-            )
-          )
-        )
-      )
-    )
-  );
+  return _jsx('div', {
+    className: _style2.default.card
+  }, id, _jsx(_Card2.default, {}, void 0, _jsx(_Link2.default, {
+    href: '/item/' + (0, _data.bin2hex)(id)
+  }, void 0, _jsx(_Grid2.default, {}, void 0, _jsx(_Grid2.default.Item, {
+    className: _style2.default.imagePane
+  }, void 0, _jsx(_ProductImage2.default, {
+    src: featuredImageUrl,
+    alt: name
+  })), _jsx(_Grid2.default.Item, {
+    className: _style2.default.infoPane
+  }, void 0, price.discount > 0 ? _jsx(_DiscountBadge2.default, {
+    text: 'liveshopping.discount_badge',
+    discount: price.discount,
+    display: 'big',
+    className: _style2.default.discountBadge
+  }) : null, _jsx(_Ellipsis2.default, {
+    rows: 2,
+    className: _style2.default.cardTitle
+  }, void 0, name), timeout ? _jsx('span', {
+    className: _style2.default.timer
+  }, void 0, _jsx(_CountdownTimer2.default, {
+    timeout: timeout
+  })) : null, _jsx('div', {
+    className: _style2.default.priceWrapper
+  }, void 0, _jsx(_Grid2.default, {
+    className: _style2.default.priceGrid
+  }, void 0, priceStriked > 0 ? _jsx(_Grid2.default.Item, {
+    className: _style2.default.priceStrikedItem
+  }, void 0, _jsx(_PriceStriked2.default, {
+    className: _style2.default.priceStriked,
+    value: priceStriked,
+    currency: price.currency
+  })) : null, _jsx(_Grid2.default.Item, {
+    className: _style2.default.priceItem
+  }, void 0, _jsx(_Price2.default, {
+    className: priceStriked > 0 ? _style2.default.price : '',
+    unitPrice: price.unitPrice,
+    unitPriceMin: price.unitPriceMin,
+    currency: price.currency
+  })))))))));
 };
 
 createProductSliderItem.propTypes = {
@@ -276,7 +149,7 @@ createProductSliderItem.propTypes = {
   price: _propTypes2.default.shape().isRequired
 };
 
-var LiveshoppingWidget = _wrapComponent('LiveshoppingWidget')(function (_React$Component) {
+var LiveshoppingWidget = function (_React$Component) {
   _inherits(LiveshoppingWidget, _React$Component);
 
   function LiveshoppingWidget() {
@@ -301,51 +174,22 @@ var LiveshoppingWidget = _wrapComponent('LiveshoppingWidget')(function (_React$C
         return null;
       }
 
-      return _react3.default.createElement(
-        'div',
-        { className: _style2.default.cardsWrapper, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 156
-          }
-        },
-        _react3.default.createElement(
-          _ImageSlider2.default,
-          { indicators: true, loop: true, classNames: { indicator: _style2.default.indicator }, __source: {
-              fileName: _jsxFileName,
-              lineNumber: 157
-            }
-          },
-          items
-        )
-      );
+      return _jsx('div', {
+        className: _style2.default.cardsWrapper
+      }, void 0, _jsx(_ImageSlider2.default, {
+        indicators: true,
+        loop: true,
+        classNames: { indicator: _style2.default.indicator }
+      }, void 0, items));
     }
   }]);
 
   return LiveshoppingWidget;
-}(_react3.default.Component));
+}(_react2.default.Component);
 
 LiveshoppingWidget.propTypes = {
   getLiveshoppingProducts: _propTypes2.default.func.isRequired,
   products: _propTypes2.default.arrayOf(_propTypes2.default.shape()).isRequired
 };
 
-var _default = (0, _connector2.default)(LiveshoppingWidget);
-
-exports.default = _default;
-;
-
-var _temp = function () {
-  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-    return;
-  }
-
-  __REACT_HOT_LOADER__.register(getLiveshoppingTimeout, 'getLiveshoppingTimeout', 'src/Liveshopping/index.jsx');
-
-  __REACT_HOT_LOADER__.register(createProductSliderItem, 'createProductSliderItem', 'src/Liveshopping/index.jsx');
-
-  __REACT_HOT_LOADER__.register(LiveshoppingWidget, 'LiveshoppingWidget', 'src/Liveshopping/index.jsx');
-
-  __REACT_HOT_LOADER__.register(_default, 'default', 'src/Liveshopping/index.jsx');
-}();
-
-;
+exports.default = (0, _connector2.default)(LiveshoppingWidget);

@@ -82,18 +82,3 @@ var getResultByHash = (0, _reselect.createSelector)(function (state) {
 var getProductsResult = exports.getProductsResult = (0, _reselect.createSelector)(function (state) {
   return state;
 }, getResultHash, getResultByHash, _product.getPopulatedProductsResult);
-;
-
-var _temp = function () {
-  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-    return;
-  }
-
-  __REACT_HOT_LOADER__.register(getResultHash, 'getResultHash', 'src/selectors.js');
-
-  __REACT_HOT_LOADER__.register(getResultByHash, 'getResultByHash', 'src/selectors.js');
-
-  __REACT_HOT_LOADER__.register(getProductsResult, 'getProductsResult', 'src/selectors.js');
-}();
-
-;

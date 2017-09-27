@@ -4,23 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redboxReact2 = require('redbox-react');
-
-var _redboxReact3 = _interopRequireDefault(_redboxReact2);
-
-var _react2 = require('react');
-
-var _react3 = _interopRequireDefault(_react2);
-
-var _reactTransformCatchErrors3 = require('react-transform-catch-errors');
-
-var _reactTransformCatchErrors4 = _interopRequireDefault(_reactTransformCatchErrors3);
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _jsxFileName = 'src/ProductSlider/index.jsx',
-    _class,
-    _temp2;
+var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
 
 var _propTypes = require('prop-types');
 
@@ -56,25 +46,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var _components = {
-  ProductSlider: {
-    displayName: 'ProductSlider'
-  }
-};
-
-var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-  filename: 'src/ProductSlider/index.jsx',
-  components: _components,
-  locals: [],
-  imports: [_react3.default, _redboxReact3.default]
-});
-
-function _wrapComponent(id) {
-  return function (Component) {
-    return _reactTransformCatchErrors2(Component, id);
-  };
-}
-
 var createSliderItem = function createSliderItem(product, _ref) {
   var showName = _ref.showName,
       showPrice = _ref.showPrice,
@@ -82,36 +53,20 @@ var createSliderItem = function createSliderItem(product, _ref) {
 
   var key = 's' + product.id;
 
-  return _react3.default.createElement(
-    _Slider2.default.Item,
-    { key: key, className: _style2.default.sliderItem, __source: {
-        fileName: _jsxFileName,
-        lineNumber: 29
-      }
-    },
-    _react3.default.createElement(
-      _Card2.default,
-      { className: _style2.default.card, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 30
-        }
-      },
-      _react3.default.createElement(_ProductCard2.default, {
-        product: product,
-        hideName: !showName,
-        hidePrice: !showPrice,
-        hideRating: !showReviews,
-        titleRows: 2,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 31
-        }
-      })
-    )
-  );
+  return _jsx(_Slider2.default.Item, {
+    className: _style2.default.sliderItem
+  }, key, _jsx(_Card2.default, {
+    className: _style2.default.card
+  }, void 0, _jsx(_ProductCard2.default, {
+    product: product,
+    hideName: !showName,
+    hidePrice: !showPrice,
+    hideRating: !showReviews,
+    titleRows: 2
+  })));
 };
 
-var ProductSlider = _wrapComponent('ProductSlider')((_temp2 = _class = function (_React$Component) {
+var ProductSlider = function (_React$Component) {
   _inherits(ProductSlider, _React$Component);
 
   function ProductSlider() {
@@ -126,9 +81,13 @@ var ProductSlider = _wrapComponent('ProductSlider')((_temp2 = _class = function 
     }
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref2 = ProductSlider.__proto__ || Object.getPrototypeOf(ProductSlider)).call.apply(_ref2, [this].concat(args))), _this), _this.renderHeadline = function () {
-      var _this2;
+      if (_this.props.settings.headline) {
+        return _jsx('h3', {
+          className: _style2.default.headline
+        }, void 0, _this.props.settings.headline);
+      }
 
-      return (_this2 = _this).__renderHeadline__REACT_HOT_LOADER__.apply(_this2, arguments);
+      return null;
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -146,23 +105,6 @@ var ProductSlider = _wrapComponent('ProductSlider')((_temp2 = _class = function 
       });
     }
   }, {
-    key: '__renderHeadline__REACT_HOT_LOADER__',
-    value: function __renderHeadline__REACT_HOT_LOADER__() {
-      if (this.props.settings.headline) {
-        return _react3.default.createElement(
-          'h3',
-          { className: _style2.default.headline, __source: {
-              fileName: _jsxFileName,
-              lineNumber: 101
-            }
-          },
-          this.props.settings.headline
-        );
-      }
-
-      return null;
-    }
-  }, {
     key: 'render',
     value: function render() {
       var settings = this.props.settings;
@@ -176,38 +118,25 @@ var ProductSlider = _wrapComponent('ProductSlider')((_temp2 = _class = function 
         return null;
       }
 
-      return _react3.default.createElement(
-        'div',
-        { className: _style2.default.slider, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 129
-          }
-        },
-        this.renderHeadline(),
-        _react3.default.createElement(
-          _Slider2.default,
-          {
-            autoPlay: sliderSettings.autoPlay,
-            loop: false,
-            indicators: false,
-            controls: false,
-            interval: Number.parseInt(sliderSettings.delay, 10),
-            snapItems: false,
-            slidesPerView: 2.3,
-            classNames: { container: _style2.default.sliderContainer },
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 131
-            }
-          },
-          items
-        )
-      );
+      return _jsx('div', {
+        className: _style2.default.slider
+      }, void 0, this.renderHeadline(), _jsx(_Slider2.default, {
+        autoPlay: sliderSettings.autoPlay,
+        loop: false,
+        indicators: false,
+        controls: false,
+        interval: Number.parseInt(sliderSettings.delay, 10),
+        snapItems: false,
+        slidesPerView: 2.3,
+        classNames: { container: _style2.default.sliderContainer }
+      }, void 0, items));
     }
   }]);
 
   return ProductSlider;
-}(_react3.default.Component), _class.propTypes = {
+}(_react2.default.Component);
+
+ProductSlider.propTypes = {
   getProducts: _propTypes2.default.func.isRequired,
 
   settings: _propTypes2.default.shape({
@@ -225,25 +154,8 @@ var ProductSlider = _wrapComponent('ProductSlider')((_temp2 = _class = function 
     }).isRequired
   }).isRequired,
   products: _propTypes2.default.arrayOf(_propTypes2.default.shape())
-}, _class.defaultProps = {
+};
+ProductSlider.defaultProps = {
   products: []
-}, _temp2));
-
-var _default = (0, _connector2.default)(ProductSlider);
-
-exports.default = _default;
-;
-
-var _temp3 = function () {
-  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-    return;
-  }
-
-  __REACT_HOT_LOADER__.register(createSliderItem, 'createSliderItem', 'src/ProductSlider/index.jsx');
-
-  __REACT_HOT_LOADER__.register(ProductSlider, 'ProductSlider', 'src/ProductSlider/index.jsx');
-
-  __REACT_HOT_LOADER__.register(_default, 'default', 'src/ProductSlider/index.jsx');
-}();
-
-;
+};
+exports.default = (0, _connector2.default)(ProductSlider);

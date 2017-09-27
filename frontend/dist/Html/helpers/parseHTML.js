@@ -59,18 +59,4 @@ var parseHTML = function parseHTML(html, widgetSettings) {
   }
 };
 
-var _default = parseHTML;
-exports.default = _default;
-;
-
-var _temp = function () {
-  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-    return;
-  }
-
-  __REACT_HOT_LOADER__.register(parseHTML, 'parseHTML', 'src/Html/helpers/parseHTML.js');
-
-  __REACT_HOT_LOADER__.register(_default, 'default', 'src/Html/helpers/parseHTML.js');
-}();
-
-;
+exports.default = parseHTML;

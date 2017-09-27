@@ -8,6 +8,8 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _jsxFileName = 'src/Products/components/ProductGrid/index.jsx';
 
+var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -33,22 +35,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var ProductGridWidget = (0, _pure2.default)(function (_ref) {
   var products = _ref.products,
       flags = _ref.flags;
-  return _react2.default.createElement(
-    _Layout2.default,
-    {
-      __source: {
+  return _jsx(_Layout2.default, {}, void 0, products.map(function (product) {
+    return _react2.default.createElement(_Iterator2.default, _extends({}, product, { display: flags, key: product.id, __source: {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 22
       }
-    },
-    products.map(function (product) {
-      return _react2.default.createElement(_Iterator2.default, _extends({}, product, { display: flags, key: product.id, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 22
-        }
-      }));
-    })
-  );
+    }));
+  }));
 });
 
 ProductGridWidget.propTypes = {
@@ -60,18 +53,4 @@ ProductGridWidget.defaultProps = {
   flags: {}
 };
 
-var _default = ProductGridWidget;
-exports.default = _default;
-;
-
-var _temp = function () {
-  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-    return;
-  }
-
-  __REACT_HOT_LOADER__.register(ProductGridWidget, 'ProductGridWidget', 'src/Products/components/ProductGrid/index.jsx');
-
-  __REACT_HOT_LOADER__.register(_default, 'default', 'src/Products/components/ProductGrid/index.jsx');
-}();
-
-;
+exports.default = ProductGridWidget;
