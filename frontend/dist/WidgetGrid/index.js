@@ -3,7 +3,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = 'src/WidgetGrid/index.jsx';
+
+var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
 
 var _react = require('react');
 
@@ -52,31 +53,21 @@ var WidgetGrid = function WidgetGrid(props) {
 
   var height = rowCount * cellSize + 'px';
 
-  return _react2.default.createElement(
-    'div',
-    { className: _style2.default.container, style: { height: height }, __source: {
-        fileName: _jsxFileName,
-        lineNumber: 53
-      }
-    },
-    Object.keys(widgets).map(function (key) {
-      var widget = widgets[key];
-      var widgetKey = 'w' + key;
+  return _jsx('div', {
+    className: _style2.default.container,
+    style: { height: height }
+  }, void 0, Object.keys(widgets).map(function (key) {
+    var widget = widgets[key];
+    var widgetKey = 'w' + key;
 
-      var WidgetComponent = _2.default[widget.type];
+    var WidgetComponent = _2.default[widget.type];
 
-      return _react2.default.createElement(_Widget2.default, {
-        cellSize: cellSize,
-        config: widget,
-        component: WidgetComponent,
-        key: widgetKey,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 61
-        }
-      });
-    })
-  );
+    return _jsx(_Widget2.default, {
+      cellSize: cellSize,
+      config: widget,
+      component: WidgetComponent
+    }, widgetKey);
+  }));
 };
 
 WidgetGrid.propTypes = {
@@ -87,22 +78,4 @@ WidgetGrid.defaultProps = {
   config: []
 };
 
-var _default = WidgetGrid;
-exports.default = _default;
-;
-
-var _temp = function () {
-  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-    return;
-  }
-
-  __REACT_HOT_LOADER__.register(GRID_COLUMNS, 'GRID_COLUMNS', 'src/WidgetGrid/index.jsx');
-
-  __REACT_HOT_LOADER__.register(getMaxHeight, 'getMaxHeight', 'src/WidgetGrid/index.jsx');
-
-  __REACT_HOT_LOADER__.register(WidgetGrid, 'WidgetGrid', 'src/WidgetGrid/index.jsx');
-
-  __REACT_HOT_LOADER__.register(_default, 'default', 'src/WidgetGrid/index.jsx');
-}();
-
-;
+exports.default = WidgetGrid;

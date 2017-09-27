@@ -5,23 +5,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Unwrapped = undefined;
 
-var _redboxReact2 = require('redbox-react');
-
-var _redboxReact3 = _interopRequireDefault(_redboxReact2);
-
-var _react2 = require('react');
-
-var _react3 = _interopRequireDefault(_react2);
-
-var _reactTransformCatchErrors3 = require('react-transform-catch-errors');
-
-var _reactTransformCatchErrors4 = _interopRequireDefault(_reactTransformCatchErrors3);
+var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _class,
-    _temp,
-    _jsxFileName = 'src/CategoryList/index.jsx';
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
 
 var _propTypes = require('prop-types');
 
@@ -57,26 +47,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var _components = {
-  CategoryListWidget: {
-    displayName: 'CategoryListWidget'
-  }
-};
-
-var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-  filename: 'src/CategoryList/index.jsx',
-  components: _components,
-  locals: [],
-  imports: [_react3.default, _redboxReact3.default]
-});
-
-function _wrapComponent(id) {
-  return function (Component) {
-    return _reactTransformCatchErrors2(Component, id);
-  };
-}
-
-var CategoryListWidget = _wrapComponent('CategoryListWidget')((_temp = _class = function (_Component) {
+var CategoryListWidget = function (_Component) {
   _inherits(CategoryListWidget, _Component);
 
   function CategoryListWidget() {
@@ -109,79 +80,37 @@ var CategoryListWidget = _wrapComponent('CategoryListWidget')((_temp = _class = 
         return null;
       }
 
-      return _react3.default.createElement(
-        'div',
-        { className: _style2.default.container, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 66
-          }
-        },
-        settings.headline ? _react3.default.createElement(
-          'h3',
-          { className: _style2.default.headline, __source: {
-              fileName: _jsxFileName,
-              lineNumber: 67
-            }
-          },
-          settings.headline
-        ) : null,
-        _react3.default.createElement(
-          _List2.default,
-          {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 68
-            }
-          },
-          items.map(function (item) {
-            var link = '/category/' + (0, _data.bin2hex)(item.id);
+      return _jsx('div', {
+        className: _style2.default.container
+      }, void 0, settings.headline ? _jsx('h3', {
+        className: _style2.default.headline
+      }, void 0, settings.headline) : null, _jsx(_List2.default, {}, void 0, items.map(function (item) {
+        var link = '/category/' + (0, _data.bin2hex)(item.id);
 
-            var Avatar = settings.showImages ? _react3.default.createElement(_Image2.default, { src: item.imageUrl, __source: {
-                fileName: _jsxFileName,
-                lineNumber: 74
-              }
-            }) : null;
+        var Avatar = settings.showImages ? _jsx(_Image2.default, {
+          src: item.imageUrl
+        }) : null;
 
-            return _react3.default.createElement(_List2.default.Item, {
-              image: Avatar,
-              link: link,
-              key: item.id,
-              title: item.name,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 77
-              }
-            });
-          })
-        )
-      );
+        return _jsx(_List2.default.Item, {
+          image: Avatar,
+          link: link,
+          title: item.name
+        }, item.id);
+      })));
     }
   }]);
 
   return CategoryListWidget;
-}(_react2.Component), _class.propTypes = {
+}(_react.Component);
+
+CategoryListWidget.propTypes = {
   settings: _propTypes2.default.shape().isRequired,
   getCategory: _propTypes2.default.func,
   items: _propTypes2.default.arrayOf(_propTypes2.default.shape())
-}, _class.defaultProps = {
+};
+CategoryListWidget.defaultProps = {
   getCategory: function getCategory() {},
   items: null
-}, _temp));
-
-var _default = (0, _connector2.default)(CategoryListWidget);
-
-exports.default = _default;
+};
+exports.default = (0, _connector2.default)(CategoryListWidget);
 exports.Unwrapped = CategoryListWidget;
-;
-
-var _temp2 = function () {
-  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-    return;
-  }
-
-  __REACT_HOT_LOADER__.register(CategoryListWidget, 'CategoryListWidget', 'src/CategoryList/index.jsx');
-
-  __REACT_HOT_LOADER__.register(_default, 'default', 'src/CategoryList/index.jsx');
-}();
-
-;

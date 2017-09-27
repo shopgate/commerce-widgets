@@ -82,7 +82,7 @@ var headline = (0, _glamor.css)({
   textAlign: 'center'
 }).toString();
 
-var _default = {
+exports.default = {
   card: card,
   headline: headline,
   sliderContainer: sliderContainer,
@@ -97,41 +97,3 @@ var _default = {
   priceStriked: priceStriked,
   price: price
 };
-exports.default = _default;
-;
-
-var _temp = function () {
-  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-    return;
-  }
-
-  __REACT_HOT_LOADER__.register(sliderContainer, 'sliderContainer', 'src/ProductSlider/style.js');
-
-  __REACT_HOT_LOADER__.register(slider, 'slider', 'src/ProductSlider/style.js');
-
-  __REACT_HOT_LOADER__.register(sliderItem, 'sliderItem', 'src/ProductSlider/style.js');
-
-  __REACT_HOT_LOADER__.register(productInfo, 'productInfo', 'src/ProductSlider/style.js');
-
-  __REACT_HOT_LOADER__.register(productName, 'productName', 'src/ProductSlider/style.js');
-
-  __REACT_HOT_LOADER__.register(priceGrid, 'priceGrid', 'src/ProductSlider/style.js');
-
-  __REACT_HOT_LOADER__.register(priceStrikedItem, 'priceStrikedItem', 'src/ProductSlider/style.js');
-
-  __REACT_HOT_LOADER__.register(priceItem, 'priceItem', 'src/ProductSlider/style.js');
-
-  __REACT_HOT_LOADER__.register(priceBase, 'priceBase', 'src/ProductSlider/style.js');
-
-  __REACT_HOT_LOADER__.register(priceStriked, 'priceStriked', 'src/ProductSlider/style.js');
-
-  __REACT_HOT_LOADER__.register(price, 'price', 'src/ProductSlider/style.js');
-
-  __REACT_HOT_LOADER__.register(card, 'card', 'src/ProductSlider/style.js');
-
-  __REACT_HOT_LOADER__.register(headline, 'headline', 'src/ProductSlider/style.js');
-
-  __REACT_HOT_LOADER__.register(_default, 'default', 'src/ProductSlider/style.js');
-}();
-
-;

@@ -99,7 +99,7 @@ var indicator = {
   textAlign: 'center'
 };
 
-var _default = {
+exports.default = {
   card: card,
   discountBadge: discountBadge,
   imagePane: imagePane,
@@ -115,47 +115,3 @@ var _default = {
   cardTitle: cardTitle,
   timer: timer
 };
-exports.default = _default;
-;
-
-var _temp = function () {
-  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-    return;
-  }
-
-  __REACT_HOT_LOADER__.register(cardsWrapper, 'cardsWrapper', 'src/Liveshopping/style.js');
-
-  __REACT_HOT_LOADER__.register(card, 'card', 'src/Liveshopping/style.js');
-
-  __REACT_HOT_LOADER__.register(pane, 'pane', 'src/Liveshopping/style.js');
-
-  __REACT_HOT_LOADER__.register(discountBadge, 'discountBadge', 'src/Liveshopping/style.js');
-
-  __REACT_HOT_LOADER__.register(imagePane, 'imagePane', 'src/Liveshopping/style.js');
-
-  __REACT_HOT_LOADER__.register(infoPane, 'infoPane', 'src/Liveshopping/style.js');
-
-  __REACT_HOT_LOADER__.register(priceWrapper, 'priceWrapper', 'src/Liveshopping/style.js');
-
-  __REACT_HOT_LOADER__.register(priceGrid, 'priceGrid', 'src/Liveshopping/style.js');
-
-  __REACT_HOT_LOADER__.register(priceStrikedItem, 'priceStrikedItem', 'src/Liveshopping/style.js');
-
-  __REACT_HOT_LOADER__.register(priceItem, 'priceItem', 'src/Liveshopping/style.js');
-
-  __REACT_HOT_LOADER__.register(priceBase, 'priceBase', 'src/Liveshopping/style.js');
-
-  __REACT_HOT_LOADER__.register(priceStriked, 'priceStriked', 'src/Liveshopping/style.js');
-
-  __REACT_HOT_LOADER__.register(price, 'price', 'src/Liveshopping/style.js');
-
-  __REACT_HOT_LOADER__.register(cardTitle, 'cardTitle', 'src/Liveshopping/style.js');
-
-  __REACT_HOT_LOADER__.register(timer, 'timer', 'src/Liveshopping/style.js');
-
-  __REACT_HOT_LOADER__.register(indicator, 'indicator', 'src/Liveshopping/style.js');
-
-  __REACT_HOT_LOADER__.register(_default, 'default', 'src/Liveshopping/style.js');
-}();
-
-;

@@ -23,20 +23,6 @@ var listView = (0, _glamor.css)({
   }
 }).toString();
 
-var _default = {
+exports.default = {
   listView: listView
 };
-exports.default = _default;
-;
-
-var _temp = function () {
-  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-    return;
-  }
-
-  __REACT_HOT_LOADER__.register(listView, 'listView', 'src/Products/style.js');
-
-  __REACT_HOT_LOADER__.register(_default, 'default', 'src/Products/style.js');
-}();
-
-;
