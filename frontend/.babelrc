@@ -15,11 +15,11 @@
     }],
     ["module-resolver", {
       "alias": {
-        "Components": "../../../../components",
-        "Config": "../../../../config",
-        "Extensions": "../../../../extensions",
-        "Pages": "../../../../pages",
-        "Styles": "../../../../styles"
+        "Components": "./components",
+        "Config": "./config",
+        "Extensions": "./extensions",
+        "Pages": "./pages",
+        "Styles": "./styles"
       }
     }]
   ],
