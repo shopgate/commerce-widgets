@@ -1,8 +1,8 @@
 # Shopgate's Commerce Widgets extension
 
-[![Travis CI Build](https://travis-ci.org/shopgate/commerce-widgets.svg?branch=development)](https://travis-ci.org/shopgate/commerce-widgets)
+[![Travis CI Build](https://travis-ci.org/shopgate/commerce-widgets.svg?branch=master)](https://travis-ci.org/shopgate/commerce-widgets)
 [![GitHub release](https://img.shields.io/github/release/shopgate/commerce-widgets.svg)]()
-[![Coverage Status](https://coveralls.io/repos/github/shopgate/commerce-widgets/badge.svg?branch=development)](https://coveralls.io/github/shopgate/commerce-widgets?branch=development)
+[![Coverage Status](https://coveralls.io/repos/github/shopgate/commerce-widgets/badge.svg?branch=master)](https://coveralls.io/github/shopgate/commerce-widgets?branch=master)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 Shopgate's Commerce Widgets extension.
