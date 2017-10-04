@@ -31,24 +31,22 @@
   },
   "devDependencies": {
     "@shopgate/eslint-config": "^1.0.2",
-    "@shopgate/pwa-common": "^1.0.0-beta13",
-    "@shopgate/pwa-common-commerce": "^1.0.0-beta6",
-    "@shopgate/pwa-core": "^1.0.0-beta10",
-    "@shopgate/pwa-unit-test": "^1.1.0",
+    "@shopgate/pwa-common": "^0.1.0",
+    "@shopgate/pwa-common-commerce": "^0.1.0",
+    "@shopgate/pwa-core": "^0.1.0",
+    "@shopgate/pwa-unit-test": "^1.2.4",
     "babel-cli": "^6.26.0",
-    "coveralls": "^2.13.1",
-    "enzyme": "2.9.1",
+    "coveralls": "^3.0.0",
     "eslint-import-resolver-babel-module": "4.0.0-beta.1",
-    "jest": "20.0.4",
     "pre-commit": "^1.2.2",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
     "rimraf": "^2.6.2"
   },
   "peerDependencies": {
     "react": "15.x",
     "react-dom": "15.x",
-    "@shopgate/pwa-common": "1.0.0-beta13",
-    "@shopgate/pwa-common-commerce": "1.0.0-beta6"
+    "@shopgate/pwa-common": "^0.1.0",
+    "@shopgate/pwa-common-commerce": "^0.1.0"
   }
 }
