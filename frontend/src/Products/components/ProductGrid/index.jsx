@@ -7,7 +7,6 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import pure from 'recompose/pure';
 import Iterator from 'Components/ProductGrid/components/Iterator';
 import Layout from 'Components/ProductGrid/components/Layout';
 
@@ -16,13 +15,13 @@ import Layout from 'Components/ProductGrid/components/Layout';
  * @param {Object} props The component props.
  * @returns {JSX}
  */
-const ProductGridWidget = pure(({ products, flags }) => (
+const ProductGridWidget = ({ products, flags }) => (
   <Layout>
     {products.map(product =>
       <Iterator {...product} display={flags} key={product.id} />
     )}
   </Layout>
-));
+);
 
 ProductGridWidget.propTypes = {
   products: PropTypes.arrayOf(PropTypes.shape()).isRequired,

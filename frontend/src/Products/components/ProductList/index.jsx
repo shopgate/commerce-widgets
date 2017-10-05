@@ -7,7 +7,6 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import pure from 'recompose/pure';
 import Iterator from 'Components/ProductList/components/Iterator';
 import Layout from 'Components/ProductList/components/Layout';
 
@@ -16,13 +15,13 @@ import Layout from 'Components/ProductList/components/Layout';
  * @param {Object} props The component props.
  * @returns {JSX}
  */
-const ProductListWidget = pure(({ products, flags }) => (
+const ProductListWidget = ({ products, flags }) => (
   <Layout>
     {products.map(product =>
       <Iterator {...product} display={flags} key={product.id} />
     )}
   </Layout>
-));
+);
 
 ProductListWidget.propTypes = {
   products: PropTypes.arrayOf(PropTypes.shape()).isRequired,
