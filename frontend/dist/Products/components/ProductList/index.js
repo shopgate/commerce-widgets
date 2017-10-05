@@ -18,10 +18,6 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _pure = require('recompose/pure');
-
-var _pure2 = _interopRequireDefault(_pure);
-
 var _Iterator = require('../../../../../../../../components/ProductList/components/Iterator');
 
 var _Iterator2 = _interopRequireDefault(_Iterator);
@@ -32,17 +28,17 @@ var _Layout2 = _interopRequireDefault(_Layout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ProductListWidget = (0, _pure2.default)(function (_ref) {
+var ProductListWidget = function ProductListWidget(_ref) {
   var products = _ref.products,
       flags = _ref.flags;
   return _jsx(_Layout2.default, {}, void 0, products.map(function (product) {
     return _react2.default.createElement(_Iterator2.default, _extends({}, product, { display: flags, key: product.id, __source: {
         fileName: _jsxFileName,
-        lineNumber: 22
+        lineNumber: 21
       }
     }));
   }));
-});
+};
 
 ProductListWidget.propTypes = {
   products: _propTypes2.default.arrayOf(_propTypes2.default.shape()).isRequired,
