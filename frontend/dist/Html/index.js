@@ -17,7 +17,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _router = require('@shopgate/pwa-common/helpers/router');
 
-var _parsedLink = require('@shopgate/pwa-common/helpers/parsed-link');
+var _parsedLink = require('@shopgate/pwa-common/components/Router/helpers/parsed-link');
 
 var _parsedLink2 = _interopRequireDefault(_parsedLink);
 

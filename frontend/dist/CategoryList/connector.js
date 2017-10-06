@@ -4,9 +4,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _routedConnect = require('@shopgate/pwa-common/helpers/routedConnect');
+var _connect = require('@shopgate/pwa-common/components/Router/helpers/connect');
 
-var _routedConnect2 = _interopRequireDefault(_routedConnect);
+var _connect2 = _interopRequireDefault(_connect);
 
 var _getCategory2 = require('@shopgate/pwa-common-commerce/category/actions/getCategory');
 
@@ -30,4 +30,4 @@ var mapStateToProps = function mapStateToProps(state, props) {
   };
 };
 
-exports.default = (0, _routedConnect2.default)(mapStateToProps, mapDispatchToProps);
+exports.default = (0, _connect2.default)(mapStateToProps, mapDispatchToProps);
