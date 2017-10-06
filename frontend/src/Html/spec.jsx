@@ -11,7 +11,7 @@ import { JSDOM } from 'jsdom';
 import HtmlWidget from './index';
 
 const mockConstructor = jest.fn();
-jest.mock('@shopgate/pwa-common/helpers/parsed-link', () => (class {
+jest.mock('@shopgate/pwa-common/components/Router/helpers/parsed-link', () => (class {
   /**
    * Mocked version of the ParsedLink constructor.
    * @param {string} href Link location.

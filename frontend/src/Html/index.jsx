@@ -8,7 +8,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { history } from '@shopgate/pwa-common/helpers/router';
-import ParsedLink from '@shopgate/pwa-common/helpers/parsed-link';
+import ParsedLink from '@shopgate/pwa-common/components/Router/helpers/parsed-link';
 import parseHTML from './helpers/parseHTML';
 
 /**
