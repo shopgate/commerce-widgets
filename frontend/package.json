@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "eslint --parser babel-eslint --ignore-path .gitignore --ignore-path .eslintignore  --ext .js --ext .jsx .",
     "pre-build": "rimraf ./dist",
-    "build-process": "NODE_ENV=production babel src --out-dir dist --no-comments --ignore tests,spec.js,spec.jsx,__snapshots__,.eslintrc.js,jest.config.js,dist,coverage,node_modules",
+    "build-process": "NODE_ENV=production babel src --out-dir dist --no-comments --minified --ignore tests,spec.js,spec.jsx,__snapshots__,.eslintrc.js,jest.config.js,dist,coverage,node_modules",
     "post-build": "git add -A",
     "build": "npm run pre-build && npm run build-process && npm run post-build",
     "test": "jest",
@@ -39,13 +39,13 @@
     "coveralls": "^3.0.0",
     "eslint-import-resolver-babel-module": "4.0.0-beta.1",
     "pre-commit": "^1.2.2",
-    "react": "^15.6.2",
-    "react-dom": "^15.6.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "rimraf": "^2.6.2"
   },
   "peerDependencies": {
-    "react": "15.x",
-    "react-dom": "15.x",
+    "react": "16.x",
+    "react-dom": "16.x",
     "@shopgate/pwa-common": "0.1.x",
     "@shopgate/pwa-common-commerce": "0.1.x"
   }
