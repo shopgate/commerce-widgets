@@ -13,7 +13,7 @@
     "prebuild": "rimraf ./dist",
     "build": "NODE_ENV=production babel src --out-dir dist --no-comments --minified --ignore tests,spec.js,spec.jsx,__snapshots__,.eslintrc.js,jest.config.js,dist,coverage,node_modules",
     "postbuild": "git add -A",
-    "version": "npm run build && PACKAGE_VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && bump ../extension-config.json -v $PACKAGE_VERSION"
+    "version": "npm run build && PACKAGE_VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && bump ../extension-config.json -v $PACKAGE_VERSION -y"
   },
   "dependencies": {
     "babel-core": "^6.26.0",
