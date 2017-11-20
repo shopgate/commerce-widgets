@@ -1,6 +1,6 @@
 {
   "name": "@shopgate/commerce-widgets",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Shopgate Commerce Widgets Extension.",
   "repository": "github:shopgate/commerce-widgets",
   "bugs": "https://github.com/shopgate/commerce-widgets/issues",
