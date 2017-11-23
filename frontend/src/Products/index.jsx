@@ -10,14 +10,11 @@ import PropTypes from 'prop-types';
 import isEqual from 'lodash/isEqual';
 import I18n from '@shopgate/pwa-common/components/I18n';
 import { transformDisplayOptions } from '@shopgate/pwa-common/helpers/data';
-import {
-  GRID_VIEW,
-  LIST_VIEW,
-} from '@shopgate/pwa-common/constants/DisplayOptions';
+import { GRID_VIEW, LIST_VIEW } from 'Pages/Category/constants';
 import ActionButton from 'Components/ActionButton';
 import Headline from 'Components/Headline';
-import ProductGrid from './components/ProductGrid';
-import ProductList from './components/ProductList';
+import ProductGrid from 'Components/ProductGrid';
+import ProductList from 'Components/ProductList';
 import connect from './connector';
 import styles from './style';
 
@@ -47,10 +44,6 @@ class ProductsWidget extends Component {
     super(props);
 
     this.productCount = props.products.length;
-
-    this.state = {
-      fetching: false,
-    };
   }
 
   /**
@@ -58,7 +51,7 @@ class ProductsWidget extends Component {
    */
   componentDidMount() {
     if (this.props.products.length === 0) {
-      this.loadProducts();
+      this.getProducts();
     }
   }
 
@@ -79,10 +72,6 @@ class ProductsWidget extends Component {
       nextProps.products.length === this.totalProductCount
     ) {
       this.productCount = Math.min(nextProps.products.length, this.totalProductCount);
-
-      this.setState({
-        fetching: false,
-      });
     }
   }
 
@@ -94,8 +83,8 @@ class ProductsWidget extends Component {
    */
   shouldComponentUpdate(nextProps, nextState) {
     return (
-      this.state.fetching !== nextState.fetching ||
-      (nextProps.products && !isEqual(this.props.products, nextProps.products))
+      this.props.isFetching !== nextProps.isFetching ||
+      this.props.products.length !== nextProps.products.length
     );
   }
 
@@ -115,15 +104,6 @@ class ProductsWidget extends Component {
     };
 
     getProducts(queryType, queryParams, options, id);
-  }
-
-  /**
-   * Set the state accordingly and then call getProducts().
-   */
-  loadProducts = () => {
-    this.setState({
-      fetching: true,
-    }, this.getProducts);
   }
 
   /**
@@ -149,10 +129,10 @@ class ProductsWidget extends Component {
 
     return (
       <ActionButton
-        loading={this.state.fetching}
-        onClick={this.loadProducts}
+        loading={this.props.isFetching}
+        onClick={this.getProducts}
       >
-        <I18n.Text string="product.load_more" />
+        <I18n.Text string="common.load_more" />
       </ActionButton>
     );
   };
@@ -183,12 +163,15 @@ class ProductsWidget extends Component {
       price: showPrice,
       reviews: showReviews,
     };
-
     if (layout === GRID_VIEW) {
       return (
         <div>
           <Headline text={headline} />
-          <ProductGrid products={productSlice} flags={flags} />
+          <ProductGrid
+            flags={flags}
+            infiniteLoad={false}
+            products={productSlice}
+          />
           {this.renderMoreButton()}
         </div>
       );
@@ -200,7 +183,11 @@ class ProductsWidget extends Component {
       return (
         <div className={styles.listView}>
           <Headline text={headline} />
-          <ProductList products={productSlice} flags={flags} />
+          <ProductList
+            flags={flags}
+            infiniteLoad={false}
+            products={productSlice}
+          />
           {this.renderMoreButton()}
         </div>
       );

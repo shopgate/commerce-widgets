@@ -87,7 +87,9 @@ const getResultHash = (state, type, params, id) => {
 const getResultByHash = createSelector(
   state => state.product,
   getResultHash,
-  (productState, hash) => productState.resultsByHash[hash]
+  (productState, hash) => {
+    return productState.resultsByHash[hash];
+  }
 );
 
 /**
@@ -101,4 +103,17 @@ export const getProductsResult = createSelector(
   getResultHash,
   getResultByHash,
   getPopulatedProductsResult
+);
+
+/**
+ * Retrieves the populated product result.
+ * @param {Object} state The application state.
+ * @param {Object} params The query parameters.
+ * @returns {Object} The product result.
+ */
+export const getProductsFetchingState = createSelector(
+  state => state,
+  getResultHash,
+  getResultByHash,
+  (state, hash, result) => result ? result.isFetching : null
 );
