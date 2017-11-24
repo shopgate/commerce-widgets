@@ -7,7 +7,6 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import isEqual from 'lodash/isEqual';
 import I18n from '@shopgate/pwa-common/components/I18n';
 import { transformDisplayOptions } from '@shopgate/pwa-common/helpers/data';
 import { GRID_VIEW, LIST_VIEW } from 'Pages/Category/constants';
@@ -25,6 +24,7 @@ class ProductsWidget extends Component {
   static propTypes = {
     getProducts: PropTypes.func.isRequired,
     id: PropTypes.string.isRequired,
+    isFetching: PropTypes.bool.isRequired,
     settings: PropTypes.shape().isRequired,
     products: PropTypes.arrayOf(PropTypes.shape()),
     totalProductCount: PropTypes.number,
@@ -78,10 +78,9 @@ class ProductsWidget extends Component {
   /**
    * Only update when we are fetching products or we have new products.
    * @param {Object} nextProps The next set of component props.
-   * @param {Object} nextState The next component state..
    * @returns {boolean}
    */
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(nextProps) {
     return (
       this.props.isFetching !== nextProps.isFetching ||
       this.props.products.length !== nextProps.products.length
