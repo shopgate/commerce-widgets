@@ -18,16 +18,22 @@ import {
  * @param {Object} props The component properties.
  * @return {Object} The extended component props.
  */
-const mapStateToProps = (state, props) => ({
-  ...getProductsResult(state, props.settings.queryType, {
-    sort: props.settings.sortOrder,
-    value: props.settings.queryParams,
-  }, props.id),
-  isFetching: getProductsFetchingState(state, props.settings.queryType, {
-    sort: props.settings.sortOrder,
-    value: props.settings.queryParams,
-  }, props.id),
-});
+const mapStateToProps = (state, props) => {
+  const params = [
+    state,
+    props.settings.queryType,
+    {
+      sort: props.settings.sortOrder,
+      value: props.settings.queryParams,
+    },
+    props.id,
+  ];
+
+  return {
+    ...getProductsResult(...params),
+    isFetching: getProductsFetchingState(...params),
+  };
+};
 
 /**
  * Maps the contents of the state to the component props.
