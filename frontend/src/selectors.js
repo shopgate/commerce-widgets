@@ -87,9 +87,7 @@ const getResultHash = (state, type, params, id) => {
 const getResultByHash = createSelector(
   state => state.product,
   getResultHash,
-  (productState, hash) => {
-    return productState.resultsByHash[hash];
-  }
+  (productState, hash) => productState.resultsByHash[hash]
 );
 
 /**

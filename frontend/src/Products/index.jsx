@@ -157,42 +157,31 @@ class ProductsWidget extends Component {
       showPrice,
       showReviews,
     } = this.props.settings;
+
+    const isList = layout === LIST_VIEW;
+
+    // Flags to enable/disable elements when displaying the products.
     const flags = {
-      name: showName,
+      name: isList ? true : showName,
       price: showPrice,
       reviews: showReviews,
+      ...isList && { manufacturer: false },
     };
-    if (layout === GRID_VIEW) {
-      return (
-        <div>
-          <Headline text={headline} />
-          <ProductGrid
-            flags={flags}
-            infiniteLoad={false}
-            products={productSlice}
-          />
-          {this.renderMoreButton()}
-        </div>
-      );
-    } else if (layout === LIST_VIEW) {
-      // We have to overwrite some flags here because of the design of the Product List.
-      flags.name = true;
-      flags.manufacturer = false;
 
-      return (
-        <div className={styles.listView}>
-          <Headline text={headline} />
-          <ProductList
-            flags={flags}
-            infiniteLoad={false}
-            products={productSlice}
-          />
-          {this.renderMoreButton()}
-        </div>
-      );
-    }
+    // Determine which component to render.
+    const ProductComponent = isList ? ProductList : ProductGrid;
 
-    return null;
+    return (
+      <div {...isList ? { className: styles.listView } : {}}>
+        <Headline text={headline} />
+        <ProductComponent
+          flags={flags}
+          infiniteLoad={false}
+          products={productSlice}
+        />
+        {this.renderMoreButton()}
+      </div>
+    );
   }
 }
 
