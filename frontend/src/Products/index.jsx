@@ -7,17 +7,13 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import isEqual from 'lodash/isEqual';
 import I18n from '@shopgate/pwa-common/components/I18n';
 import { transformDisplayOptions } from '@shopgate/pwa-common/helpers/data';
-import {
-  GRID_VIEW,
-  LIST_VIEW,
-} from '@shopgate/pwa-common/constants/DisplayOptions';
+import { GRID_VIEW, LIST_VIEW } from 'Pages/Category/constants';
 import ActionButton from 'Components/ActionButton';
 import Headline from 'Components/Headline';
-import ProductGrid from './components/ProductGrid';
-import ProductList from './components/ProductList';
+import ProductGrid from 'Components/ProductGrid';
+import ProductList from 'Components/ProductList';
 import connect from './connector';
 import styles from './style';
 
@@ -28,6 +24,7 @@ class ProductsWidget extends Component {
   static propTypes = {
     getProducts: PropTypes.func.isRequired,
     id: PropTypes.string.isRequired,
+    isFetching: PropTypes.bool.isRequired,
     settings: PropTypes.shape().isRequired,
     products: PropTypes.arrayOf(PropTypes.shape()),
     totalProductCount: PropTypes.number,
@@ -47,10 +44,6 @@ class ProductsWidget extends Component {
     super(props);
 
     this.productCount = props.products.length;
-
-    this.state = {
-      fetching: false,
-    };
   }
 
   /**
@@ -58,7 +51,7 @@ class ProductsWidget extends Component {
    */
   componentDidMount() {
     if (this.props.products.length === 0) {
-      this.loadProducts();
+      this.getProducts();
     }
   }
 
@@ -79,23 +72,18 @@ class ProductsWidget extends Component {
       nextProps.products.length === this.totalProductCount
     ) {
       this.productCount = Math.min(nextProps.products.length, this.totalProductCount);
-
-      this.setState({
-        fetching: false,
-      });
     }
   }
 
   /**
    * Only update when we are fetching products or we have new products.
    * @param {Object} nextProps The next set of component props.
-   * @param {Object} nextState The next component state..
    * @returns {boolean}
    */
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(nextProps) {
     return (
-      this.state.fetching !== nextState.fetching ||
-      (nextProps.products && !isEqual(this.props.products, nextProps.products))
+      this.props.isFetching !== nextProps.isFetching ||
+      this.props.products.length !== nextProps.products.length
     );
   }
 
@@ -115,15 +103,6 @@ class ProductsWidget extends Component {
     };
 
     getProducts(queryType, queryParams, options, id);
-  }
-
-  /**
-   * Set the state accordingly and then call getProducts().
-   */
-  loadProducts = () => {
-    this.setState({
-      fetching: true,
-    }, this.getProducts);
   }
 
   /**
@@ -149,10 +128,10 @@ class ProductsWidget extends Component {
 
     return (
       <ActionButton
-        loading={this.state.fetching}
-        onClick={this.loadProducts}
+        loading={this.props.isFetching}
+        onClick={this.getProducts}
       >
-        <I18n.Text string="product.load_more" />
+        <I18n.Text string="common.load_more" />
       </ActionButton>
     );
   };
@@ -178,35 +157,31 @@ class ProductsWidget extends Component {
       showPrice,
       showReviews,
     } = this.props.settings;
+
+    const isList = layout === LIST_VIEW;
+
+    // Flags to enable/disable elements when displaying the products.
     const flags = {
-      name: showName,
+      name: isList ? true : showName,
       price: showPrice,
       reviews: showReviews,
+      ...isList && { manufacturer: false },
     };
 
-    if (layout === GRID_VIEW) {
-      return (
-        <div>
-          <Headline text={headline} />
-          <ProductGrid products={productSlice} flags={flags} />
-          {this.renderMoreButton()}
-        </div>
-      );
-    } else if (layout === LIST_VIEW) {
-      // We have to overwrite some flags here because of the design of the Product List.
-      flags.name = true;
-      flags.manufacturer = false;
+    // Determine which component to render.
+    const ProductComponent = isList ? ProductList : ProductGrid;
 
-      return (
-        <div className={styles.listView}>
-          <Headline text={headline} />
-          <ProductList products={productSlice} flags={flags} />
-          {this.renderMoreButton()}
-        </div>
-      );
-    }
-
-    return null;
+    return (
+      <div {...isList ? { className: styles.listView } : {}}>
+        <Headline text={headline} />
+        <ProductComponent
+          flags={flags}
+          infiniteLoad={false}
+          products={productSlice}
+        />
+        {this.renderMoreButton()}
+      </div>
+    );
   }
 }
 

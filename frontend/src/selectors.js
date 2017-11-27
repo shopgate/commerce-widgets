@@ -102,3 +102,16 @@ export const getProductsResult = createSelector(
   getResultByHash,
   getPopulatedProductsResult
 );
+
+/**
+ * Retrieves the populated product result.
+ * @param {Object} state The application state.
+ * @param {Object} params The query parameters.
+ * @returns {Object} The product result.
+ */
+export const getProductsFetchingState = createSelector(
+  state => state,
+  getResultHash,
+  getResultByHash,
+  (state, hash, result) => result ? result.isFetching : null
+);

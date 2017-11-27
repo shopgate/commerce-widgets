@@ -7,7 +7,10 @@
 
 import connect from '@shopgate/pwa-common/components/Router/helpers/connect';
 import getProductsByQuery from '@shopgate/pwa-common-commerce/product/actions/getProductsByQuery';
-import { getProductsResult } from '../selectors';
+import {
+  getProductsResult,
+  getProductsFetchingState,
+} from '../selectors';
 
 /**
  * Maps the contents of the state to the component props.
@@ -15,12 +18,22 @@ import { getProductsResult } from '../selectors';
  * @param {Object} props The component properties.
  * @return {Object} The extended component props.
  */
-const mapStateToProps = (state, props) => ({
-  products: getProductsResult(state, props.settings.queryType, {
-    sort: props.settings.sortOrder,
-    value: props.settings.queryParams,
-  }).products,
-});
+const mapStateToProps = (state, props) => {
+  const params = [
+    state,
+    props.settings.queryType,
+    {
+      sort: props.settings.sortOrder,
+      value: props.settings.queryParams,
+    },
+    props.id,
+  ];
+
+  return {
+    ...getProductsResult(...params),
+    isFetching: getProductsFetchingState(...params),
+  };
+};
 
 /**
  * Maps the contents of the state to the component props.
