@@ -9,7 +9,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import I18n from '@shopgate/pwa-common/components/I18n';
 import { transformDisplayOptions } from '@shopgate/pwa-common/helpers/data';
-import { GRID_VIEW, LIST_VIEW } from 'Pages/Category/constants';
+import { LIST_VIEW } from 'Pages/Category/constants';
 import ActionButton from 'Components/ActionButton';
 import Headline from 'Components/Headline';
 import ProductGrid from 'Components/ProductGrid';
@@ -24,14 +24,15 @@ class ProductsWidget extends Component {
   static propTypes = {
     getProducts: PropTypes.func.isRequired,
     id: PropTypes.string.isRequired,
-    isFetching: PropTypes.bool.isRequired,
     settings: PropTypes.shape().isRequired,
+    isFetching: PropTypes.bool,
     products: PropTypes.arrayOf(PropTypes.shape()),
     totalProductCount: PropTypes.number,
   };
 
   static defaultProps = {
     getProducts: () => {},
+    isFetching: false,
     products: null,
     totalProductCount: null,
   };
