@@ -10,6 +10,7 @@ import PropTypes from 'prop-types';
 import { history } from '@shopgate/pwa-common/helpers/router';
 import ParsedLink from '@shopgate/pwa-common/components/Router/helpers/parsed-link';
 import parseHTML from './helpers/parseHTML';
+import styles from './style';
 
 /**
  * The custom HTML widget.
@@ -88,6 +89,7 @@ class Html extends Component {
   render() {
     return (
       <div
+        className={styles}
         dangerouslySetInnerHTML={{ __html: this.state.html }}
         ref={(domElm) => { this.htmlContainer = domElm; }}
       />
